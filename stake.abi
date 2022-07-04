@@ -121,62 +121,11 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "amountXETH",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amountETH",
-        "type": "uint256"
-      }
-    ],
-    "name": "RedeemFromValidator",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amountXETH",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amountETH",
-        "type": "uint256"
-      }
-    ],
-    "name": "Redeemed",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
         "name": "amount",
         "type": "uint256"
       }
     ],
     "name": "RevenueAccounted",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "RevenueWithdrawedFromValidator",
     "type": "event"
   },
   {
@@ -273,7 +222,7 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "node_id",
+        "name": "nextValidatorId",
         "type": "uint256"
       }
     ],
@@ -285,9 +234,28 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "uint256[]",
-        "name": "stoppedIDs",
-        "type": "uint256[]"
+        "internalType": "uint256",
+        "name": "stoppedCount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "slashed",
+        "type": "uint256"
+      }
+    ],
+    "name": "ValidatorSlashedStopped",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "stoppedCount",
+        "type": "uint256"
       },
       {
         "indexed": false,
@@ -340,12 +308,12 @@
   },
   {
     "inputs": [],
-    "name": "MANAGER_ROLE",
+    "name": "DEPOSIT_SIZE",
     "outputs": [
       {
-        "internalType": "bytes32",
+        "internalType": "uint256",
         "name": "",
-        "type": "bytes32"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -353,7 +321,7 @@
   },
   {
     "inputs": [],
-    "name": "OPERATOR_ROLE",
+    "name": "MANAGER_ROLE",
     "outputs": [
       {
         "internalType": "bytes32",
@@ -582,6 +550,32 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "getRecentReceived",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRecentSlashed",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -669,24 +663,13 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "idx_from",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "idx_to",
-        "type": "uint256"
-      }
-    ],
-    "name": "getStoppedValidators",
+    "inputs": [],
+    "name": "getStoppedValidatorsCount",
     "outputs": [
       {
-        "internalType": "bytes[]",
+        "internalType": "uint256",
         "name": "",
-        "type": "bytes[]"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -694,7 +677,7 @@
   },
   {
     "inputs": [],
-    "name": "getStoppedValidatorsCount",
+    "name": "getTotalStaked",
     "outputs": [
       {
         "internalType": "uint256",
@@ -794,7 +777,13 @@
       }
     ],
     "name": "mint",
-    "outputs": [],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "minted",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "payable",
     "type": "function"
   },
@@ -873,7 +862,13 @@
       }
     ],
     "name": "redeemFromValidators",
-    "outputs": [],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "burned",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "nonpayable",
     "type": "function"
   },
@@ -934,9 +929,9 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
+        "internalType": "bytes",
+        "name": "oldpubkey",
+        "type": "bytes"
       },
       {
         "internalType": "bytes",
@@ -968,19 +963,6 @@
       }
     ],
     "name": "revokeRole",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "depositSize",
-        "type": "uint256"
-      }
-    ],
-    "name": "setDepositSize",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1051,6 +1033,13 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "stake",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -1096,7 +1085,13 @@
     "type": "function"
   },
   {
-    "inputs": [],
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "clock",
+        "type": "bytes32"
+      }
+    ],
     "name": "syncBalance",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -1112,14 +1107,47 @@
   {
     "inputs": [
       {
-        "internalType": "uint256[]",
-        "name": "_stoppedIDs",
-        "type": "uint256[]"
+        "internalType": "bytes[]",
+        "name": "_stoppedPubKeys",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_remainingAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_slashedAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "clock",
+        "type": "bytes32"
+      }
+    ],
+    "name": "validatorSlashedStop",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "_stoppedPubKeys",
+        "type": "bytes[]"
       },
       {
         "internalType": "uint256",
         "name": "_stoppedBalance",
         "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "clock",
+        "type": "bytes32"
       }
     ],
     "name": "validatorStopped",
