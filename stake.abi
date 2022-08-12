@@ -599,6 +599,11 @@
         "internalType": "bytes[]",
         "name": "signatures",
         "type": "bytes[]"
+      },
+      {
+        "internalType": "bool[]",
+        "name": "stopped",
+        "type": "bool[]"
       }
     ],
     "stateMutability": "view",
@@ -1166,6 +1171,11 @@
         "internalType": "address",
         "name": "to",
         "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "clock",
+        "type": "bytes32"
       }
     ],
     "name": "withdrawManagerFee",
