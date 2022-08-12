@@ -30,7 +30,7 @@ var (
 
 // StakingContractMetaData contains all meta data concerning the StakingContract contract.
 var StakingContractMetaData = &bind.MetaData{
-	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Mintable\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"Snapshot\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unmintable\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"snapshotId\",\"type\":\"uint256\"}],\"name\":\"balanceOfAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"recipients\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"amounts\",\"type\":\"uint256[]\"}],\"name\":\"batchTransfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"burnFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"subtractedValue\",\"type\":\"uint256\"}],\"name\":\"decreaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"addedValue\",\"type\":\"uint256\"}],\"name\":\"increaseAllowance\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"mintableGroup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"allow\",\"type\":\"bool\"}],\"name\":\"setMintable\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"snapshot\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"snapshotId\",\"type\":\"uint256\"}],\"name\":\"totalSupplyAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+	ABI: "[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"diff\",\"type\":\"uint256\"}],\"name\":\"BalanceSynced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"creditor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountEther\",\"type\":\"uint256\"}],\"name\":\"DebtQueued\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"DepositContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"ManagerAccountSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"ManagerFeeSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"ManagerFeeWithdrawed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"RedeemContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RevenueAccounted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nextValidatorId\",\"type\":\"uint256\"}],\"name\":\"ValidatorActivated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stoppedCount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"slashed\",\"type\":\"uint256\"}],\"name\":\"ValidatorSlashedStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stoppedCount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stoppedBalance\",\"type\":\"uint256\"}],\"name\":\"ValidatorStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"withdrawCredential\",\"type\":\"bytes32\"}],\"name\":\"WithdrawCredentialSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"XETHContractSet\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEPOSIT_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ORACLE_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REGISTRY_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"checkDebt\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentReserve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"debtOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ethDepositContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"exchangeRatio\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedBalance\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedManagerRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedUserRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCurrentDebts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDebtQueue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"first\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"last\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingEthers\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecentReceived\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecentSlashed\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx_from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"idx_to\",\"type\":\"uint256\"}],\"name\":\"getRegisteredValidators\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRegisteredValidatorsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReportedValidatorBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReportedValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getStoppedValidatorsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalStaked\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getVectorClock\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"managerFeeShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"minToMint\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"minted\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_aliveValidators\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_aliveBalance\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"pushBeacon\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"redeemContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ethersToRedeem\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxToBurn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"redeemFromValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"burned\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"registerValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"name\":\"registerValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"oldpubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"replaceValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ethDepositContract\",\"type\":\"address\"}],\"name\":\"setETHDepositContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"setManagerFeeShare\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_redeemContract\",\"type\":\"address\"}],\"name\":\"setRedeemContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"withdrawalCredentials_\",\"type\":\"bytes32\"}],\"name\":\"setWithdrawCredential\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_xETHContract\",\"type\":\"address\"}],\"name\":\"setXETHContractAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"sumbitRewardWithdrawal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newPhase\",\"type\":\"uint256\"}],\"name\":\"switchPhase\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"syncBalance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"_stoppedPubKeys\",\"type\":\"bytes[]\"},{\"internalType\":\"uint256\",\"name\":\"_remainingAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_slashedAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"validatorSlashedStop\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"_stoppedPubKeys\",\"type\":\"bytes[]\"},{\"internalType\":\"uint256\",\"name\":\"_stoppedBalance\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"validatorStopped\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"withdrawManagerFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawalCredentials\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"xETHAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
 }
 
 // StakingContractABI is the input ABI used to generate the binding from.
@@ -179,12 +179,43 @@ func (_StakingContract *StakingContractTransactorRaw) Transact(opts *bind.Transa
 	return _StakingContract.Contract.contract.Transact(opts, method, params...)
 }
 
-// Allowance is a free data retrieval call binding the contract method 0xdd62ed3e.
+// DEFAULTADMINROLE is a free data retrieval call binding the contract method 0xa217fddf.
 //
-// Solidity: function allowance(address owner, address spender) view returns(uint256)
-func (_StakingContract *StakingContractCaller) Allowance(opts *bind.CallOpts, owner common.Address, spender common.Address) (*big.Int, error) {
+// Solidity: function DEFAULT_ADMIN_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCaller) DEFAULTADMINROLE(opts *bind.CallOpts) ([32]byte, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "allowance", owner, spender)
+	err := _StakingContract.contract.Call(opts, &out, "DEFAULT_ADMIN_ROLE")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// DEFAULTADMINROLE is a free data retrieval call binding the contract method 0xa217fddf.
+//
+// Solidity: function DEFAULT_ADMIN_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractSession) DEFAULTADMINROLE() ([32]byte, error) {
+	return _StakingContract.Contract.DEFAULTADMINROLE(&_StakingContract.CallOpts)
+}
+
+// DEFAULTADMINROLE is a free data retrieval call binding the contract method 0xa217fddf.
+//
+// Solidity: function DEFAULT_ADMIN_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) DEFAULTADMINROLE() ([32]byte, error) {
+	return _StakingContract.Contract.DEFAULTADMINROLE(&_StakingContract.CallOpts)
+}
+
+// DEPOSITSIZE is a free data retrieval call binding the contract method 0x36bf3325.
+//
+// Solidity: function DEPOSIT_SIZE() view returns(uint256)
+func (_StakingContract *StakingContractCaller) DEPOSITSIZE(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "DEPOSIT_SIZE")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -196,26 +227,195 @@ func (_StakingContract *StakingContractCaller) Allowance(opts *bind.CallOpts, ow
 
 }
 
-// Allowance is a free data retrieval call binding the contract method 0xdd62ed3e.
+// DEPOSITSIZE is a free data retrieval call binding the contract method 0x36bf3325.
 //
-// Solidity: function allowance(address owner, address spender) view returns(uint256)
-func (_StakingContract *StakingContractSession) Allowance(owner common.Address, spender common.Address) (*big.Int, error) {
-	return _StakingContract.Contract.Allowance(&_StakingContract.CallOpts, owner, spender)
+// Solidity: function DEPOSIT_SIZE() view returns(uint256)
+func (_StakingContract *StakingContractSession) DEPOSITSIZE() (*big.Int, error) {
+	return _StakingContract.Contract.DEPOSITSIZE(&_StakingContract.CallOpts)
 }
 
-// Allowance is a free data retrieval call binding the contract method 0xdd62ed3e.
+// DEPOSITSIZE is a free data retrieval call binding the contract method 0x36bf3325.
 //
-// Solidity: function allowance(address owner, address spender) view returns(uint256)
-func (_StakingContract *StakingContractCallerSession) Allowance(owner common.Address, spender common.Address) (*big.Int, error) {
-	return _StakingContract.Contract.Allowance(&_StakingContract.CallOpts, owner, spender)
+// Solidity: function DEPOSIT_SIZE() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) DEPOSITSIZE() (*big.Int, error) {
+	return _StakingContract.Contract.DEPOSITSIZE(&_StakingContract.CallOpts)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
 //
-// Solidity: function balanceOf(address account) view returns(uint256)
-func (_StakingContract *StakingContractCaller) BalanceOf(opts *bind.CallOpts, account common.Address) (*big.Int, error) {
+// Solidity: function MANAGER_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCaller) MANAGERROLE(opts *bind.CallOpts) ([32]byte, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "balanceOf", account)
+	err := _StakingContract.contract.Call(opts, &out, "MANAGER_ROLE")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
+//
+// Solidity: function MANAGER_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractSession) MANAGERROLE() ([32]byte, error) {
+	return _StakingContract.Contract.MANAGERROLE(&_StakingContract.CallOpts)
+}
+
+// MANAGERROLE is a free data retrieval call binding the contract method 0xec87621c.
+//
+// Solidity: function MANAGER_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) MANAGERROLE() ([32]byte, error) {
+	return _StakingContract.Contract.MANAGERROLE(&_StakingContract.CallOpts)
+}
+
+// ORACLEROLE is a free data retrieval call binding the contract method 0x07e2cea5.
+//
+// Solidity: function ORACLE_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCaller) ORACLEROLE(opts *bind.CallOpts) ([32]byte, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "ORACLE_ROLE")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// ORACLEROLE is a free data retrieval call binding the contract method 0x07e2cea5.
+//
+// Solidity: function ORACLE_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractSession) ORACLEROLE() ([32]byte, error) {
+	return _StakingContract.Contract.ORACLEROLE(&_StakingContract.CallOpts)
+}
+
+// ORACLEROLE is a free data retrieval call binding the contract method 0x07e2cea5.
+//
+// Solidity: function ORACLE_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) ORACLEROLE() ([32]byte, error) {
+	return _StakingContract.Contract.ORACLEROLE(&_StakingContract.CallOpts)
+}
+
+// PAUSERROLE is a free data retrieval call binding the contract method 0xe63ab1e9.
+//
+// Solidity: function PAUSER_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCaller) PAUSERROLE(opts *bind.CallOpts) ([32]byte, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "PAUSER_ROLE")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// PAUSERROLE is a free data retrieval call binding the contract method 0xe63ab1e9.
+//
+// Solidity: function PAUSER_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractSession) PAUSERROLE() ([32]byte, error) {
+	return _StakingContract.Contract.PAUSERROLE(&_StakingContract.CallOpts)
+}
+
+// PAUSERROLE is a free data retrieval call binding the contract method 0xe63ab1e9.
+//
+// Solidity: function PAUSER_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) PAUSERROLE() ([32]byte, error) {
+	return _StakingContract.Contract.PAUSERROLE(&_StakingContract.CallOpts)
+}
+
+// REGISTRYROLE is a free data retrieval call binding the contract method 0x42f1e879.
+//
+// Solidity: function REGISTRY_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCaller) REGISTRYROLE(opts *bind.CallOpts) ([32]byte, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "REGISTRY_ROLE")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// REGISTRYROLE is a free data retrieval call binding the contract method 0x42f1e879.
+//
+// Solidity: function REGISTRY_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractSession) REGISTRYROLE() ([32]byte, error) {
+	return _StakingContract.Contract.REGISTRYROLE(&_StakingContract.CallOpts)
+}
+
+// REGISTRYROLE is a free data retrieval call binding the contract method 0x42f1e879.
+//
+// Solidity: function REGISTRY_ROLE() view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) REGISTRYROLE() ([32]byte, error) {
+	return _StakingContract.Contract.REGISTRYROLE(&_StakingContract.CallOpts)
+}
+
+// CheckDebt is a free data retrieval call binding the contract method 0xc8c3df4a.
+//
+// Solidity: function checkDebt(uint256 index) view returns(address account, uint256 amount)
+func (_StakingContract *StakingContractCaller) CheckDebt(opts *bind.CallOpts, index *big.Int) (struct {
+	Account common.Address
+	Amount  *big.Int
+}, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "checkDebt", index)
+
+	outstruct := new(struct {
+		Account common.Address
+		Amount  *big.Int
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.Account = *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+	outstruct.Amount = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
+
+	return *outstruct, err
+
+}
+
+// CheckDebt is a free data retrieval call binding the contract method 0xc8c3df4a.
+//
+// Solidity: function checkDebt(uint256 index) view returns(address account, uint256 amount)
+func (_StakingContract *StakingContractSession) CheckDebt(index *big.Int) (struct {
+	Account common.Address
+	Amount  *big.Int
+}, error) {
+	return _StakingContract.Contract.CheckDebt(&_StakingContract.CallOpts, index)
+}
+
+// CheckDebt is a free data retrieval call binding the contract method 0xc8c3df4a.
+//
+// Solidity: function checkDebt(uint256 index) view returns(address account, uint256 amount)
+func (_StakingContract *StakingContractCallerSession) CheckDebt(index *big.Int) (struct {
+	Account common.Address
+	Amount  *big.Int
+}, error) {
+	return _StakingContract.Contract.CheckDebt(&_StakingContract.CallOpts, index)
+}
+
+// CurrentReserve is a free data retrieval call binding the contract method 0x2e12007c.
+//
+// Solidity: function currentReserve() view returns(uint256)
+func (_StakingContract *StakingContractCaller) CurrentReserve(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "currentReserve")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -227,26 +427,26 @@ func (_StakingContract *StakingContractCaller) BalanceOf(opts *bind.CallOpts, ac
 
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// CurrentReserve is a free data retrieval call binding the contract method 0x2e12007c.
 //
-// Solidity: function balanceOf(address account) view returns(uint256)
-func (_StakingContract *StakingContractSession) BalanceOf(account common.Address) (*big.Int, error) {
-	return _StakingContract.Contract.BalanceOf(&_StakingContract.CallOpts, account)
+// Solidity: function currentReserve() view returns(uint256)
+func (_StakingContract *StakingContractSession) CurrentReserve() (*big.Int, error) {
+	return _StakingContract.Contract.CurrentReserve(&_StakingContract.CallOpts)
 }
 
-// BalanceOf is a free data retrieval call binding the contract method 0x70a08231.
+// CurrentReserve is a free data retrieval call binding the contract method 0x2e12007c.
 //
-// Solidity: function balanceOf(address account) view returns(uint256)
-func (_StakingContract *StakingContractCallerSession) BalanceOf(account common.Address) (*big.Int, error) {
-	return _StakingContract.Contract.BalanceOf(&_StakingContract.CallOpts, account)
+// Solidity: function currentReserve() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) CurrentReserve() (*big.Int, error) {
+	return _StakingContract.Contract.CurrentReserve(&_StakingContract.CallOpts)
 }
 
-// BalanceOfAt is a free data retrieval call binding the contract method 0x4ee2cd7e.
+// DebtOf is a free data retrieval call binding the contract method 0xd283e75f.
 //
-// Solidity: function balanceOfAt(address account, uint256 snapshotId) view returns(uint256)
-func (_StakingContract *StakingContractCaller) BalanceOfAt(opts *bind.CallOpts, account common.Address, snapshotId *big.Int) (*big.Int, error) {
+// Solidity: function debtOf(address account) view returns(uint256)
+func (_StakingContract *StakingContractCaller) DebtOf(opts *bind.CallOpts, account common.Address) (*big.Int, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "balanceOfAt", account, snapshotId)
+	err := _StakingContract.contract.Call(opts, &out, "debtOf", account)
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -258,119 +458,26 @@ func (_StakingContract *StakingContractCaller) BalanceOfAt(opts *bind.CallOpts, 
 
 }
 
-// BalanceOfAt is a free data retrieval call binding the contract method 0x4ee2cd7e.
+// DebtOf is a free data retrieval call binding the contract method 0xd283e75f.
 //
-// Solidity: function balanceOfAt(address account, uint256 snapshotId) view returns(uint256)
-func (_StakingContract *StakingContractSession) BalanceOfAt(account common.Address, snapshotId *big.Int) (*big.Int, error) {
-	return _StakingContract.Contract.BalanceOfAt(&_StakingContract.CallOpts, account, snapshotId)
+// Solidity: function debtOf(address account) view returns(uint256)
+func (_StakingContract *StakingContractSession) DebtOf(account common.Address) (*big.Int, error) {
+	return _StakingContract.Contract.DebtOf(&_StakingContract.CallOpts, account)
 }
 
-// BalanceOfAt is a free data retrieval call binding the contract method 0x4ee2cd7e.
+// DebtOf is a free data retrieval call binding the contract method 0xd283e75f.
 //
-// Solidity: function balanceOfAt(address account, uint256 snapshotId) view returns(uint256)
-func (_StakingContract *StakingContractCallerSession) BalanceOfAt(account common.Address, snapshotId *big.Int) (*big.Int, error) {
-	return _StakingContract.Contract.BalanceOfAt(&_StakingContract.CallOpts, account, snapshotId)
+// Solidity: function debtOf(address account) view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) DebtOf(account common.Address) (*big.Int, error) {
+	return _StakingContract.Contract.DebtOf(&_StakingContract.CallOpts, account)
 }
 
-// Decimals is a free data retrieval call binding the contract method 0x313ce567.
+// EthDepositContract is a free data retrieval call binding the contract method 0x3884545d.
 //
-// Solidity: function decimals() view returns(uint8)
-func (_StakingContract *StakingContractCaller) Decimals(opts *bind.CallOpts) (uint8, error) {
+// Solidity: function ethDepositContract() view returns(address)
+func (_StakingContract *StakingContractCaller) EthDepositContract(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "decimals")
-
-	if err != nil {
-		return *new(uint8), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(uint8)).(*uint8)
-
-	return out0, err
-
-}
-
-// Decimals is a free data retrieval call binding the contract method 0x313ce567.
-//
-// Solidity: function decimals() view returns(uint8)
-func (_StakingContract *StakingContractSession) Decimals() (uint8, error) {
-	return _StakingContract.Contract.Decimals(&_StakingContract.CallOpts)
-}
-
-// Decimals is a free data retrieval call binding the contract method 0x313ce567.
-//
-// Solidity: function decimals() view returns(uint8)
-func (_StakingContract *StakingContractCallerSession) Decimals() (uint8, error) {
-	return _StakingContract.Contract.Decimals(&_StakingContract.CallOpts)
-}
-
-// MintableGroup is a free data retrieval call binding the contract method 0xec49c938.
-//
-// Solidity: function mintableGroup(address ) view returns(bool)
-func (_StakingContract *StakingContractCaller) MintableGroup(opts *bind.CallOpts, arg0 common.Address) (bool, error) {
-	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "mintableGroup", arg0)
-
-	if err != nil {
-		return *new(bool), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
-
-	return out0, err
-
-}
-
-// MintableGroup is a free data retrieval call binding the contract method 0xec49c938.
-//
-// Solidity: function mintableGroup(address ) view returns(bool)
-func (_StakingContract *StakingContractSession) MintableGroup(arg0 common.Address) (bool, error) {
-	return _StakingContract.Contract.MintableGroup(&_StakingContract.CallOpts, arg0)
-}
-
-// MintableGroup is a free data retrieval call binding the contract method 0xec49c938.
-//
-// Solidity: function mintableGroup(address ) view returns(bool)
-func (_StakingContract *StakingContractCallerSession) MintableGroup(arg0 common.Address) (bool, error) {
-	return _StakingContract.Contract.MintableGroup(&_StakingContract.CallOpts, arg0)
-}
-
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
-//
-// Solidity: function name() view returns(string)
-func (_StakingContract *StakingContractCaller) Name(opts *bind.CallOpts) (string, error) {
-	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "name")
-
-	if err != nil {
-		return *new(string), err
-	}
-
-	out0 := *abi.ConvertType(out[0], new(string)).(*string)
-
-	return out0, err
-
-}
-
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
-//
-// Solidity: function name() view returns(string)
-func (_StakingContract *StakingContractSession) Name() (string, error) {
-	return _StakingContract.Contract.Name(&_StakingContract.CallOpts)
-}
-
-// Name is a free data retrieval call binding the contract method 0x06fdde03.
-//
-// Solidity: function name() view returns(string)
-func (_StakingContract *StakingContractCallerSession) Name() (string, error) {
-	return _StakingContract.Contract.Name(&_StakingContract.CallOpts)
-}
-
-// Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
-//
-// Solidity: function owner() view returns(address)
-func (_StakingContract *StakingContractCaller) Owner(opts *bind.CallOpts) (common.Address, error) {
-	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "owner")
+	err := _StakingContract.contract.Call(opts, &out, "ethDepositContract")
 
 	if err != nil {
 		return *new(common.Address), err
@@ -382,18 +489,666 @@ func (_StakingContract *StakingContractCaller) Owner(opts *bind.CallOpts) (commo
 
 }
 
-// Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
+// EthDepositContract is a free data retrieval call binding the contract method 0x3884545d.
 //
-// Solidity: function owner() view returns(address)
-func (_StakingContract *StakingContractSession) Owner() (common.Address, error) {
-	return _StakingContract.Contract.Owner(&_StakingContract.CallOpts)
+// Solidity: function ethDepositContract() view returns(address)
+func (_StakingContract *StakingContractSession) EthDepositContract() (common.Address, error) {
+	return _StakingContract.Contract.EthDepositContract(&_StakingContract.CallOpts)
 }
 
-// Owner is a free data retrieval call binding the contract method 0x8da5cb5b.
+// EthDepositContract is a free data retrieval call binding the contract method 0x3884545d.
 //
-// Solidity: function owner() view returns(address)
-func (_StakingContract *StakingContractCallerSession) Owner() (common.Address, error) {
-	return _StakingContract.Contract.Owner(&_StakingContract.CallOpts)
+// Solidity: function ethDepositContract() view returns(address)
+func (_StakingContract *StakingContractCallerSession) EthDepositContract() (common.Address, error) {
+	return _StakingContract.Contract.EthDepositContract(&_StakingContract.CallOpts)
+}
+
+// ExchangeRatio is a free data retrieval call binding the contract method 0x4006ccc5.
+//
+// Solidity: function exchangeRatio() view returns(uint256)
+func (_StakingContract *StakingContractCaller) ExchangeRatio(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "exchangeRatio")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// ExchangeRatio is a free data retrieval call binding the contract method 0x4006ccc5.
+//
+// Solidity: function exchangeRatio() view returns(uint256)
+func (_StakingContract *StakingContractSession) ExchangeRatio() (*big.Int, error) {
+	return _StakingContract.Contract.ExchangeRatio(&_StakingContract.CallOpts)
+}
+
+// ExchangeRatio is a free data retrieval call binding the contract method 0x4006ccc5.
+//
+// Solidity: function exchangeRatio() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) ExchangeRatio() (*big.Int, error) {
+	return _StakingContract.Contract.ExchangeRatio(&_StakingContract.CallOpts)
+}
+
+// GetAccountedBalance is a free data retrieval call binding the contract method 0x33e5761f.
+//
+// Solidity: function getAccountedBalance() view returns(int256)
+func (_StakingContract *StakingContractCaller) GetAccountedBalance(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getAccountedBalance")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetAccountedBalance is a free data retrieval call binding the contract method 0x33e5761f.
+//
+// Solidity: function getAccountedBalance() view returns(int256)
+func (_StakingContract *StakingContractSession) GetAccountedBalance() (*big.Int, error) {
+	return _StakingContract.Contract.GetAccountedBalance(&_StakingContract.CallOpts)
+}
+
+// GetAccountedBalance is a free data retrieval call binding the contract method 0x33e5761f.
+//
+// Solidity: function getAccountedBalance() view returns(int256)
+func (_StakingContract *StakingContractCallerSession) GetAccountedBalance() (*big.Int, error) {
+	return _StakingContract.Contract.GetAccountedBalance(&_StakingContract.CallOpts)
+}
+
+// GetAccountedManagerRevenue is a free data retrieval call binding the contract method 0x08b84c0c.
+//
+// Solidity: function getAccountedManagerRevenue() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetAccountedManagerRevenue(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getAccountedManagerRevenue")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetAccountedManagerRevenue is a free data retrieval call binding the contract method 0x08b84c0c.
+//
+// Solidity: function getAccountedManagerRevenue() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetAccountedManagerRevenue() (*big.Int, error) {
+	return _StakingContract.Contract.GetAccountedManagerRevenue(&_StakingContract.CallOpts)
+}
+
+// GetAccountedManagerRevenue is a free data retrieval call binding the contract method 0x08b84c0c.
+//
+// Solidity: function getAccountedManagerRevenue() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetAccountedManagerRevenue() (*big.Int, error) {
+	return _StakingContract.Contract.GetAccountedManagerRevenue(&_StakingContract.CallOpts)
+}
+
+// GetAccountedUserRevenue is a free data retrieval call binding the contract method 0x61c993c5.
+//
+// Solidity: function getAccountedUserRevenue() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetAccountedUserRevenue(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getAccountedUserRevenue")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetAccountedUserRevenue is a free data retrieval call binding the contract method 0x61c993c5.
+//
+// Solidity: function getAccountedUserRevenue() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetAccountedUserRevenue() (*big.Int, error) {
+	return _StakingContract.Contract.GetAccountedUserRevenue(&_StakingContract.CallOpts)
+}
+
+// GetAccountedUserRevenue is a free data retrieval call binding the contract method 0x61c993c5.
+//
+// Solidity: function getAccountedUserRevenue() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetAccountedUserRevenue() (*big.Int, error) {
+	return _StakingContract.Contract.GetAccountedUserRevenue(&_StakingContract.CallOpts)
+}
+
+// GetCurrentDebts is a free data retrieval call binding the contract method 0x8b0bfd35.
+//
+// Solidity: function getCurrentDebts() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetCurrentDebts(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getCurrentDebts")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetCurrentDebts is a free data retrieval call binding the contract method 0x8b0bfd35.
+//
+// Solidity: function getCurrentDebts() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetCurrentDebts() (*big.Int, error) {
+	return _StakingContract.Contract.GetCurrentDebts(&_StakingContract.CallOpts)
+}
+
+// GetCurrentDebts is a free data retrieval call binding the contract method 0x8b0bfd35.
+//
+// Solidity: function getCurrentDebts() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetCurrentDebts() (*big.Int, error) {
+	return _StakingContract.Contract.GetCurrentDebts(&_StakingContract.CallOpts)
+}
+
+// GetDebtQueue is a free data retrieval call binding the contract method 0xdc3fc3b2.
+//
+// Solidity: function getDebtQueue() view returns(uint256 first, uint256 last)
+func (_StakingContract *StakingContractCaller) GetDebtQueue(opts *bind.CallOpts) (struct {
+	First *big.Int
+	Last  *big.Int
+}, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getDebtQueue")
+
+	outstruct := new(struct {
+		First *big.Int
+		Last  *big.Int
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.First = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	outstruct.Last = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
+
+	return *outstruct, err
+
+}
+
+// GetDebtQueue is a free data retrieval call binding the contract method 0xdc3fc3b2.
+//
+// Solidity: function getDebtQueue() view returns(uint256 first, uint256 last)
+func (_StakingContract *StakingContractSession) GetDebtQueue() (struct {
+	First *big.Int
+	Last  *big.Int
+}, error) {
+	return _StakingContract.Contract.GetDebtQueue(&_StakingContract.CallOpts)
+}
+
+// GetDebtQueue is a free data retrieval call binding the contract method 0xdc3fc3b2.
+//
+// Solidity: function getDebtQueue() view returns(uint256 first, uint256 last)
+func (_StakingContract *StakingContractCallerSession) GetDebtQueue() (struct {
+	First *big.Int
+	Last  *big.Int
+}, error) {
+	return _StakingContract.Contract.GetDebtQueue(&_StakingContract.CallOpts)
+}
+
+// GetNextValidatorId is a free data retrieval call binding the contract method 0xda863b3b.
+//
+// Solidity: function getNextValidatorId() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetNextValidatorId(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getNextValidatorId")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetNextValidatorId is a free data retrieval call binding the contract method 0xda863b3b.
+//
+// Solidity: function getNextValidatorId() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetNextValidatorId() (*big.Int, error) {
+	return _StakingContract.Contract.GetNextValidatorId(&_StakingContract.CallOpts)
+}
+
+// GetNextValidatorId is a free data retrieval call binding the contract method 0xda863b3b.
+//
+// Solidity: function getNextValidatorId() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetNextValidatorId() (*big.Int, error) {
+	return _StakingContract.Contract.GetNextValidatorId(&_StakingContract.CallOpts)
+}
+
+// GetPendingEthers is a free data retrieval call binding the contract method 0x64363f2b.
+//
+// Solidity: function getPendingEthers() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetPendingEthers(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getPendingEthers")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetPendingEthers is a free data retrieval call binding the contract method 0x64363f2b.
+//
+// Solidity: function getPendingEthers() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetPendingEthers() (*big.Int, error) {
+	return _StakingContract.Contract.GetPendingEthers(&_StakingContract.CallOpts)
+}
+
+// GetPendingEthers is a free data retrieval call binding the contract method 0x64363f2b.
+//
+// Solidity: function getPendingEthers() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetPendingEthers() (*big.Int, error) {
+	return _StakingContract.Contract.GetPendingEthers(&_StakingContract.CallOpts)
+}
+
+// GetRecentReceived is a free data retrieval call binding the contract method 0xe08f2d89.
+//
+// Solidity: function getRecentReceived() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetRecentReceived(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getRecentReceived")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetRecentReceived is a free data retrieval call binding the contract method 0xe08f2d89.
+//
+// Solidity: function getRecentReceived() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetRecentReceived() (*big.Int, error) {
+	return _StakingContract.Contract.GetRecentReceived(&_StakingContract.CallOpts)
+}
+
+// GetRecentReceived is a free data retrieval call binding the contract method 0xe08f2d89.
+//
+// Solidity: function getRecentReceived() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetRecentReceived() (*big.Int, error) {
+	return _StakingContract.Contract.GetRecentReceived(&_StakingContract.CallOpts)
+}
+
+// GetRecentSlashed is a free data retrieval call binding the contract method 0xaba52536.
+//
+// Solidity: function getRecentSlashed() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetRecentSlashed(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getRecentSlashed")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetRecentSlashed is a free data retrieval call binding the contract method 0xaba52536.
+//
+// Solidity: function getRecentSlashed() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetRecentSlashed() (*big.Int, error) {
+	return _StakingContract.Contract.GetRecentSlashed(&_StakingContract.CallOpts)
+}
+
+// GetRecentSlashed is a free data retrieval call binding the contract method 0xaba52536.
+//
+// Solidity: function getRecentSlashed() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetRecentSlashed() (*big.Int, error) {
+	return _StakingContract.Contract.GetRecentSlashed(&_StakingContract.CallOpts)
+}
+
+// GetRegisteredValidators is a free data retrieval call binding the contract method 0xf22abf37.
+//
+// Solidity: function getRegisteredValidators(uint256 idx_from, uint256 idx_to) view returns(bytes[] pubkeys, bytes[] signatures)
+func (_StakingContract *StakingContractCaller) GetRegisteredValidators(opts *bind.CallOpts, idx_from *big.Int, idx_to *big.Int) (struct {
+	Pubkeys    [][]byte
+	Signatures [][]byte
+}, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getRegisteredValidators", idx_from, idx_to)
+
+	outstruct := new(struct {
+		Pubkeys    [][]byte
+		Signatures [][]byte
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.Pubkeys = *abi.ConvertType(out[0], new([][]byte)).(*[][]byte)
+	outstruct.Signatures = *abi.ConvertType(out[1], new([][]byte)).(*[][]byte)
+
+	return *outstruct, err
+
+}
+
+// GetRegisteredValidators is a free data retrieval call binding the contract method 0xf22abf37.
+//
+// Solidity: function getRegisteredValidators(uint256 idx_from, uint256 idx_to) view returns(bytes[] pubkeys, bytes[] signatures)
+func (_StakingContract *StakingContractSession) GetRegisteredValidators(idx_from *big.Int, idx_to *big.Int) (struct {
+	Pubkeys    [][]byte
+	Signatures [][]byte
+}, error) {
+	return _StakingContract.Contract.GetRegisteredValidators(&_StakingContract.CallOpts, idx_from, idx_to)
+}
+
+// GetRegisteredValidators is a free data retrieval call binding the contract method 0xf22abf37.
+//
+// Solidity: function getRegisteredValidators(uint256 idx_from, uint256 idx_to) view returns(bytes[] pubkeys, bytes[] signatures)
+func (_StakingContract *StakingContractCallerSession) GetRegisteredValidators(idx_from *big.Int, idx_to *big.Int) (struct {
+	Pubkeys    [][]byte
+	Signatures [][]byte
+}, error) {
+	return _StakingContract.Contract.GetRegisteredValidators(&_StakingContract.CallOpts, idx_from, idx_to)
+}
+
+// GetRegisteredValidatorsCount is a free data retrieval call binding the contract method 0x30b12c8d.
+//
+// Solidity: function getRegisteredValidatorsCount() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetRegisteredValidatorsCount(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getRegisteredValidatorsCount")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetRegisteredValidatorsCount is a free data retrieval call binding the contract method 0x30b12c8d.
+//
+// Solidity: function getRegisteredValidatorsCount() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetRegisteredValidatorsCount() (*big.Int, error) {
+	return _StakingContract.Contract.GetRegisteredValidatorsCount(&_StakingContract.CallOpts)
+}
+
+// GetRegisteredValidatorsCount is a free data retrieval call binding the contract method 0x30b12c8d.
+//
+// Solidity: function getRegisteredValidatorsCount() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetRegisteredValidatorsCount() (*big.Int, error) {
+	return _StakingContract.Contract.GetRegisteredValidatorsCount(&_StakingContract.CallOpts)
+}
+
+// GetReportedValidatorBalance is a free data retrieval call binding the contract method 0xcdb54a1b.
+//
+// Solidity: function getReportedValidatorBalance() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetReportedValidatorBalance(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getReportedValidatorBalance")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetReportedValidatorBalance is a free data retrieval call binding the contract method 0xcdb54a1b.
+//
+// Solidity: function getReportedValidatorBalance() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetReportedValidatorBalance() (*big.Int, error) {
+	return _StakingContract.Contract.GetReportedValidatorBalance(&_StakingContract.CallOpts)
+}
+
+// GetReportedValidatorBalance is a free data retrieval call binding the contract method 0xcdb54a1b.
+//
+// Solidity: function getReportedValidatorBalance() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetReportedValidatorBalance() (*big.Int, error) {
+	return _StakingContract.Contract.GetReportedValidatorBalance(&_StakingContract.CallOpts)
+}
+
+// GetReportedValidators is a free data retrieval call binding the contract method 0x6a42602c.
+//
+// Solidity: function getReportedValidators() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetReportedValidators(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getReportedValidators")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetReportedValidators is a free data retrieval call binding the contract method 0x6a42602c.
+//
+// Solidity: function getReportedValidators() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetReportedValidators() (*big.Int, error) {
+	return _StakingContract.Contract.GetReportedValidators(&_StakingContract.CallOpts)
+}
+
+// GetReportedValidators is a free data retrieval call binding the contract method 0x6a42602c.
+//
+// Solidity: function getReportedValidators() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetReportedValidators() (*big.Int, error) {
+	return _StakingContract.Contract.GetReportedValidators(&_StakingContract.CallOpts)
+}
+
+// GetRoleAdmin is a free data retrieval call binding the contract method 0x248a9ca3.
+//
+// Solidity: function getRoleAdmin(bytes32 role) view returns(bytes32)
+func (_StakingContract *StakingContractCaller) GetRoleAdmin(opts *bind.CallOpts, role [32]byte) ([32]byte, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getRoleAdmin", role)
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// GetRoleAdmin is a free data retrieval call binding the contract method 0x248a9ca3.
+//
+// Solidity: function getRoleAdmin(bytes32 role) view returns(bytes32)
+func (_StakingContract *StakingContractSession) GetRoleAdmin(role [32]byte) ([32]byte, error) {
+	return _StakingContract.Contract.GetRoleAdmin(&_StakingContract.CallOpts, role)
+}
+
+// GetRoleAdmin is a free data retrieval call binding the contract method 0x248a9ca3.
+//
+// Solidity: function getRoleAdmin(bytes32 role) view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) GetRoleAdmin(role [32]byte) ([32]byte, error) {
+	return _StakingContract.Contract.GetRoleAdmin(&_StakingContract.CallOpts, role)
+}
+
+// GetStoppedValidatorsCount is a free data retrieval call binding the contract method 0x49557df9.
+//
+// Solidity: function getStoppedValidatorsCount() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetStoppedValidatorsCount(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getStoppedValidatorsCount")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetStoppedValidatorsCount is a free data retrieval call binding the contract method 0x49557df9.
+//
+// Solidity: function getStoppedValidatorsCount() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetStoppedValidatorsCount() (*big.Int, error) {
+	return _StakingContract.Contract.GetStoppedValidatorsCount(&_StakingContract.CallOpts)
+}
+
+// GetStoppedValidatorsCount is a free data retrieval call binding the contract method 0x49557df9.
+//
+// Solidity: function getStoppedValidatorsCount() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetStoppedValidatorsCount() (*big.Int, error) {
+	return _StakingContract.Contract.GetStoppedValidatorsCount(&_StakingContract.CallOpts)
+}
+
+// GetTotalStaked is a free data retrieval call binding the contract method 0x0917e776.
+//
+// Solidity: function getTotalStaked() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetTotalStaked(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getTotalStaked")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetTotalStaked is a free data retrieval call binding the contract method 0x0917e776.
+//
+// Solidity: function getTotalStaked() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetTotalStaked() (*big.Int, error) {
+	return _StakingContract.Contract.GetTotalStaked(&_StakingContract.CallOpts)
+}
+
+// GetTotalStaked is a free data retrieval call binding the contract method 0x0917e776.
+//
+// Solidity: function getTotalStaked() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetTotalStaked() (*big.Int, error) {
+	return _StakingContract.Contract.GetTotalStaked(&_StakingContract.CallOpts)
+}
+
+// GetVectorClock is a free data retrieval call binding the contract method 0xecacf56d.
+//
+// Solidity: function getVectorClock() view returns(bytes32)
+func (_StakingContract *StakingContractCaller) GetVectorClock(opts *bind.CallOpts) ([32]byte, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "getVectorClock")
+
+	if err != nil {
+		return *new([32]byte), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
+
+	return out0, err
+
+}
+
+// GetVectorClock is a free data retrieval call binding the contract method 0xecacf56d.
+//
+// Solidity: function getVectorClock() view returns(bytes32)
+func (_StakingContract *StakingContractSession) GetVectorClock() ([32]byte, error) {
+	return _StakingContract.Contract.GetVectorClock(&_StakingContract.CallOpts)
+}
+
+// GetVectorClock is a free data retrieval call binding the contract method 0xecacf56d.
+//
+// Solidity: function getVectorClock() view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) GetVectorClock() ([32]byte, error) {
+	return _StakingContract.Contract.GetVectorClock(&_StakingContract.CallOpts)
+}
+
+// HasRole is a free data retrieval call binding the contract method 0x91d14854.
+//
+// Solidity: function hasRole(bytes32 role, address account) view returns(bool)
+func (_StakingContract *StakingContractCaller) HasRole(opts *bind.CallOpts, role [32]byte, account common.Address) (bool, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "hasRole", role, account)
+
+	if err != nil {
+		return *new(bool), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
+
+	return out0, err
+
+}
+
+// HasRole is a free data retrieval call binding the contract method 0x91d14854.
+//
+// Solidity: function hasRole(bytes32 role, address account) view returns(bool)
+func (_StakingContract *StakingContractSession) HasRole(role [32]byte, account common.Address) (bool, error) {
+	return _StakingContract.Contract.HasRole(&_StakingContract.CallOpts, role, account)
+}
+
+// HasRole is a free data retrieval call binding the contract method 0x91d14854.
+//
+// Solidity: function hasRole(bytes32 role, address account) view returns(bool)
+func (_StakingContract *StakingContractCallerSession) HasRole(role [32]byte, account common.Address) (bool, error) {
+	return _StakingContract.Contract.HasRole(&_StakingContract.CallOpts, role, account)
+}
+
+// ManagerFeeShare is a free data retrieval call binding the contract method 0xe43a4954.
+//
+// Solidity: function managerFeeShare() view returns(uint256)
+func (_StakingContract *StakingContractCaller) ManagerFeeShare(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "managerFeeShare")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// ManagerFeeShare is a free data retrieval call binding the contract method 0xe43a4954.
+//
+// Solidity: function managerFeeShare() view returns(uint256)
+func (_StakingContract *StakingContractSession) ManagerFeeShare() (*big.Int, error) {
+	return _StakingContract.Contract.ManagerFeeShare(&_StakingContract.CallOpts)
+}
+
+// ManagerFeeShare is a free data retrieval call binding the contract method 0xe43a4954.
+//
+// Solidity: function managerFeeShare() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) ManagerFeeShare() (*big.Int, error) {
+	return _StakingContract.Contract.ManagerFeeShare(&_StakingContract.CallOpts)
 }
 
 // Paused is a free data retrieval call binding the contract method 0x5c975abb.
@@ -427,223 +1182,149 @@ func (_StakingContract *StakingContractCallerSession) Paused() (bool, error) {
 	return _StakingContract.Contract.Paused(&_StakingContract.CallOpts)
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// RedeemContract is a free data retrieval call binding the contract method 0x7a4473e1.
 //
-// Solidity: function symbol() view returns(string)
-func (_StakingContract *StakingContractCaller) Symbol(opts *bind.CallOpts) (string, error) {
+// Solidity: function redeemContract() view returns(address)
+func (_StakingContract *StakingContractCaller) RedeemContract(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "symbol")
+	err := _StakingContract.contract.Call(opts, &out, "redeemContract")
 
 	if err != nil {
-		return *new(string), err
+		return *new(common.Address), err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(string)).(*string)
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
 
 	return out0, err
 
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// RedeemContract is a free data retrieval call binding the contract method 0x7a4473e1.
 //
-// Solidity: function symbol() view returns(string)
-func (_StakingContract *StakingContractSession) Symbol() (string, error) {
-	return _StakingContract.Contract.Symbol(&_StakingContract.CallOpts)
+// Solidity: function redeemContract() view returns(address)
+func (_StakingContract *StakingContractSession) RedeemContract() (common.Address, error) {
+	return _StakingContract.Contract.RedeemContract(&_StakingContract.CallOpts)
 }
 
-// Symbol is a free data retrieval call binding the contract method 0x95d89b41.
+// RedeemContract is a free data retrieval call binding the contract method 0x7a4473e1.
 //
-// Solidity: function symbol() view returns(string)
-func (_StakingContract *StakingContractCallerSession) Symbol() (string, error) {
-	return _StakingContract.Contract.Symbol(&_StakingContract.CallOpts)
+// Solidity: function redeemContract() view returns(address)
+func (_StakingContract *StakingContractCallerSession) RedeemContract() (common.Address, error) {
+	return _StakingContract.Contract.RedeemContract(&_StakingContract.CallOpts)
 }
 
-// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
 //
-// Solidity: function totalSupply() view returns(uint256)
-func (_StakingContract *StakingContractCaller) TotalSupply(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
+func (_StakingContract *StakingContractCaller) SupportsInterface(opts *bind.CallOpts, interfaceId [4]byte) (bool, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "totalSupply")
+	err := _StakingContract.contract.Call(opts, &out, "supportsInterface", interfaceId)
 
 	if err != nil {
-		return *new(*big.Int), err
+		return *new(bool), err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	out0 := *abi.ConvertType(out[0], new(bool)).(*bool)
 
 	return out0, err
 
 }
 
-// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
 //
-// Solidity: function totalSupply() view returns(uint256)
-func (_StakingContract *StakingContractSession) TotalSupply() (*big.Int, error) {
-	return _StakingContract.Contract.TotalSupply(&_StakingContract.CallOpts)
+// Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
+func (_StakingContract *StakingContractSession) SupportsInterface(interfaceId [4]byte) (bool, error) {
+	return _StakingContract.Contract.SupportsInterface(&_StakingContract.CallOpts, interfaceId)
 }
 
-// TotalSupply is a free data retrieval call binding the contract method 0x18160ddd.
+// SupportsInterface is a free data retrieval call binding the contract method 0x01ffc9a7.
 //
-// Solidity: function totalSupply() view returns(uint256)
-func (_StakingContract *StakingContractCallerSession) TotalSupply() (*big.Int, error) {
-	return _StakingContract.Contract.TotalSupply(&_StakingContract.CallOpts)
+// Solidity: function supportsInterface(bytes4 interfaceId) view returns(bool)
+func (_StakingContract *StakingContractCallerSession) SupportsInterface(interfaceId [4]byte) (bool, error) {
+	return _StakingContract.Contract.SupportsInterface(&_StakingContract.CallOpts, interfaceId)
 }
 
-// TotalSupplyAt is a free data retrieval call binding the contract method 0x981b24d0.
+// WithdrawalCredentials is a free data retrieval call binding the contract method 0x4cd79e0a.
 //
-// Solidity: function totalSupplyAt(uint256 snapshotId) view returns(uint256)
-func (_StakingContract *StakingContractCaller) TotalSupplyAt(opts *bind.CallOpts, snapshotId *big.Int) (*big.Int, error) {
+// Solidity: function withdrawalCredentials() view returns(bytes32)
+func (_StakingContract *StakingContractCaller) WithdrawalCredentials(opts *bind.CallOpts) ([32]byte, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "totalSupplyAt", snapshotId)
+	err := _StakingContract.contract.Call(opts, &out, "withdrawalCredentials")
 
 	if err != nil {
-		return *new(*big.Int), err
+		return *new([32]byte), err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	out0 := *abi.ConvertType(out[0], new([32]byte)).(*[32]byte)
 
 	return out0, err
 
 }
 
-// TotalSupplyAt is a free data retrieval call binding the contract method 0x981b24d0.
+// WithdrawalCredentials is a free data retrieval call binding the contract method 0x4cd79e0a.
 //
-// Solidity: function totalSupplyAt(uint256 snapshotId) view returns(uint256)
-func (_StakingContract *StakingContractSession) TotalSupplyAt(snapshotId *big.Int) (*big.Int, error) {
-	return _StakingContract.Contract.TotalSupplyAt(&_StakingContract.CallOpts, snapshotId)
+// Solidity: function withdrawalCredentials() view returns(bytes32)
+func (_StakingContract *StakingContractSession) WithdrawalCredentials() ([32]byte, error) {
+	return _StakingContract.Contract.WithdrawalCredentials(&_StakingContract.CallOpts)
 }
 
-// TotalSupplyAt is a free data retrieval call binding the contract method 0x981b24d0.
+// WithdrawalCredentials is a free data retrieval call binding the contract method 0x4cd79e0a.
 //
-// Solidity: function totalSupplyAt(uint256 snapshotId) view returns(uint256)
-func (_StakingContract *StakingContractCallerSession) TotalSupplyAt(snapshotId *big.Int) (*big.Int, error) {
-	return _StakingContract.Contract.TotalSupplyAt(&_StakingContract.CallOpts, snapshotId)
+// Solidity: function withdrawalCredentials() view returns(bytes32)
+func (_StakingContract *StakingContractCallerSession) WithdrawalCredentials() ([32]byte, error) {
+	return _StakingContract.Contract.WithdrawalCredentials(&_StakingContract.CallOpts)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// XETHAddress is a free data retrieval call binding the contract method 0xb181033a.
 //
-// Solidity: function approve(address spender, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractTransactor) Approve(opts *bind.TransactOpts, spender common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "approve", spender, amount)
+// Solidity: function xETHAddress() view returns(address)
+func (_StakingContract *StakingContractCaller) XETHAddress(opts *bind.CallOpts) (common.Address, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "xETHAddress")
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// XETHAddress is a free data retrieval call binding the contract method 0xb181033a.
 //
-// Solidity: function approve(address spender, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractSession) Approve(spender common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Approve(&_StakingContract.TransactOpts, spender, amount)
+// Solidity: function xETHAddress() view returns(address)
+func (_StakingContract *StakingContractSession) XETHAddress() (common.Address, error) {
+	return _StakingContract.Contract.XETHAddress(&_StakingContract.CallOpts)
 }
 
-// Approve is a paid mutator transaction binding the contract method 0x095ea7b3.
+// XETHAddress is a free data retrieval call binding the contract method 0xb181033a.
 //
-// Solidity: function approve(address spender, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractTransactorSession) Approve(spender common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Approve(&_StakingContract.TransactOpts, spender, amount)
+// Solidity: function xETHAddress() view returns(address)
+func (_StakingContract *StakingContractCallerSession) XETHAddress() (common.Address, error) {
+	return _StakingContract.Contract.XETHAddress(&_StakingContract.CallOpts)
 }
 
-// BatchTransfer is a paid mutator transaction binding the contract method 0x88d695b2.
+// GrantRole is a paid mutator transaction binding the contract method 0x2f2ff15d.
 //
-// Solidity: function batchTransfer(address[] recipients, uint256[] amounts) returns()
-func (_StakingContract *StakingContractTransactor) BatchTransfer(opts *bind.TransactOpts, recipients []common.Address, amounts []*big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "batchTransfer", recipients, amounts)
+// Solidity: function grantRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractTransactor) GrantRole(opts *bind.TransactOpts, role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "grantRole", role, account)
 }
 
-// BatchTransfer is a paid mutator transaction binding the contract method 0x88d695b2.
+// GrantRole is a paid mutator transaction binding the contract method 0x2f2ff15d.
 //
-// Solidity: function batchTransfer(address[] recipients, uint256[] amounts) returns()
-func (_StakingContract *StakingContractSession) BatchTransfer(recipients []common.Address, amounts []*big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.BatchTransfer(&_StakingContract.TransactOpts, recipients, amounts)
+// Solidity: function grantRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractSession) GrantRole(role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.GrantRole(&_StakingContract.TransactOpts, role, account)
 }
 
-// BatchTransfer is a paid mutator transaction binding the contract method 0x88d695b2.
+// GrantRole is a paid mutator transaction binding the contract method 0x2f2ff15d.
 //
-// Solidity: function batchTransfer(address[] recipients, uint256[] amounts) returns()
-func (_StakingContract *StakingContractTransactorSession) BatchTransfer(recipients []common.Address, amounts []*big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.BatchTransfer(&_StakingContract.TransactOpts, recipients, amounts)
-}
-
-// Burn is a paid mutator transaction binding the contract method 0x42966c68.
-//
-// Solidity: function burn(uint256 amount) returns()
-func (_StakingContract *StakingContractTransactor) Burn(opts *bind.TransactOpts, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "burn", amount)
-}
-
-// Burn is a paid mutator transaction binding the contract method 0x42966c68.
-//
-// Solidity: function burn(uint256 amount) returns()
-func (_StakingContract *StakingContractSession) Burn(amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Burn(&_StakingContract.TransactOpts, amount)
-}
-
-// Burn is a paid mutator transaction binding the contract method 0x42966c68.
-//
-// Solidity: function burn(uint256 amount) returns()
-func (_StakingContract *StakingContractTransactorSession) Burn(amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Burn(&_StakingContract.TransactOpts, amount)
-}
-
-// BurnFrom is a paid mutator transaction binding the contract method 0x79cc6790.
-//
-// Solidity: function burnFrom(address account, uint256 amount) returns()
-func (_StakingContract *StakingContractTransactor) BurnFrom(opts *bind.TransactOpts, account common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "burnFrom", account, amount)
-}
-
-// BurnFrom is a paid mutator transaction binding the contract method 0x79cc6790.
-//
-// Solidity: function burnFrom(address account, uint256 amount) returns()
-func (_StakingContract *StakingContractSession) BurnFrom(account common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.BurnFrom(&_StakingContract.TransactOpts, account, amount)
-}
-
-// BurnFrom is a paid mutator transaction binding the contract method 0x79cc6790.
-//
-// Solidity: function burnFrom(address account, uint256 amount) returns()
-func (_StakingContract *StakingContractTransactorSession) BurnFrom(account common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.BurnFrom(&_StakingContract.TransactOpts, account, amount)
-}
-
-// DecreaseAllowance is a paid mutator transaction binding the contract method 0xa457c2d7.
-//
-// Solidity: function decreaseAllowance(address spender, uint256 subtractedValue) returns(bool)
-func (_StakingContract *StakingContractTransactor) DecreaseAllowance(opts *bind.TransactOpts, spender common.Address, subtractedValue *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "decreaseAllowance", spender, subtractedValue)
-}
-
-// DecreaseAllowance is a paid mutator transaction binding the contract method 0xa457c2d7.
-//
-// Solidity: function decreaseAllowance(address spender, uint256 subtractedValue) returns(bool)
-func (_StakingContract *StakingContractSession) DecreaseAllowance(spender common.Address, subtractedValue *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.DecreaseAllowance(&_StakingContract.TransactOpts, spender, subtractedValue)
-}
-
-// DecreaseAllowance is a paid mutator transaction binding the contract method 0xa457c2d7.
-//
-// Solidity: function decreaseAllowance(address spender, uint256 subtractedValue) returns(bool)
-func (_StakingContract *StakingContractTransactorSession) DecreaseAllowance(spender common.Address, subtractedValue *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.DecreaseAllowance(&_StakingContract.TransactOpts, spender, subtractedValue)
-}
-
-// IncreaseAllowance is a paid mutator transaction binding the contract method 0x39509351.
-//
-// Solidity: function increaseAllowance(address spender, uint256 addedValue) returns(bool)
-func (_StakingContract *StakingContractTransactor) IncreaseAllowance(opts *bind.TransactOpts, spender common.Address, addedValue *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "increaseAllowance", spender, addedValue)
-}
-
-// IncreaseAllowance is a paid mutator transaction binding the contract method 0x39509351.
-//
-// Solidity: function increaseAllowance(address spender, uint256 addedValue) returns(bool)
-func (_StakingContract *StakingContractSession) IncreaseAllowance(spender common.Address, addedValue *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.IncreaseAllowance(&_StakingContract.TransactOpts, spender, addedValue)
-}
-
-// IncreaseAllowance is a paid mutator transaction binding the contract method 0x39509351.
-//
-// Solidity: function increaseAllowance(address spender, uint256 addedValue) returns(bool)
-func (_StakingContract *StakingContractTransactorSession) IncreaseAllowance(spender common.Address, addedValue *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.IncreaseAllowance(&_StakingContract.TransactOpts, spender, addedValue)
+// Solidity: function grantRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractTransactorSession) GrantRole(role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.GrantRole(&_StakingContract.TransactOpts, role, account)
 }
 
 // Initialize is a paid mutator transaction binding the contract method 0x8129fc1c.
@@ -667,25 +1348,25 @@ func (_StakingContract *StakingContractTransactorSession) Initialize() (*types.T
 	return _StakingContract.Contract.Initialize(&_StakingContract.TransactOpts)
 }
 
-// Mint is a paid mutator transaction binding the contract method 0x40c10f19.
+// Mint is a paid mutator transaction binding the contract method 0x1b2ef1ca.
 //
-// Solidity: function mint(address to, uint256 amount) returns()
-func (_StakingContract *StakingContractTransactor) Mint(opts *bind.TransactOpts, to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "mint", to, amount)
+// Solidity: function mint(uint256 minToMint, uint256 deadline) payable returns(uint256 minted)
+func (_StakingContract *StakingContractTransactor) Mint(opts *bind.TransactOpts, minToMint *big.Int, deadline *big.Int) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "mint", minToMint, deadline)
 }
 
-// Mint is a paid mutator transaction binding the contract method 0x40c10f19.
+// Mint is a paid mutator transaction binding the contract method 0x1b2ef1ca.
 //
-// Solidity: function mint(address to, uint256 amount) returns()
-func (_StakingContract *StakingContractSession) Mint(to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Mint(&_StakingContract.TransactOpts, to, amount)
+// Solidity: function mint(uint256 minToMint, uint256 deadline) payable returns(uint256 minted)
+func (_StakingContract *StakingContractSession) Mint(minToMint *big.Int, deadline *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.Mint(&_StakingContract.TransactOpts, minToMint, deadline)
 }
 
-// Mint is a paid mutator transaction binding the contract method 0x40c10f19.
+// Mint is a paid mutator transaction binding the contract method 0x1b2ef1ca.
 //
-// Solidity: function mint(address to, uint256 amount) returns()
-func (_StakingContract *StakingContractTransactorSession) Mint(to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Mint(&_StakingContract.TransactOpts, to, amount)
+// Solidity: function mint(uint256 minToMint, uint256 deadline) payable returns(uint256 minted)
+func (_StakingContract *StakingContractTransactorSession) Mint(minToMint *big.Int, deadline *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.Mint(&_StakingContract.TransactOpts, minToMint, deadline)
 }
 
 // Pause is a paid mutator transaction binding the contract method 0x8456cb59.
@@ -709,130 +1390,340 @@ func (_StakingContract *StakingContractTransactorSession) Pause() (*types.Transa
 	return _StakingContract.Contract.Pause(&_StakingContract.TransactOpts)
 }
 
-// RenounceOwnership is a paid mutator transaction binding the contract method 0x715018a6.
+// PushBeacon is a paid mutator transaction binding the contract method 0x496bf5bb.
 //
-// Solidity: function renounceOwnership() returns()
-func (_StakingContract *StakingContractTransactor) RenounceOwnership(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "renounceOwnership")
+// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 _aliveBalance, bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactor) PushBeacon(opts *bind.TransactOpts, _aliveValidators *big.Int, _aliveBalance *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "pushBeacon", _aliveValidators, _aliveBalance, clock)
 }
 
-// RenounceOwnership is a paid mutator transaction binding the contract method 0x715018a6.
+// PushBeacon is a paid mutator transaction binding the contract method 0x496bf5bb.
 //
-// Solidity: function renounceOwnership() returns()
-func (_StakingContract *StakingContractSession) RenounceOwnership() (*types.Transaction, error) {
-	return _StakingContract.Contract.RenounceOwnership(&_StakingContract.TransactOpts)
+// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 _aliveBalance, bytes32 clock) returns()
+func (_StakingContract *StakingContractSession) PushBeacon(_aliveValidators *big.Int, _aliveBalance *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.PushBeacon(&_StakingContract.TransactOpts, _aliveValidators, _aliveBalance, clock)
 }
 
-// RenounceOwnership is a paid mutator transaction binding the contract method 0x715018a6.
+// PushBeacon is a paid mutator transaction binding the contract method 0x496bf5bb.
 //
-// Solidity: function renounceOwnership() returns()
-func (_StakingContract *StakingContractTransactorSession) RenounceOwnership() (*types.Transaction, error) {
-	return _StakingContract.Contract.RenounceOwnership(&_StakingContract.TransactOpts)
+// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 _aliveBalance, bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactorSession) PushBeacon(_aliveValidators *big.Int, _aliveBalance *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.PushBeacon(&_StakingContract.TransactOpts, _aliveValidators, _aliveBalance, clock)
 }
 
-// SetMintable is a paid mutator transaction binding the contract method 0xf7eb06c4.
+// RedeemFromValidators is a paid mutator transaction binding the contract method 0xf5404d60.
 //
-// Solidity: function setMintable(address account, bool allow) returns()
-func (_StakingContract *StakingContractTransactor) SetMintable(opts *bind.TransactOpts, account common.Address, allow bool) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "setMintable", account, allow)
+// Solidity: function redeemFromValidators(uint256 ethersToRedeem, uint256 maxToBurn, uint256 deadline) returns(uint256 burned)
+func (_StakingContract *StakingContractTransactor) RedeemFromValidators(opts *bind.TransactOpts, ethersToRedeem *big.Int, maxToBurn *big.Int, deadline *big.Int) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "redeemFromValidators", ethersToRedeem, maxToBurn, deadline)
 }
 
-// SetMintable is a paid mutator transaction binding the contract method 0xf7eb06c4.
+// RedeemFromValidators is a paid mutator transaction binding the contract method 0xf5404d60.
 //
-// Solidity: function setMintable(address account, bool allow) returns()
-func (_StakingContract *StakingContractSession) SetMintable(account common.Address, allow bool) (*types.Transaction, error) {
-	return _StakingContract.Contract.SetMintable(&_StakingContract.TransactOpts, account, allow)
+// Solidity: function redeemFromValidators(uint256 ethersToRedeem, uint256 maxToBurn, uint256 deadline) returns(uint256 burned)
+func (_StakingContract *StakingContractSession) RedeemFromValidators(ethersToRedeem *big.Int, maxToBurn *big.Int, deadline *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.RedeemFromValidators(&_StakingContract.TransactOpts, ethersToRedeem, maxToBurn, deadline)
 }
 
-// SetMintable is a paid mutator transaction binding the contract method 0xf7eb06c4.
+// RedeemFromValidators is a paid mutator transaction binding the contract method 0xf5404d60.
 //
-// Solidity: function setMintable(address account, bool allow) returns()
-func (_StakingContract *StakingContractTransactorSession) SetMintable(account common.Address, allow bool) (*types.Transaction, error) {
-	return _StakingContract.Contract.SetMintable(&_StakingContract.TransactOpts, account, allow)
+// Solidity: function redeemFromValidators(uint256 ethersToRedeem, uint256 maxToBurn, uint256 deadline) returns(uint256 burned)
+func (_StakingContract *StakingContractTransactorSession) RedeemFromValidators(ethersToRedeem *big.Int, maxToBurn *big.Int, deadline *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.RedeemFromValidators(&_StakingContract.TransactOpts, ethersToRedeem, maxToBurn, deadline)
 }
 
-// Snapshot is a paid mutator transaction binding the contract method 0x9711715a.
+// RegisterValidator is a paid mutator transaction binding the contract method 0x226f2645.
 //
-// Solidity: function snapshot() returns()
-func (_StakingContract *StakingContractTransactor) Snapshot(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "snapshot")
+// Solidity: function registerValidator(bytes pubkey, bytes signature) returns()
+func (_StakingContract *StakingContractTransactor) RegisterValidator(opts *bind.TransactOpts, pubkey []byte, signature []byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "registerValidator", pubkey, signature)
 }
 
-// Snapshot is a paid mutator transaction binding the contract method 0x9711715a.
+// RegisterValidator is a paid mutator transaction binding the contract method 0x226f2645.
 //
-// Solidity: function snapshot() returns()
-func (_StakingContract *StakingContractSession) Snapshot() (*types.Transaction, error) {
-	return _StakingContract.Contract.Snapshot(&_StakingContract.TransactOpts)
+// Solidity: function registerValidator(bytes pubkey, bytes signature) returns()
+func (_StakingContract *StakingContractSession) RegisterValidator(pubkey []byte, signature []byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.RegisterValidator(&_StakingContract.TransactOpts, pubkey, signature)
 }
 
-// Snapshot is a paid mutator transaction binding the contract method 0x9711715a.
+// RegisterValidator is a paid mutator transaction binding the contract method 0x226f2645.
 //
-// Solidity: function snapshot() returns()
-func (_StakingContract *StakingContractTransactorSession) Snapshot() (*types.Transaction, error) {
-	return _StakingContract.Contract.Snapshot(&_StakingContract.TransactOpts)
+// Solidity: function registerValidator(bytes pubkey, bytes signature) returns()
+func (_StakingContract *StakingContractTransactorSession) RegisterValidator(pubkey []byte, signature []byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.RegisterValidator(&_StakingContract.TransactOpts, pubkey, signature)
 }
 
-// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+// RegisterValidators is a paid mutator transaction binding the contract method 0xe7efb747.
 //
-// Solidity: function transfer(address to, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractTransactor) Transfer(opts *bind.TransactOpts, to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "transfer", to, amount)
+// Solidity: function registerValidators(bytes[] pubkeys, bytes[] signatures) returns()
+func (_StakingContract *StakingContractTransactor) RegisterValidators(opts *bind.TransactOpts, pubkeys [][]byte, signatures [][]byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "registerValidators", pubkeys, signatures)
 }
 
-// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+// RegisterValidators is a paid mutator transaction binding the contract method 0xe7efb747.
 //
-// Solidity: function transfer(address to, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractSession) Transfer(to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Transfer(&_StakingContract.TransactOpts, to, amount)
+// Solidity: function registerValidators(bytes[] pubkeys, bytes[] signatures) returns()
+func (_StakingContract *StakingContractSession) RegisterValidators(pubkeys [][]byte, signatures [][]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.RegisterValidators(&_StakingContract.TransactOpts, pubkeys, signatures)
 }
 
-// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+// RegisterValidators is a paid mutator transaction binding the contract method 0xe7efb747.
 //
-// Solidity: function transfer(address to, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractTransactorSession) Transfer(to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.Transfer(&_StakingContract.TransactOpts, to, amount)
+// Solidity: function registerValidators(bytes[] pubkeys, bytes[] signatures) returns()
+func (_StakingContract *StakingContractTransactorSession) RegisterValidators(pubkeys [][]byte, signatures [][]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.RegisterValidators(&_StakingContract.TransactOpts, pubkeys, signatures)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// RenounceRole is a paid mutator transaction binding the contract method 0x36568abe.
 //
-// Solidity: function transferFrom(address from, address to, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractTransactor) TransferFrom(opts *bind.TransactOpts, from common.Address, to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "transferFrom", from, to, amount)
+// Solidity: function renounceRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractTransactor) RenounceRole(opts *bind.TransactOpts, role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "renounceRole", role, account)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// RenounceRole is a paid mutator transaction binding the contract method 0x36568abe.
 //
-// Solidity: function transferFrom(address from, address to, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractSession) TransferFrom(from common.Address, to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.TransferFrom(&_StakingContract.TransactOpts, from, to, amount)
+// Solidity: function renounceRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractSession) RenounceRole(role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.RenounceRole(&_StakingContract.TransactOpts, role, account)
 }
 
-// TransferFrom is a paid mutator transaction binding the contract method 0x23b872dd.
+// RenounceRole is a paid mutator transaction binding the contract method 0x36568abe.
 //
-// Solidity: function transferFrom(address from, address to, uint256 amount) returns(bool)
-func (_StakingContract *StakingContractTransactorSession) TransferFrom(from common.Address, to common.Address, amount *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.TransferFrom(&_StakingContract.TransactOpts, from, to, amount)
+// Solidity: function renounceRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractTransactorSession) RenounceRole(role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.RenounceRole(&_StakingContract.TransactOpts, role, account)
 }
 
-// TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
+// ReplaceValidator is a paid mutator transaction binding the contract method 0xc3d51709.
 //
-// Solidity: function transferOwnership(address newOwner) returns()
-func (_StakingContract *StakingContractTransactor) TransferOwnership(opts *bind.TransactOpts, newOwner common.Address) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "transferOwnership", newOwner)
+// Solidity: function replaceValidator(bytes oldpubkey, bytes pubkey, bytes signature) returns()
+func (_StakingContract *StakingContractTransactor) ReplaceValidator(opts *bind.TransactOpts, oldpubkey []byte, pubkey []byte, signature []byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "replaceValidator", oldpubkey, pubkey, signature)
 }
 
-// TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
+// ReplaceValidator is a paid mutator transaction binding the contract method 0xc3d51709.
 //
-// Solidity: function transferOwnership(address newOwner) returns()
-func (_StakingContract *StakingContractSession) TransferOwnership(newOwner common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.TransferOwnership(&_StakingContract.TransactOpts, newOwner)
+// Solidity: function replaceValidator(bytes oldpubkey, bytes pubkey, bytes signature) returns()
+func (_StakingContract *StakingContractSession) ReplaceValidator(oldpubkey []byte, pubkey []byte, signature []byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.ReplaceValidator(&_StakingContract.TransactOpts, oldpubkey, pubkey, signature)
 }
 
-// TransferOwnership is a paid mutator transaction binding the contract method 0xf2fde38b.
+// ReplaceValidator is a paid mutator transaction binding the contract method 0xc3d51709.
 //
-// Solidity: function transferOwnership(address newOwner) returns()
-func (_StakingContract *StakingContractTransactorSession) TransferOwnership(newOwner common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.TransferOwnership(&_StakingContract.TransactOpts, newOwner)
+// Solidity: function replaceValidator(bytes oldpubkey, bytes pubkey, bytes signature) returns()
+func (_StakingContract *StakingContractTransactorSession) ReplaceValidator(oldpubkey []byte, pubkey []byte, signature []byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.ReplaceValidator(&_StakingContract.TransactOpts, oldpubkey, pubkey, signature)
+}
+
+// RevokeRole is a paid mutator transaction binding the contract method 0xd547741f.
+//
+// Solidity: function revokeRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractTransactor) RevokeRole(opts *bind.TransactOpts, role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "revokeRole", role, account)
+}
+
+// RevokeRole is a paid mutator transaction binding the contract method 0xd547741f.
+//
+// Solidity: function revokeRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractSession) RevokeRole(role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.RevokeRole(&_StakingContract.TransactOpts, role, account)
+}
+
+// RevokeRole is a paid mutator transaction binding the contract method 0xd547741f.
+//
+// Solidity: function revokeRole(bytes32 role, address account) returns()
+func (_StakingContract *StakingContractTransactorSession) RevokeRole(role [32]byte, account common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.RevokeRole(&_StakingContract.TransactOpts, role, account)
+}
+
+// SetETHDepositContract is a paid mutator transaction binding the contract method 0x91b66caa.
+//
+// Solidity: function setETHDepositContract(address _ethDepositContract) returns()
+func (_StakingContract *StakingContractTransactor) SetETHDepositContract(opts *bind.TransactOpts, _ethDepositContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "setETHDepositContract", _ethDepositContract)
+}
+
+// SetETHDepositContract is a paid mutator transaction binding the contract method 0x91b66caa.
+//
+// Solidity: function setETHDepositContract(address _ethDepositContract) returns()
+func (_StakingContract *StakingContractSession) SetETHDepositContract(_ethDepositContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetETHDepositContract(&_StakingContract.TransactOpts, _ethDepositContract)
+}
+
+// SetETHDepositContract is a paid mutator transaction binding the contract method 0x91b66caa.
+//
+// Solidity: function setETHDepositContract(address _ethDepositContract) returns()
+func (_StakingContract *StakingContractTransactorSession) SetETHDepositContract(_ethDepositContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetETHDepositContract(&_StakingContract.TransactOpts, _ethDepositContract)
+}
+
+// SetManagerFeeShare is a paid mutator transaction binding the contract method 0x755d7dd3.
+//
+// Solidity: function setManagerFeeShare(uint256 milli) returns()
+func (_StakingContract *StakingContractTransactor) SetManagerFeeShare(opts *bind.TransactOpts, milli *big.Int) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "setManagerFeeShare", milli)
+}
+
+// SetManagerFeeShare is a paid mutator transaction binding the contract method 0x755d7dd3.
+//
+// Solidity: function setManagerFeeShare(uint256 milli) returns()
+func (_StakingContract *StakingContractSession) SetManagerFeeShare(milli *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetManagerFeeShare(&_StakingContract.TransactOpts, milli)
+}
+
+// SetManagerFeeShare is a paid mutator transaction binding the contract method 0x755d7dd3.
+//
+// Solidity: function setManagerFeeShare(uint256 milli) returns()
+func (_StakingContract *StakingContractTransactorSession) SetManagerFeeShare(milli *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetManagerFeeShare(&_StakingContract.TransactOpts, milli)
+}
+
+// SetRedeemContract is a paid mutator transaction binding the contract method 0x6bb022c8.
+//
+// Solidity: function setRedeemContract(address _redeemContract) returns()
+func (_StakingContract *StakingContractTransactor) SetRedeemContract(opts *bind.TransactOpts, _redeemContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "setRedeemContract", _redeemContract)
+}
+
+// SetRedeemContract is a paid mutator transaction binding the contract method 0x6bb022c8.
+//
+// Solidity: function setRedeemContract(address _redeemContract) returns()
+func (_StakingContract *StakingContractSession) SetRedeemContract(_redeemContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetRedeemContract(&_StakingContract.TransactOpts, _redeemContract)
+}
+
+// SetRedeemContract is a paid mutator transaction binding the contract method 0x6bb022c8.
+//
+// Solidity: function setRedeemContract(address _redeemContract) returns()
+func (_StakingContract *StakingContractTransactorSession) SetRedeemContract(_redeemContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetRedeemContract(&_StakingContract.TransactOpts, _redeemContract)
+}
+
+// SetWithdrawCredential is a paid mutator transaction binding the contract method 0xd7d25461.
+//
+// Solidity: function setWithdrawCredential(bytes32 withdrawalCredentials_) returns()
+func (_StakingContract *StakingContractTransactor) SetWithdrawCredential(opts *bind.TransactOpts, withdrawalCredentials_ [32]byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "setWithdrawCredential", withdrawalCredentials_)
+}
+
+// SetWithdrawCredential is a paid mutator transaction binding the contract method 0xd7d25461.
+//
+// Solidity: function setWithdrawCredential(bytes32 withdrawalCredentials_) returns()
+func (_StakingContract *StakingContractSession) SetWithdrawCredential(withdrawalCredentials_ [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetWithdrawCredential(&_StakingContract.TransactOpts, withdrawalCredentials_)
+}
+
+// SetWithdrawCredential is a paid mutator transaction binding the contract method 0xd7d25461.
+//
+// Solidity: function setWithdrawCredential(bytes32 withdrawalCredentials_) returns()
+func (_StakingContract *StakingContractTransactorSession) SetWithdrawCredential(withdrawalCredentials_ [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetWithdrawCredential(&_StakingContract.TransactOpts, withdrawalCredentials_)
+}
+
+// SetXETHContractAddress is a paid mutator transaction binding the contract method 0x72cda182.
+//
+// Solidity: function setXETHContractAddress(address _xETHContract) returns()
+func (_StakingContract *StakingContractTransactor) SetXETHContractAddress(opts *bind.TransactOpts, _xETHContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "setXETHContractAddress", _xETHContract)
+}
+
+// SetXETHContractAddress is a paid mutator transaction binding the contract method 0x72cda182.
+//
+// Solidity: function setXETHContractAddress(address _xETHContract) returns()
+func (_StakingContract *StakingContractSession) SetXETHContractAddress(_xETHContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetXETHContractAddress(&_StakingContract.TransactOpts, _xETHContract)
+}
+
+// SetXETHContractAddress is a paid mutator transaction binding the contract method 0x72cda182.
+//
+// Solidity: function setXETHContractAddress(address _xETHContract) returns()
+func (_StakingContract *StakingContractTransactorSession) SetXETHContractAddress(_xETHContract common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.SetXETHContractAddress(&_StakingContract.TransactOpts, _xETHContract)
+}
+
+// Stake is a paid mutator transaction binding the contract method 0x3a4b66f1.
+//
+// Solidity: function stake() returns()
+func (_StakingContract *StakingContractTransactor) Stake(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "stake")
+}
+
+// Stake is a paid mutator transaction binding the contract method 0x3a4b66f1.
+//
+// Solidity: function stake() returns()
+func (_StakingContract *StakingContractSession) Stake() (*types.Transaction, error) {
+	return _StakingContract.Contract.Stake(&_StakingContract.TransactOpts)
+}
+
+// Stake is a paid mutator transaction binding the contract method 0x3a4b66f1.
+//
+// Solidity: function stake() returns()
+func (_StakingContract *StakingContractTransactorSession) Stake() (*types.Transaction, error) {
+	return _StakingContract.Contract.Stake(&_StakingContract.TransactOpts)
+}
+
+// SumbitRewardWithdrawal is a paid mutator transaction binding the contract method 0xba19912e.
+//
+// Solidity: function sumbitRewardWithdrawal(uint256 amount) returns()
+func (_StakingContract *StakingContractTransactor) SumbitRewardWithdrawal(opts *bind.TransactOpts, amount *big.Int) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "sumbitRewardWithdrawal", amount)
+}
+
+// SumbitRewardWithdrawal is a paid mutator transaction binding the contract method 0xba19912e.
+//
+// Solidity: function sumbitRewardWithdrawal(uint256 amount) returns()
+func (_StakingContract *StakingContractSession) SumbitRewardWithdrawal(amount *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.SumbitRewardWithdrawal(&_StakingContract.TransactOpts, amount)
+}
+
+// SumbitRewardWithdrawal is a paid mutator transaction binding the contract method 0xba19912e.
+//
+// Solidity: function sumbitRewardWithdrawal(uint256 amount) returns()
+func (_StakingContract *StakingContractTransactorSession) SumbitRewardWithdrawal(amount *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.SumbitRewardWithdrawal(&_StakingContract.TransactOpts, amount)
+}
+
+// SwitchPhase is a paid mutator transaction binding the contract method 0x63e54717.
+//
+// Solidity: function switchPhase(uint256 newPhase) returns()
+func (_StakingContract *StakingContractTransactor) SwitchPhase(opts *bind.TransactOpts, newPhase *big.Int) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "switchPhase", newPhase)
+}
+
+// SwitchPhase is a paid mutator transaction binding the contract method 0x63e54717.
+//
+// Solidity: function switchPhase(uint256 newPhase) returns()
+func (_StakingContract *StakingContractSession) SwitchPhase(newPhase *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.SwitchPhase(&_StakingContract.TransactOpts, newPhase)
+}
+
+// SwitchPhase is a paid mutator transaction binding the contract method 0x63e54717.
+//
+// Solidity: function switchPhase(uint256 newPhase) returns()
+func (_StakingContract *StakingContractTransactorSession) SwitchPhase(newPhase *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.SwitchPhase(&_StakingContract.TransactOpts, newPhase)
+}
+
+// SyncBalance is a paid mutator transaction binding the contract method 0x16c14416.
+//
+// Solidity: function syncBalance(bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactor) SyncBalance(opts *bind.TransactOpts, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "syncBalance", clock)
+}
+
+// SyncBalance is a paid mutator transaction binding the contract method 0x16c14416.
+//
+// Solidity: function syncBalance(bytes32 clock) returns()
+func (_StakingContract *StakingContractSession) SyncBalance(clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.SyncBalance(&_StakingContract.TransactOpts, clock)
+}
+
+// SyncBalance is a paid mutator transaction binding the contract method 0x16c14416.
+//
+// Solidity: function syncBalance(bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactorSession) SyncBalance(clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.SyncBalance(&_StakingContract.TransactOpts, clock)
 }
 
 // Unpause is a paid mutator transaction binding the contract method 0x3f4ba83a.
@@ -856,9 +1747,93 @@ func (_StakingContract *StakingContractTransactorSession) Unpause() (*types.Tran
 	return _StakingContract.Contract.Unpause(&_StakingContract.TransactOpts)
 }
 
-// StakingContractApprovalIterator is returned from FilterApproval and is used to iterate over the raw logs and unpacked data for Approval events raised by the StakingContract contract.
-type StakingContractApprovalIterator struct {
-	Event *StakingContractApproval // Event containing the contract specifics and raw log
+// ValidatorSlashedStop is a paid mutator transaction binding the contract method 0xf36d7ff3.
+//
+// Solidity: function validatorSlashedStop(bytes[] _stoppedPubKeys, uint256 _remainingAmount, uint256 _slashedAmount, bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactor) ValidatorSlashedStop(opts *bind.TransactOpts, _stoppedPubKeys [][]byte, _remainingAmount *big.Int, _slashedAmount *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "validatorSlashedStop", _stoppedPubKeys, _remainingAmount, _slashedAmount, clock)
+}
+
+// ValidatorSlashedStop is a paid mutator transaction binding the contract method 0xf36d7ff3.
+//
+// Solidity: function validatorSlashedStop(bytes[] _stoppedPubKeys, uint256 _remainingAmount, uint256 _slashedAmount, bytes32 clock) returns()
+func (_StakingContract *StakingContractSession) ValidatorSlashedStop(_stoppedPubKeys [][]byte, _remainingAmount *big.Int, _slashedAmount *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.ValidatorSlashedStop(&_StakingContract.TransactOpts, _stoppedPubKeys, _remainingAmount, _slashedAmount, clock)
+}
+
+// ValidatorSlashedStop is a paid mutator transaction binding the contract method 0xf36d7ff3.
+//
+// Solidity: function validatorSlashedStop(bytes[] _stoppedPubKeys, uint256 _remainingAmount, uint256 _slashedAmount, bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactorSession) ValidatorSlashedStop(_stoppedPubKeys [][]byte, _remainingAmount *big.Int, _slashedAmount *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.ValidatorSlashedStop(&_StakingContract.TransactOpts, _stoppedPubKeys, _remainingAmount, _slashedAmount, clock)
+}
+
+// ValidatorStopped is a paid mutator transaction binding the contract method 0x1616e43d.
+//
+// Solidity: function validatorStopped(bytes[] _stoppedPubKeys, uint256 _stoppedBalance, bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactor) ValidatorStopped(opts *bind.TransactOpts, _stoppedPubKeys [][]byte, _stoppedBalance *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "validatorStopped", _stoppedPubKeys, _stoppedBalance, clock)
+}
+
+// ValidatorStopped is a paid mutator transaction binding the contract method 0x1616e43d.
+//
+// Solidity: function validatorStopped(bytes[] _stoppedPubKeys, uint256 _stoppedBalance, bytes32 clock) returns()
+func (_StakingContract *StakingContractSession) ValidatorStopped(_stoppedPubKeys [][]byte, _stoppedBalance *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.ValidatorStopped(&_StakingContract.TransactOpts, _stoppedPubKeys, _stoppedBalance, clock)
+}
+
+// ValidatorStopped is a paid mutator transaction binding the contract method 0x1616e43d.
+//
+// Solidity: function validatorStopped(bytes[] _stoppedPubKeys, uint256 _stoppedBalance, bytes32 clock) returns()
+func (_StakingContract *StakingContractTransactorSession) ValidatorStopped(_stoppedPubKeys [][]byte, _stoppedBalance *big.Int, clock [32]byte) (*types.Transaction, error) {
+	return _StakingContract.Contract.ValidatorStopped(&_StakingContract.TransactOpts, _stoppedPubKeys, _stoppedBalance, clock)
+}
+
+// WithdrawManagerFee is a paid mutator transaction binding the contract method 0xfa0ec2ce.
+//
+// Solidity: function withdrawManagerFee(uint256 amount, address to) returns()
+func (_StakingContract *StakingContractTransactor) WithdrawManagerFee(opts *bind.TransactOpts, amount *big.Int, to common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "withdrawManagerFee", amount, to)
+}
+
+// WithdrawManagerFee is a paid mutator transaction binding the contract method 0xfa0ec2ce.
+//
+// Solidity: function withdrawManagerFee(uint256 amount, address to) returns()
+func (_StakingContract *StakingContractSession) WithdrawManagerFee(amount *big.Int, to common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.WithdrawManagerFee(&_StakingContract.TransactOpts, amount, to)
+}
+
+// WithdrawManagerFee is a paid mutator transaction binding the contract method 0xfa0ec2ce.
+//
+// Solidity: function withdrawManagerFee(uint256 amount, address to) returns()
+func (_StakingContract *StakingContractTransactorSession) WithdrawManagerFee(amount *big.Int, to common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.WithdrawManagerFee(&_StakingContract.TransactOpts, amount, to)
+}
+
+// Receive is a paid mutator transaction binding the contract receive function.
+//
+// Solidity: receive() payable returns()
+func (_StakingContract *StakingContractTransactor) Receive(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _StakingContract.contract.RawTransact(opts, nil) // calldata is disallowed for receive function
+}
+
+// Receive is a paid mutator transaction binding the contract receive function.
+//
+// Solidity: receive() payable returns()
+func (_StakingContract *StakingContractSession) Receive() (*types.Transaction, error) {
+	return _StakingContract.Contract.Receive(&_StakingContract.TransactOpts)
+}
+
+// Receive is a paid mutator transaction binding the contract receive function.
+//
+// Solidity: receive() payable returns()
+func (_StakingContract *StakingContractTransactorSession) Receive() (*types.Transaction, error) {
+	return _StakingContract.Contract.Receive(&_StakingContract.TransactOpts)
+}
+
+// StakingContractBalanceSyncedIterator is returned from FilterBalanceSynced and is used to iterate over the raw logs and unpacked data for BalanceSynced events raised by the StakingContract contract.
+type StakingContractBalanceSyncedIterator struct {
+	Event *StakingContractBalanceSynced // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -872,7 +1847,7 @@ type StakingContractApprovalIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *StakingContractApprovalIterator) Next() bool {
+func (it *StakingContractBalanceSyncedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -881,7 +1856,7 @@ func (it *StakingContractApprovalIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(StakingContractApproval)
+			it.Event = new(StakingContractBalanceSynced)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -896,7 +1871,7 @@ func (it *StakingContractApprovalIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(StakingContractApproval)
+		it.Event = new(StakingContractBalanceSynced)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -912,61 +1887,41 @@ func (it *StakingContractApprovalIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractApprovalIterator) Error() error {
+func (it *StakingContractBalanceSyncedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *StakingContractApprovalIterator) Close() error {
+func (it *StakingContractBalanceSyncedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// StakingContractApproval represents a Approval event raised by the StakingContract contract.
-type StakingContractApproval struct {
-	Owner   common.Address
-	Spender common.Address
-	Value   *big.Int
-	Raw     types.Log // Blockchain specific contextual infos
+// StakingContractBalanceSynced represents a BalanceSynced event raised by the StakingContract contract.
+type StakingContractBalanceSynced struct {
+	Diff *big.Int
+	Raw  types.Log // Blockchain specific contextual infos
 }
 
-// FilterApproval is a free log retrieval operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// FilterBalanceSynced is a free log retrieval operation binding the contract event 0xe7948c33eb604391785037114655100edf93283c25b69884e9238ae197f07817.
 //
-// Solidity: event Approval(address indexed owner, address indexed spender, uint256 value)
-func (_StakingContract *StakingContractFilterer) FilterApproval(opts *bind.FilterOpts, owner []common.Address, spender []common.Address) (*StakingContractApprovalIterator, error) {
+// Solidity: event BalanceSynced(uint256 diff)
+func (_StakingContract *StakingContractFilterer) FilterBalanceSynced(opts *bind.FilterOpts) (*StakingContractBalanceSyncedIterator, error) {
 
-	var ownerRule []interface{}
-	for _, ownerItem := range owner {
-		ownerRule = append(ownerRule, ownerItem)
-	}
-	var spenderRule []interface{}
-	for _, spenderItem := range spender {
-		spenderRule = append(spenderRule, spenderItem)
-	}
-
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "Approval", ownerRule, spenderRule)
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "BalanceSynced")
 	if err != nil {
 		return nil, err
 	}
-	return &StakingContractApprovalIterator{contract: _StakingContract.contract, event: "Approval", logs: logs, sub: sub}, nil
+	return &StakingContractBalanceSyncedIterator{contract: _StakingContract.contract, event: "BalanceSynced", logs: logs, sub: sub}, nil
 }
 
-// WatchApproval is a free log subscription operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// WatchBalanceSynced is a free log subscription operation binding the contract event 0xe7948c33eb604391785037114655100edf93283c25b69884e9238ae197f07817.
 //
-// Solidity: event Approval(address indexed owner, address indexed spender, uint256 value)
-func (_StakingContract *StakingContractFilterer) WatchApproval(opts *bind.WatchOpts, sink chan<- *StakingContractApproval, owner []common.Address, spender []common.Address) (event.Subscription, error) {
+// Solidity: event BalanceSynced(uint256 diff)
+func (_StakingContract *StakingContractFilterer) WatchBalanceSynced(opts *bind.WatchOpts, sink chan<- *StakingContractBalanceSynced) (event.Subscription, error) {
 
-	var ownerRule []interface{}
-	for _, ownerItem := range owner {
-		ownerRule = append(ownerRule, ownerItem)
-	}
-	var spenderRule []interface{}
-	for _, spenderItem := range spender {
-		spenderRule = append(spenderRule, spenderItem)
-	}
-
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "Approval", ownerRule, spenderRule)
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "BalanceSynced")
 	if err != nil {
 		return nil, err
 	}
@@ -976,8 +1931,8 @@ func (_StakingContract *StakingContractFilterer) WatchApproval(opts *bind.WatchO
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractApproval)
-				if err := _StakingContract.contract.UnpackLog(event, "Approval", log); err != nil {
+				event := new(StakingContractBalanceSynced)
+				if err := _StakingContract.contract.UnpackLog(event, "BalanceSynced", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -998,21 +1953,21 @@ func (_StakingContract *StakingContractFilterer) WatchApproval(opts *bind.WatchO
 	}), nil
 }
 
-// ParseApproval is a log parse operation binding the contract event 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925.
+// ParseBalanceSynced is a log parse operation binding the contract event 0xe7948c33eb604391785037114655100edf93283c25b69884e9238ae197f07817.
 //
-// Solidity: event Approval(address indexed owner, address indexed spender, uint256 value)
-func (_StakingContract *StakingContractFilterer) ParseApproval(log types.Log) (*StakingContractApproval, error) {
-	event := new(StakingContractApproval)
-	if err := _StakingContract.contract.UnpackLog(event, "Approval", log); err != nil {
+// Solidity: event BalanceSynced(uint256 diff)
+func (_StakingContract *StakingContractFilterer) ParseBalanceSynced(log types.Log) (*StakingContractBalanceSynced, error) {
+	event := new(StakingContractBalanceSynced)
+	if err := _StakingContract.contract.UnpackLog(event, "BalanceSynced", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// StakingContractMintableIterator is returned from FilterMintable and is used to iterate over the raw logs and unpacked data for Mintable events raised by the StakingContract contract.
-type StakingContractMintableIterator struct {
-	Event *StakingContractMintable // Event containing the contract specifics and raw log
+// StakingContractDebtQueuedIterator is returned from FilterDebtQueued and is used to iterate over the raw logs and unpacked data for DebtQueued events raised by the StakingContract contract.
+type StakingContractDebtQueuedIterator struct {
+	Event *StakingContractDebtQueued // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1026,7 +1981,7 @@ type StakingContractMintableIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *StakingContractMintableIterator) Next() bool {
+func (it *StakingContractDebtQueuedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1035,7 +1990,7 @@ func (it *StakingContractMintableIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(StakingContractMintable)
+			it.Event = new(StakingContractDebtQueued)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1050,7 +2005,7 @@ func (it *StakingContractMintableIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(StakingContractMintable)
+		it.Event = new(StakingContractDebtQueued)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1066,41 +2021,310 @@ func (it *StakingContractMintableIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractMintableIterator) Error() error {
+func (it *StakingContractDebtQueuedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *StakingContractMintableIterator) Close() error {
+func (it *StakingContractDebtQueuedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// StakingContractMintable represents a Mintable event raised by the StakingContract contract.
-type StakingContractMintable struct {
+// StakingContractDebtQueued represents a DebtQueued event raised by the StakingContract contract.
+type StakingContractDebtQueued struct {
+	Creditor    common.Address
+	AmountEther *big.Int
+	Raw         types.Log // Blockchain specific contextual infos
+}
+
+// FilterDebtQueued is a free log retrieval operation binding the contract event 0x889f3b08db1ce169841b4f7e2aadfe4298088b1bce57b31fecae3260dd435829.
+//
+// Solidity: event DebtQueued(address creditor, uint256 amountEther)
+func (_StakingContract *StakingContractFilterer) FilterDebtQueued(opts *bind.FilterOpts) (*StakingContractDebtQueuedIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "DebtQueued")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractDebtQueuedIterator{contract: _StakingContract.contract, event: "DebtQueued", logs: logs, sub: sub}, nil
+}
+
+// WatchDebtQueued is a free log subscription operation binding the contract event 0x889f3b08db1ce169841b4f7e2aadfe4298088b1bce57b31fecae3260dd435829.
+//
+// Solidity: event DebtQueued(address creditor, uint256 amountEther)
+func (_StakingContract *StakingContractFilterer) WatchDebtQueued(opts *bind.WatchOpts, sink chan<- *StakingContractDebtQueued) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "DebtQueued")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractDebtQueued)
+				if err := _StakingContract.contract.UnpackLog(event, "DebtQueued", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseDebtQueued is a log parse operation binding the contract event 0x889f3b08db1ce169841b4f7e2aadfe4298088b1bce57b31fecae3260dd435829.
+//
+// Solidity: event DebtQueued(address creditor, uint256 amountEther)
+func (_StakingContract *StakingContractFilterer) ParseDebtQueued(log types.Log) (*StakingContractDebtQueued, error) {
+	event := new(StakingContractDebtQueued)
+	if err := _StakingContract.contract.UnpackLog(event, "DebtQueued", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractDepositContractSetIterator is returned from FilterDepositContractSet and is used to iterate over the raw logs and unpacked data for DepositContractSet events raised by the StakingContract contract.
+type StakingContractDepositContractSetIterator struct {
+	Event *StakingContractDepositContractSet // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractDepositContractSetIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractDepositContractSet)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractDepositContractSet)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractDepositContractSetIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractDepositContractSetIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractDepositContractSet represents a DepositContractSet event raised by the StakingContract contract.
+type StakingContractDepositContractSet struct {
+	Addr common.Address
+	Raw  types.Log // Blockchain specific contextual infos
+}
+
+// FilterDepositContractSet is a free log retrieval operation binding the contract event 0x1781ac9526b978975dba0fd26a33e044a55a7ace054a3ee7efa5f8459513bead.
+//
+// Solidity: event DepositContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) FilterDepositContractSet(opts *bind.FilterOpts) (*StakingContractDepositContractSetIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "DepositContractSet")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractDepositContractSetIterator{contract: _StakingContract.contract, event: "DepositContractSet", logs: logs, sub: sub}, nil
+}
+
+// WatchDepositContractSet is a free log subscription operation binding the contract event 0x1781ac9526b978975dba0fd26a33e044a55a7ace054a3ee7efa5f8459513bead.
+//
+// Solidity: event DepositContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) WatchDepositContractSet(opts *bind.WatchOpts, sink chan<- *StakingContractDepositContractSet) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "DepositContractSet")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractDepositContractSet)
+				if err := _StakingContract.contract.UnpackLog(event, "DepositContractSet", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseDepositContractSet is a log parse operation binding the contract event 0x1781ac9526b978975dba0fd26a33e044a55a7ace054a3ee7efa5f8459513bead.
+//
+// Solidity: event DepositContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) ParseDepositContractSet(log types.Log) (*StakingContractDepositContractSet, error) {
+	event := new(StakingContractDepositContractSet)
+	if err := _StakingContract.contract.UnpackLog(event, "DepositContractSet", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractManagerAccountSetIterator is returned from FilterManagerAccountSet and is used to iterate over the raw logs and unpacked data for ManagerAccountSet events raised by the StakingContract contract.
+type StakingContractManagerAccountSetIterator struct {
+	Event *StakingContractManagerAccountSet // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractManagerAccountSetIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractManagerAccountSet)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractManagerAccountSet)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractManagerAccountSetIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractManagerAccountSetIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractManagerAccountSet represents a ManagerAccountSet event raised by the StakingContract contract.
+type StakingContractManagerAccountSet struct {
 	Account common.Address
 	Raw     types.Log // Blockchain specific contextual infos
 }
 
-// FilterMintable is a free log retrieval operation binding the contract event 0x8fc6bf72ae36e2e0d306c3344626c34ed9bbc8c82fe8289b2f79847094637551.
+// FilterManagerAccountSet is a free log retrieval operation binding the contract event 0x3aa9ccc8285bfd4a1ad6b4cbde39a3b91da051237323010b14c1fa4130be9b7f.
 //
-// Solidity: event Mintable(address account)
-func (_StakingContract *StakingContractFilterer) FilterMintable(opts *bind.FilterOpts) (*StakingContractMintableIterator, error) {
+// Solidity: event ManagerAccountSet(address account)
+func (_StakingContract *StakingContractFilterer) FilterManagerAccountSet(opts *bind.FilterOpts) (*StakingContractManagerAccountSetIterator, error) {
 
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "Mintable")
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "ManagerAccountSet")
 	if err != nil {
 		return nil, err
 	}
-	return &StakingContractMintableIterator{contract: _StakingContract.contract, event: "Mintable", logs: logs, sub: sub}, nil
+	return &StakingContractManagerAccountSetIterator{contract: _StakingContract.contract, event: "ManagerAccountSet", logs: logs, sub: sub}, nil
 }
 
-// WatchMintable is a free log subscription operation binding the contract event 0x8fc6bf72ae36e2e0d306c3344626c34ed9bbc8c82fe8289b2f79847094637551.
+// WatchManagerAccountSet is a free log subscription operation binding the contract event 0x3aa9ccc8285bfd4a1ad6b4cbde39a3b91da051237323010b14c1fa4130be9b7f.
 //
-// Solidity: event Mintable(address account)
-func (_StakingContract *StakingContractFilterer) WatchMintable(opts *bind.WatchOpts, sink chan<- *StakingContractMintable) (event.Subscription, error) {
+// Solidity: event ManagerAccountSet(address account)
+func (_StakingContract *StakingContractFilterer) WatchManagerAccountSet(opts *bind.WatchOpts, sink chan<- *StakingContractManagerAccountSet) (event.Subscription, error) {
 
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "Mintable")
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "ManagerAccountSet")
 	if err != nil {
 		return nil, err
 	}
@@ -1110,8 +2334,8 @@ func (_StakingContract *StakingContractFilterer) WatchMintable(opts *bind.WatchO
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractMintable)
-				if err := _StakingContract.contract.UnpackLog(event, "Mintable", log); err != nil {
+				event := new(StakingContractManagerAccountSet)
+				if err := _StakingContract.contract.UnpackLog(event, "ManagerAccountSet", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1132,21 +2356,21 @@ func (_StakingContract *StakingContractFilterer) WatchMintable(opts *bind.WatchO
 	}), nil
 }
 
-// ParseMintable is a log parse operation binding the contract event 0x8fc6bf72ae36e2e0d306c3344626c34ed9bbc8c82fe8289b2f79847094637551.
+// ParseManagerAccountSet is a log parse operation binding the contract event 0x3aa9ccc8285bfd4a1ad6b4cbde39a3b91da051237323010b14c1fa4130be9b7f.
 //
-// Solidity: event Mintable(address account)
-func (_StakingContract *StakingContractFilterer) ParseMintable(log types.Log) (*StakingContractMintable, error) {
-	event := new(StakingContractMintable)
-	if err := _StakingContract.contract.UnpackLog(event, "Mintable", log); err != nil {
+// Solidity: event ManagerAccountSet(address account)
+func (_StakingContract *StakingContractFilterer) ParseManagerAccountSet(log types.Log) (*StakingContractManagerAccountSet, error) {
+	event := new(StakingContractManagerAccountSet)
+	if err := _StakingContract.contract.UnpackLog(event, "ManagerAccountSet", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// StakingContractOwnershipTransferredIterator is returned from FilterOwnershipTransferred and is used to iterate over the raw logs and unpacked data for OwnershipTransferred events raised by the StakingContract contract.
-type StakingContractOwnershipTransferredIterator struct {
-	Event *StakingContractOwnershipTransferred // Event containing the contract specifics and raw log
+// StakingContractManagerFeeSetIterator is returned from FilterManagerFeeSet and is used to iterate over the raw logs and unpacked data for ManagerFeeSet events raised by the StakingContract contract.
+type StakingContractManagerFeeSetIterator struct {
+	Event *StakingContractManagerFeeSet // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1160,7 +2384,7 @@ type StakingContractOwnershipTransferredIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *StakingContractOwnershipTransferredIterator) Next() bool {
+func (it *StakingContractManagerFeeSetIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1169,7 +2393,7 @@ func (it *StakingContractOwnershipTransferredIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(StakingContractOwnershipTransferred)
+			it.Event = new(StakingContractManagerFeeSet)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1184,7 +2408,7 @@ func (it *StakingContractOwnershipTransferredIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(StakingContractOwnershipTransferred)
+		it.Event = new(StakingContractManagerFeeSet)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1200,60 +2424,41 @@ func (it *StakingContractOwnershipTransferredIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractOwnershipTransferredIterator) Error() error {
+func (it *StakingContractManagerFeeSetIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *StakingContractOwnershipTransferredIterator) Close() error {
+func (it *StakingContractManagerFeeSetIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// StakingContractOwnershipTransferred represents a OwnershipTransferred event raised by the StakingContract contract.
-type StakingContractOwnershipTransferred struct {
-	PreviousOwner common.Address
-	NewOwner      common.Address
-	Raw           types.Log // Blockchain specific contextual infos
+// StakingContractManagerFeeSet represents a ManagerFeeSet event raised by the StakingContract contract.
+type StakingContractManagerFeeSet struct {
+	Milli *big.Int
+	Raw   types.Log // Blockchain specific contextual infos
 }
 
-// FilterOwnershipTransferred is a free log retrieval operation binding the contract event 0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0.
+// FilterManagerFeeSet is a free log retrieval operation binding the contract event 0x4de90ec86e1bc56c192e2399bacbd10bdaba720caca606354d66c5cb33d6802b.
 //
-// Solidity: event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-func (_StakingContract *StakingContractFilterer) FilterOwnershipTransferred(opts *bind.FilterOpts, previousOwner []common.Address, newOwner []common.Address) (*StakingContractOwnershipTransferredIterator, error) {
+// Solidity: event ManagerFeeSet(uint256 milli)
+func (_StakingContract *StakingContractFilterer) FilterManagerFeeSet(opts *bind.FilterOpts) (*StakingContractManagerFeeSetIterator, error) {
 
-	var previousOwnerRule []interface{}
-	for _, previousOwnerItem := range previousOwner {
-		previousOwnerRule = append(previousOwnerRule, previousOwnerItem)
-	}
-	var newOwnerRule []interface{}
-	for _, newOwnerItem := range newOwner {
-		newOwnerRule = append(newOwnerRule, newOwnerItem)
-	}
-
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "OwnershipTransferred", previousOwnerRule, newOwnerRule)
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "ManagerFeeSet")
 	if err != nil {
 		return nil, err
 	}
-	return &StakingContractOwnershipTransferredIterator{contract: _StakingContract.contract, event: "OwnershipTransferred", logs: logs, sub: sub}, nil
+	return &StakingContractManagerFeeSetIterator{contract: _StakingContract.contract, event: "ManagerFeeSet", logs: logs, sub: sub}, nil
 }
 
-// WatchOwnershipTransferred is a free log subscription operation binding the contract event 0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0.
+// WatchManagerFeeSet is a free log subscription operation binding the contract event 0x4de90ec86e1bc56c192e2399bacbd10bdaba720caca606354d66c5cb33d6802b.
 //
-// Solidity: event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-func (_StakingContract *StakingContractFilterer) WatchOwnershipTransferred(opts *bind.WatchOpts, sink chan<- *StakingContractOwnershipTransferred, previousOwner []common.Address, newOwner []common.Address) (event.Subscription, error) {
+// Solidity: event ManagerFeeSet(uint256 milli)
+func (_StakingContract *StakingContractFilterer) WatchManagerFeeSet(opts *bind.WatchOpts, sink chan<- *StakingContractManagerFeeSet) (event.Subscription, error) {
 
-	var previousOwnerRule []interface{}
-	for _, previousOwnerItem := range previousOwner {
-		previousOwnerRule = append(previousOwnerRule, previousOwnerItem)
-	}
-	var newOwnerRule []interface{}
-	for _, newOwnerItem := range newOwner {
-		newOwnerRule = append(newOwnerRule, newOwnerItem)
-	}
-
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "OwnershipTransferred", previousOwnerRule, newOwnerRule)
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "ManagerFeeSet")
 	if err != nil {
 		return nil, err
 	}
@@ -1263,8 +2468,8 @@ func (_StakingContract *StakingContractFilterer) WatchOwnershipTransferred(opts 
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractOwnershipTransferred)
-				if err := _StakingContract.contract.UnpackLog(event, "OwnershipTransferred", log); err != nil {
+				event := new(StakingContractManagerFeeSet)
+				if err := _StakingContract.contract.UnpackLog(event, "ManagerFeeSet", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1285,12 +2490,147 @@ func (_StakingContract *StakingContractFilterer) WatchOwnershipTransferred(opts 
 	}), nil
 }
 
-// ParseOwnershipTransferred is a log parse operation binding the contract event 0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0.
+// ParseManagerFeeSet is a log parse operation binding the contract event 0x4de90ec86e1bc56c192e2399bacbd10bdaba720caca606354d66c5cb33d6802b.
 //
-// Solidity: event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
-func (_StakingContract *StakingContractFilterer) ParseOwnershipTransferred(log types.Log) (*StakingContractOwnershipTransferred, error) {
-	event := new(StakingContractOwnershipTransferred)
-	if err := _StakingContract.contract.UnpackLog(event, "OwnershipTransferred", log); err != nil {
+// Solidity: event ManagerFeeSet(uint256 milli)
+func (_StakingContract *StakingContractFilterer) ParseManagerFeeSet(log types.Log) (*StakingContractManagerFeeSet, error) {
+	event := new(StakingContractManagerFeeSet)
+	if err := _StakingContract.contract.UnpackLog(event, "ManagerFeeSet", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractManagerFeeWithdrawedIterator is returned from FilterManagerFeeWithdrawed and is used to iterate over the raw logs and unpacked data for ManagerFeeWithdrawed events raised by the StakingContract contract.
+type StakingContractManagerFeeWithdrawedIterator struct {
+	Event *StakingContractManagerFeeWithdrawed // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractManagerFeeWithdrawedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractManagerFeeWithdrawed)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractManagerFeeWithdrawed)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractManagerFeeWithdrawedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractManagerFeeWithdrawedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractManagerFeeWithdrawed represents a ManagerFeeWithdrawed event raised by the StakingContract contract.
+type StakingContractManagerFeeWithdrawed struct {
+	Amount *big.Int
+	Arg1   common.Address
+	Raw    types.Log // Blockchain specific contextual infos
+}
+
+// FilterManagerFeeWithdrawed is a free log retrieval operation binding the contract event 0x2425aa1fadefc5c570850aa9c9e3dfa4fc6b43ccd1c05b47db38dd6518a743b3.
+//
+// Solidity: event ManagerFeeWithdrawed(uint256 amount, address arg1)
+func (_StakingContract *StakingContractFilterer) FilterManagerFeeWithdrawed(opts *bind.FilterOpts) (*StakingContractManagerFeeWithdrawedIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "ManagerFeeWithdrawed")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractManagerFeeWithdrawedIterator{contract: _StakingContract.contract, event: "ManagerFeeWithdrawed", logs: logs, sub: sub}, nil
+}
+
+// WatchManagerFeeWithdrawed is a free log subscription operation binding the contract event 0x2425aa1fadefc5c570850aa9c9e3dfa4fc6b43ccd1c05b47db38dd6518a743b3.
+//
+// Solidity: event ManagerFeeWithdrawed(uint256 amount, address arg1)
+func (_StakingContract *StakingContractFilterer) WatchManagerFeeWithdrawed(opts *bind.WatchOpts, sink chan<- *StakingContractManagerFeeWithdrawed) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "ManagerFeeWithdrawed")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractManagerFeeWithdrawed)
+				if err := _StakingContract.contract.UnpackLog(event, "ManagerFeeWithdrawed", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseManagerFeeWithdrawed is a log parse operation binding the contract event 0x2425aa1fadefc5c570850aa9c9e3dfa4fc6b43ccd1c05b47db38dd6518a743b3.
+//
+// Solidity: event ManagerFeeWithdrawed(uint256 amount, address arg1)
+func (_StakingContract *StakingContractFilterer) ParseManagerFeeWithdrawed(log types.Log) (*StakingContractManagerFeeWithdrawed, error) {
+	event := new(StakingContractManagerFeeWithdrawed)
+	if err := _StakingContract.contract.UnpackLog(event, "ManagerFeeWithdrawed", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
@@ -1431,9 +2771,9 @@ func (_StakingContract *StakingContractFilterer) ParsePaused(log types.Log) (*St
 	return event, nil
 }
 
-// StakingContractSnapshotIterator is returned from FilterSnapshot and is used to iterate over the raw logs and unpacked data for Snapshot events raised by the StakingContract contract.
-type StakingContractSnapshotIterator struct {
-	Event *StakingContractSnapshot // Event containing the contract specifics and raw log
+// StakingContractRedeemContractSetIterator is returned from FilterRedeemContractSet and is used to iterate over the raw logs and unpacked data for RedeemContractSet events raised by the StakingContract contract.
+type StakingContractRedeemContractSetIterator struct {
+	Event *StakingContractRedeemContractSet // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1447,7 +2787,7 @@ type StakingContractSnapshotIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *StakingContractSnapshotIterator) Next() bool {
+func (it *StakingContractRedeemContractSetIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1456,7 +2796,7 @@ func (it *StakingContractSnapshotIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(StakingContractSnapshot)
+			it.Event = new(StakingContractRedeemContractSet)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1471,7 +2811,7 @@ func (it *StakingContractSnapshotIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(StakingContractSnapshot)
+		it.Event = new(StakingContractRedeemContractSet)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1487,41 +2827,41 @@ func (it *StakingContractSnapshotIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractSnapshotIterator) Error() error {
+func (it *StakingContractRedeemContractSetIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *StakingContractSnapshotIterator) Close() error {
+func (it *StakingContractRedeemContractSetIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// StakingContractSnapshot represents a Snapshot event raised by the StakingContract contract.
-type StakingContractSnapshot struct {
-	Id  *big.Int
-	Raw types.Log // Blockchain specific contextual infos
+// StakingContractRedeemContractSet represents a RedeemContractSet event raised by the StakingContract contract.
+type StakingContractRedeemContractSet struct {
+	Addr common.Address
+	Raw  types.Log // Blockchain specific contextual infos
 }
 
-// FilterSnapshot is a free log retrieval operation binding the contract event 0x8030e83b04d87bef53480e26263266d6ca66863aa8506aca6f2559d18aa1cb67.
+// FilterRedeemContractSet is a free log retrieval operation binding the contract event 0x4d3d3f5d1d8423a4e40b3fcfccaf0c1b18ca550a8592d5e38a61765931a9cf78.
 //
-// Solidity: event Snapshot(uint256 id)
-func (_StakingContract *StakingContractFilterer) FilterSnapshot(opts *bind.FilterOpts) (*StakingContractSnapshotIterator, error) {
+// Solidity: event RedeemContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) FilterRedeemContractSet(opts *bind.FilterOpts) (*StakingContractRedeemContractSetIterator, error) {
 
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "Snapshot")
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "RedeemContractSet")
 	if err != nil {
 		return nil, err
 	}
-	return &StakingContractSnapshotIterator{contract: _StakingContract.contract, event: "Snapshot", logs: logs, sub: sub}, nil
+	return &StakingContractRedeemContractSetIterator{contract: _StakingContract.contract, event: "RedeemContractSet", logs: logs, sub: sub}, nil
 }
 
-// WatchSnapshot is a free log subscription operation binding the contract event 0x8030e83b04d87bef53480e26263266d6ca66863aa8506aca6f2559d18aa1cb67.
+// WatchRedeemContractSet is a free log subscription operation binding the contract event 0x4d3d3f5d1d8423a4e40b3fcfccaf0c1b18ca550a8592d5e38a61765931a9cf78.
 //
-// Solidity: event Snapshot(uint256 id)
-func (_StakingContract *StakingContractFilterer) WatchSnapshot(opts *bind.WatchOpts, sink chan<- *StakingContractSnapshot) (event.Subscription, error) {
+// Solidity: event RedeemContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) WatchRedeemContractSet(opts *bind.WatchOpts, sink chan<- *StakingContractRedeemContractSet) (event.Subscription, error) {
 
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "Snapshot")
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "RedeemContractSet")
 	if err != nil {
 		return nil, err
 	}
@@ -1531,8 +2871,8 @@ func (_StakingContract *StakingContractFilterer) WatchSnapshot(opts *bind.WatchO
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractSnapshot)
-				if err := _StakingContract.contract.UnpackLog(event, "Snapshot", log); err != nil {
+				event := new(StakingContractRedeemContractSet)
+				if err := _StakingContract.contract.UnpackLog(event, "RedeemContractSet", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1553,21 +2893,21 @@ func (_StakingContract *StakingContractFilterer) WatchSnapshot(opts *bind.WatchO
 	}), nil
 }
 
-// ParseSnapshot is a log parse operation binding the contract event 0x8030e83b04d87bef53480e26263266d6ca66863aa8506aca6f2559d18aa1cb67.
+// ParseRedeemContractSet is a log parse operation binding the contract event 0x4d3d3f5d1d8423a4e40b3fcfccaf0c1b18ca550a8592d5e38a61765931a9cf78.
 //
-// Solidity: event Snapshot(uint256 id)
-func (_StakingContract *StakingContractFilterer) ParseSnapshot(log types.Log) (*StakingContractSnapshot, error) {
-	event := new(StakingContractSnapshot)
-	if err := _StakingContract.contract.UnpackLog(event, "Snapshot", log); err != nil {
+// Solidity: event RedeemContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) ParseRedeemContractSet(log types.Log) (*StakingContractRedeemContractSet, error) {
+	event := new(StakingContractRedeemContractSet)
+	if err := _StakingContract.contract.UnpackLog(event, "RedeemContractSet", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// StakingContractTransferIterator is returned from FilterTransfer and is used to iterate over the raw logs and unpacked data for Transfer events raised by the StakingContract contract.
-type StakingContractTransferIterator struct {
-	Event *StakingContractTransfer // Event containing the contract specifics and raw log
+// StakingContractRevenueAccountedIterator is returned from FilterRevenueAccounted and is used to iterate over the raw logs and unpacked data for RevenueAccounted events raised by the StakingContract contract.
+type StakingContractRevenueAccountedIterator struct {
+	Event *StakingContractRevenueAccounted // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1581,7 +2921,7 @@ type StakingContractTransferIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *StakingContractTransferIterator) Next() bool {
+func (it *StakingContractRevenueAccountedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1590,7 +2930,7 @@ func (it *StakingContractTransferIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(StakingContractTransfer)
+			it.Event = new(StakingContractRevenueAccounted)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1605,7 +2945,7 @@ func (it *StakingContractTransferIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(StakingContractTransfer)
+		it.Event = new(StakingContractRevenueAccounted)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1621,61 +2961,41 @@ func (it *StakingContractTransferIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractTransferIterator) Error() error {
+func (it *StakingContractRevenueAccountedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *StakingContractTransferIterator) Close() error {
+func (it *StakingContractRevenueAccountedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// StakingContractTransfer represents a Transfer event raised by the StakingContract contract.
-type StakingContractTransfer struct {
-	From  common.Address
-	To    common.Address
-	Value *big.Int
-	Raw   types.Log // Blockchain specific contextual infos
+// StakingContractRevenueAccounted represents a RevenueAccounted event raised by the StakingContract contract.
+type StakingContractRevenueAccounted struct {
+	Amount *big.Int
+	Raw    types.Log // Blockchain specific contextual infos
 }
 
-// FilterTransfer is a free log retrieval operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// FilterRevenueAccounted is a free log retrieval operation binding the contract event 0x82f24840c0f58d92529afdd441950ddc6e8f2d60138d4458a8d74ba367540cda.
 //
-// Solidity: event Transfer(address indexed from, address indexed to, uint256 value)
-func (_StakingContract *StakingContractFilterer) FilterTransfer(opts *bind.FilterOpts, from []common.Address, to []common.Address) (*StakingContractTransferIterator, error) {
+// Solidity: event RevenueAccounted(uint256 amount)
+func (_StakingContract *StakingContractFilterer) FilterRevenueAccounted(opts *bind.FilterOpts) (*StakingContractRevenueAccountedIterator, error) {
 
-	var fromRule []interface{}
-	for _, fromItem := range from {
-		fromRule = append(fromRule, fromItem)
-	}
-	var toRule []interface{}
-	for _, toItem := range to {
-		toRule = append(toRule, toItem)
-	}
-
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "Transfer", fromRule, toRule)
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "RevenueAccounted")
 	if err != nil {
 		return nil, err
 	}
-	return &StakingContractTransferIterator{contract: _StakingContract.contract, event: "Transfer", logs: logs, sub: sub}, nil
+	return &StakingContractRevenueAccountedIterator{contract: _StakingContract.contract, event: "RevenueAccounted", logs: logs, sub: sub}, nil
 }
 
-// WatchTransfer is a free log subscription operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// WatchRevenueAccounted is a free log subscription operation binding the contract event 0x82f24840c0f58d92529afdd441950ddc6e8f2d60138d4458a8d74ba367540cda.
 //
-// Solidity: event Transfer(address indexed from, address indexed to, uint256 value)
-func (_StakingContract *StakingContractFilterer) WatchTransfer(opts *bind.WatchOpts, sink chan<- *StakingContractTransfer, from []common.Address, to []common.Address) (event.Subscription, error) {
+// Solidity: event RevenueAccounted(uint256 amount)
+func (_StakingContract *StakingContractFilterer) WatchRevenueAccounted(opts *bind.WatchOpts, sink chan<- *StakingContractRevenueAccounted) (event.Subscription, error) {
 
-	var fromRule []interface{}
-	for _, fromItem := range from {
-		fromRule = append(fromRule, fromItem)
-	}
-	var toRule []interface{}
-	for _, toItem := range to {
-		toRule = append(toRule, toItem)
-	}
-
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "Transfer", fromRule, toRule)
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "RevenueAccounted")
 	if err != nil {
 		return nil, err
 	}
@@ -1685,8 +3005,8 @@ func (_StakingContract *StakingContractFilterer) WatchTransfer(opts *bind.WatchO
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractTransfer)
-				if err := _StakingContract.contract.UnpackLog(event, "Transfer", log); err != nil {
+				event := new(StakingContractRevenueAccounted)
+				if err := _StakingContract.contract.UnpackLog(event, "RevenueAccounted", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1707,21 +3027,21 @@ func (_StakingContract *StakingContractFilterer) WatchTransfer(opts *bind.WatchO
 	}), nil
 }
 
-// ParseTransfer is a log parse operation binding the contract event 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef.
+// ParseRevenueAccounted is a log parse operation binding the contract event 0x82f24840c0f58d92529afdd441950ddc6e8f2d60138d4458a8d74ba367540cda.
 //
-// Solidity: event Transfer(address indexed from, address indexed to, uint256 value)
-func (_StakingContract *StakingContractFilterer) ParseTransfer(log types.Log) (*StakingContractTransfer, error) {
-	event := new(StakingContractTransfer)
-	if err := _StakingContract.contract.UnpackLog(event, "Transfer", log); err != nil {
+// Solidity: event RevenueAccounted(uint256 amount)
+func (_StakingContract *StakingContractFilterer) ParseRevenueAccounted(log types.Log) (*StakingContractRevenueAccounted, error) {
+	event := new(StakingContractRevenueAccounted)
+	if err := _StakingContract.contract.UnpackLog(event, "RevenueAccounted", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// StakingContractUnmintableIterator is returned from FilterUnmintable and is used to iterate over the raw logs and unpacked data for Unmintable events raised by the StakingContract contract.
-type StakingContractUnmintableIterator struct {
-	Event *StakingContractUnmintable // Event containing the contract specifics and raw log
+// StakingContractRoleAdminChangedIterator is returned from FilterRoleAdminChanged and is used to iterate over the raw logs and unpacked data for RoleAdminChanged events raised by the StakingContract contract.
+type StakingContractRoleAdminChangedIterator struct {
+	Event *StakingContractRoleAdminChanged // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -1735,7 +3055,7 @@ type StakingContractUnmintableIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *StakingContractUnmintableIterator) Next() bool {
+func (it *StakingContractRoleAdminChangedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -1744,7 +3064,7 @@ func (it *StakingContractUnmintableIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(StakingContractUnmintable)
+			it.Event = new(StakingContractRoleAdminChanged)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -1759,7 +3079,7 @@ func (it *StakingContractUnmintableIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(StakingContractUnmintable)
+		it.Event = new(StakingContractRoleAdminChanged)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -1775,41 +3095,231 @@ func (it *StakingContractUnmintableIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractUnmintableIterator) Error() error {
+func (it *StakingContractRoleAdminChangedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *StakingContractUnmintableIterator) Close() error {
+func (it *StakingContractRoleAdminChangedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// StakingContractUnmintable represents a Unmintable event raised by the StakingContract contract.
-type StakingContractUnmintable struct {
+// StakingContractRoleAdminChanged represents a RoleAdminChanged event raised by the StakingContract contract.
+type StakingContractRoleAdminChanged struct {
+	Role              [32]byte
+	PreviousAdminRole [32]byte
+	NewAdminRole      [32]byte
+	Raw               types.Log // Blockchain specific contextual infos
+}
+
+// FilterRoleAdminChanged is a free log retrieval operation binding the contract event 0xbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff.
+//
+// Solidity: event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+func (_StakingContract *StakingContractFilterer) FilterRoleAdminChanged(opts *bind.FilterOpts, role [][32]byte, previousAdminRole [][32]byte, newAdminRole [][32]byte) (*StakingContractRoleAdminChangedIterator, error) {
+
+	var roleRule []interface{}
+	for _, roleItem := range role {
+		roleRule = append(roleRule, roleItem)
+	}
+	var previousAdminRoleRule []interface{}
+	for _, previousAdminRoleItem := range previousAdminRole {
+		previousAdminRoleRule = append(previousAdminRoleRule, previousAdminRoleItem)
+	}
+	var newAdminRoleRule []interface{}
+	for _, newAdminRoleItem := range newAdminRole {
+		newAdminRoleRule = append(newAdminRoleRule, newAdminRoleItem)
+	}
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "RoleAdminChanged", roleRule, previousAdminRoleRule, newAdminRoleRule)
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractRoleAdminChangedIterator{contract: _StakingContract.contract, event: "RoleAdminChanged", logs: logs, sub: sub}, nil
+}
+
+// WatchRoleAdminChanged is a free log subscription operation binding the contract event 0xbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff.
+//
+// Solidity: event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+func (_StakingContract *StakingContractFilterer) WatchRoleAdminChanged(opts *bind.WatchOpts, sink chan<- *StakingContractRoleAdminChanged, role [][32]byte, previousAdminRole [][32]byte, newAdminRole [][32]byte) (event.Subscription, error) {
+
+	var roleRule []interface{}
+	for _, roleItem := range role {
+		roleRule = append(roleRule, roleItem)
+	}
+	var previousAdminRoleRule []interface{}
+	for _, previousAdminRoleItem := range previousAdminRole {
+		previousAdminRoleRule = append(previousAdminRoleRule, previousAdminRoleItem)
+	}
+	var newAdminRoleRule []interface{}
+	for _, newAdminRoleItem := range newAdminRole {
+		newAdminRoleRule = append(newAdminRoleRule, newAdminRoleItem)
+	}
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "RoleAdminChanged", roleRule, previousAdminRoleRule, newAdminRoleRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractRoleAdminChanged)
+				if err := _StakingContract.contract.UnpackLog(event, "RoleAdminChanged", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseRoleAdminChanged is a log parse operation binding the contract event 0xbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff.
+//
+// Solidity: event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)
+func (_StakingContract *StakingContractFilterer) ParseRoleAdminChanged(log types.Log) (*StakingContractRoleAdminChanged, error) {
+	event := new(StakingContractRoleAdminChanged)
+	if err := _StakingContract.contract.UnpackLog(event, "RoleAdminChanged", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractRoleGrantedIterator is returned from FilterRoleGranted and is used to iterate over the raw logs and unpacked data for RoleGranted events raised by the StakingContract contract.
+type StakingContractRoleGrantedIterator struct {
+	Event *StakingContractRoleGranted // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractRoleGrantedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractRoleGranted)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractRoleGranted)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractRoleGrantedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractRoleGrantedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractRoleGranted represents a RoleGranted event raised by the StakingContract contract.
+type StakingContractRoleGranted struct {
+	Role    [32]byte
 	Account common.Address
+	Sender  common.Address
 	Raw     types.Log // Blockchain specific contextual infos
 }
 
-// FilterUnmintable is a free log retrieval operation binding the contract event 0xb4fa1ea6b9ba3d53e901dbf2b924fff22ac6e0658eecffa8dbd101ff61fc839d.
+// FilterRoleGranted is a free log retrieval operation binding the contract event 0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d.
 //
-// Solidity: event Unmintable(address account)
-func (_StakingContract *StakingContractFilterer) FilterUnmintable(opts *bind.FilterOpts) (*StakingContractUnmintableIterator, error) {
+// Solidity: event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+func (_StakingContract *StakingContractFilterer) FilterRoleGranted(opts *bind.FilterOpts, role [][32]byte, account []common.Address, sender []common.Address) (*StakingContractRoleGrantedIterator, error) {
 
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "Unmintable")
+	var roleRule []interface{}
+	for _, roleItem := range role {
+		roleRule = append(roleRule, roleItem)
+	}
+	var accountRule []interface{}
+	for _, accountItem := range account {
+		accountRule = append(accountRule, accountItem)
+	}
+	var senderRule []interface{}
+	for _, senderItem := range sender {
+		senderRule = append(senderRule, senderItem)
+	}
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "RoleGranted", roleRule, accountRule, senderRule)
 	if err != nil {
 		return nil, err
 	}
-	return &StakingContractUnmintableIterator{contract: _StakingContract.contract, event: "Unmintable", logs: logs, sub: sub}, nil
+	return &StakingContractRoleGrantedIterator{contract: _StakingContract.contract, event: "RoleGranted", logs: logs, sub: sub}, nil
 }
 
-// WatchUnmintable is a free log subscription operation binding the contract event 0xb4fa1ea6b9ba3d53e901dbf2b924fff22ac6e0658eecffa8dbd101ff61fc839d.
+// WatchRoleGranted is a free log subscription operation binding the contract event 0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d.
 //
-// Solidity: event Unmintable(address account)
-func (_StakingContract *StakingContractFilterer) WatchUnmintable(opts *bind.WatchOpts, sink chan<- *StakingContractUnmintable) (event.Subscription, error) {
+// Solidity: event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+func (_StakingContract *StakingContractFilterer) WatchRoleGranted(opts *bind.WatchOpts, sink chan<- *StakingContractRoleGranted, role [][32]byte, account []common.Address, sender []common.Address) (event.Subscription, error) {
 
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "Unmintable")
+	var roleRule []interface{}
+	for _, roleItem := range role {
+		roleRule = append(roleRule, roleItem)
+	}
+	var accountRule []interface{}
+	for _, accountItem := range account {
+		accountRule = append(accountRule, accountItem)
+	}
+	var senderRule []interface{}
+	for _, senderItem := range sender {
+		senderRule = append(senderRule, senderItem)
+	}
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "RoleGranted", roleRule, accountRule, senderRule)
 	if err != nil {
 		return nil, err
 	}
@@ -1819,8 +3329,8 @@ func (_StakingContract *StakingContractFilterer) WatchUnmintable(opts *bind.Watc
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractUnmintable)
-				if err := _StakingContract.contract.UnpackLog(event, "Unmintable", log); err != nil {
+				event := new(StakingContractRoleGranted)
+				if err := _StakingContract.contract.UnpackLog(event, "RoleGranted", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -1841,12 +3351,174 @@ func (_StakingContract *StakingContractFilterer) WatchUnmintable(opts *bind.Watc
 	}), nil
 }
 
-// ParseUnmintable is a log parse operation binding the contract event 0xb4fa1ea6b9ba3d53e901dbf2b924fff22ac6e0658eecffa8dbd101ff61fc839d.
+// ParseRoleGranted is a log parse operation binding the contract event 0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d.
 //
-// Solidity: event Unmintable(address account)
-func (_StakingContract *StakingContractFilterer) ParseUnmintable(log types.Log) (*StakingContractUnmintable, error) {
-	event := new(StakingContractUnmintable)
-	if err := _StakingContract.contract.UnpackLog(event, "Unmintable", log); err != nil {
+// Solidity: event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)
+func (_StakingContract *StakingContractFilterer) ParseRoleGranted(log types.Log) (*StakingContractRoleGranted, error) {
+	event := new(StakingContractRoleGranted)
+	if err := _StakingContract.contract.UnpackLog(event, "RoleGranted", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractRoleRevokedIterator is returned from FilterRoleRevoked and is used to iterate over the raw logs and unpacked data for RoleRevoked events raised by the StakingContract contract.
+type StakingContractRoleRevokedIterator struct {
+	Event *StakingContractRoleRevoked // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractRoleRevokedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractRoleRevoked)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractRoleRevoked)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractRoleRevokedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractRoleRevokedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractRoleRevoked represents a RoleRevoked event raised by the StakingContract contract.
+type StakingContractRoleRevoked struct {
+	Role    [32]byte
+	Account common.Address
+	Sender  common.Address
+	Raw     types.Log // Blockchain specific contextual infos
+}
+
+// FilterRoleRevoked is a free log retrieval operation binding the contract event 0xf6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b.
+//
+// Solidity: event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+func (_StakingContract *StakingContractFilterer) FilterRoleRevoked(opts *bind.FilterOpts, role [][32]byte, account []common.Address, sender []common.Address) (*StakingContractRoleRevokedIterator, error) {
+
+	var roleRule []interface{}
+	for _, roleItem := range role {
+		roleRule = append(roleRule, roleItem)
+	}
+	var accountRule []interface{}
+	for _, accountItem := range account {
+		accountRule = append(accountRule, accountItem)
+	}
+	var senderRule []interface{}
+	for _, senderItem := range sender {
+		senderRule = append(senderRule, senderItem)
+	}
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "RoleRevoked", roleRule, accountRule, senderRule)
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractRoleRevokedIterator{contract: _StakingContract.contract, event: "RoleRevoked", logs: logs, sub: sub}, nil
+}
+
+// WatchRoleRevoked is a free log subscription operation binding the contract event 0xf6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b.
+//
+// Solidity: event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+func (_StakingContract *StakingContractFilterer) WatchRoleRevoked(opts *bind.WatchOpts, sink chan<- *StakingContractRoleRevoked, role [][32]byte, account []common.Address, sender []common.Address) (event.Subscription, error) {
+
+	var roleRule []interface{}
+	for _, roleItem := range role {
+		roleRule = append(roleRule, roleItem)
+	}
+	var accountRule []interface{}
+	for _, accountItem := range account {
+		accountRule = append(accountRule, accountItem)
+	}
+	var senderRule []interface{}
+	for _, senderItem := range sender {
+		senderRule = append(senderRule, senderItem)
+	}
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "RoleRevoked", roleRule, accountRule, senderRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractRoleRevoked)
+				if err := _StakingContract.contract.UnpackLog(event, "RoleRevoked", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseRoleRevoked is a log parse operation binding the contract event 0xf6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b.
+//
+// Solidity: event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)
+func (_StakingContract *StakingContractFilterer) ParseRoleRevoked(log types.Log) (*StakingContractRoleRevoked, error) {
+	event := new(StakingContractRoleRevoked)
+	if err := _StakingContract.contract.UnpackLog(event, "RoleRevoked", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
@@ -1981,6 +3653,678 @@ func (_StakingContract *StakingContractFilterer) WatchUnpaused(opts *bind.WatchO
 func (_StakingContract *StakingContractFilterer) ParseUnpaused(log types.Log) (*StakingContractUnpaused, error) {
 	event := new(StakingContractUnpaused)
 	if err := _StakingContract.contract.UnpackLog(event, "Unpaused", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractValidatorActivatedIterator is returned from FilterValidatorActivated and is used to iterate over the raw logs and unpacked data for ValidatorActivated events raised by the StakingContract contract.
+type StakingContractValidatorActivatedIterator struct {
+	Event *StakingContractValidatorActivated // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractValidatorActivatedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractValidatorActivated)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractValidatorActivated)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractValidatorActivatedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractValidatorActivatedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractValidatorActivated represents a ValidatorActivated event raised by the StakingContract contract.
+type StakingContractValidatorActivated struct {
+	NextValidatorId *big.Int
+	Raw             types.Log // Blockchain specific contextual infos
+}
+
+// FilterValidatorActivated is a free log retrieval operation binding the contract event 0xe2a191ee805447bcf5adabadd39cb816b1b46de1364263aef69980bdafd8370f.
+//
+// Solidity: event ValidatorActivated(uint256 nextValidatorId)
+func (_StakingContract *StakingContractFilterer) FilterValidatorActivated(opts *bind.FilterOpts) (*StakingContractValidatorActivatedIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "ValidatorActivated")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractValidatorActivatedIterator{contract: _StakingContract.contract, event: "ValidatorActivated", logs: logs, sub: sub}, nil
+}
+
+// WatchValidatorActivated is a free log subscription operation binding the contract event 0xe2a191ee805447bcf5adabadd39cb816b1b46de1364263aef69980bdafd8370f.
+//
+// Solidity: event ValidatorActivated(uint256 nextValidatorId)
+func (_StakingContract *StakingContractFilterer) WatchValidatorActivated(opts *bind.WatchOpts, sink chan<- *StakingContractValidatorActivated) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "ValidatorActivated")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractValidatorActivated)
+				if err := _StakingContract.contract.UnpackLog(event, "ValidatorActivated", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseValidatorActivated is a log parse operation binding the contract event 0xe2a191ee805447bcf5adabadd39cb816b1b46de1364263aef69980bdafd8370f.
+//
+// Solidity: event ValidatorActivated(uint256 nextValidatorId)
+func (_StakingContract *StakingContractFilterer) ParseValidatorActivated(log types.Log) (*StakingContractValidatorActivated, error) {
+	event := new(StakingContractValidatorActivated)
+	if err := _StakingContract.contract.UnpackLog(event, "ValidatorActivated", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractValidatorSlashedStoppedIterator is returned from FilterValidatorSlashedStopped and is used to iterate over the raw logs and unpacked data for ValidatorSlashedStopped events raised by the StakingContract contract.
+type StakingContractValidatorSlashedStoppedIterator struct {
+	Event *StakingContractValidatorSlashedStopped // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractValidatorSlashedStoppedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractValidatorSlashedStopped)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractValidatorSlashedStopped)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractValidatorSlashedStoppedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractValidatorSlashedStoppedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractValidatorSlashedStopped represents a ValidatorSlashedStopped event raised by the StakingContract contract.
+type StakingContractValidatorSlashedStopped struct {
+	StoppedCount *big.Int
+	Slashed      *big.Int
+	Raw          types.Log // Blockchain specific contextual infos
+}
+
+// FilterValidatorSlashedStopped is a free log retrieval operation binding the contract event 0x10d3cb48238c3e81c131ce17f23375c27148e293784bbfe05e852647c2299115.
+//
+// Solidity: event ValidatorSlashedStopped(uint256 stoppedCount, uint256 slashed)
+func (_StakingContract *StakingContractFilterer) FilterValidatorSlashedStopped(opts *bind.FilterOpts) (*StakingContractValidatorSlashedStoppedIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "ValidatorSlashedStopped")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractValidatorSlashedStoppedIterator{contract: _StakingContract.contract, event: "ValidatorSlashedStopped", logs: logs, sub: sub}, nil
+}
+
+// WatchValidatorSlashedStopped is a free log subscription operation binding the contract event 0x10d3cb48238c3e81c131ce17f23375c27148e293784bbfe05e852647c2299115.
+//
+// Solidity: event ValidatorSlashedStopped(uint256 stoppedCount, uint256 slashed)
+func (_StakingContract *StakingContractFilterer) WatchValidatorSlashedStopped(opts *bind.WatchOpts, sink chan<- *StakingContractValidatorSlashedStopped) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "ValidatorSlashedStopped")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractValidatorSlashedStopped)
+				if err := _StakingContract.contract.UnpackLog(event, "ValidatorSlashedStopped", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseValidatorSlashedStopped is a log parse operation binding the contract event 0x10d3cb48238c3e81c131ce17f23375c27148e293784bbfe05e852647c2299115.
+//
+// Solidity: event ValidatorSlashedStopped(uint256 stoppedCount, uint256 slashed)
+func (_StakingContract *StakingContractFilterer) ParseValidatorSlashedStopped(log types.Log) (*StakingContractValidatorSlashedStopped, error) {
+	event := new(StakingContractValidatorSlashedStopped)
+	if err := _StakingContract.contract.UnpackLog(event, "ValidatorSlashedStopped", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractValidatorStoppedIterator is returned from FilterValidatorStopped and is used to iterate over the raw logs and unpacked data for ValidatorStopped events raised by the StakingContract contract.
+type StakingContractValidatorStoppedIterator struct {
+	Event *StakingContractValidatorStopped // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractValidatorStoppedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractValidatorStopped)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractValidatorStopped)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractValidatorStoppedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractValidatorStoppedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractValidatorStopped represents a ValidatorStopped event raised by the StakingContract contract.
+type StakingContractValidatorStopped struct {
+	StoppedCount   *big.Int
+	StoppedBalance *big.Int
+	Raw            types.Log // Blockchain specific contextual infos
+}
+
+// FilterValidatorStopped is a free log retrieval operation binding the contract event 0x5a51f96eda2fa129d02ccea2614367ece90f06ee3ced4c58a06a931a2b619954.
+//
+// Solidity: event ValidatorStopped(uint256 stoppedCount, uint256 stoppedBalance)
+func (_StakingContract *StakingContractFilterer) FilterValidatorStopped(opts *bind.FilterOpts) (*StakingContractValidatorStoppedIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "ValidatorStopped")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractValidatorStoppedIterator{contract: _StakingContract.contract, event: "ValidatorStopped", logs: logs, sub: sub}, nil
+}
+
+// WatchValidatorStopped is a free log subscription operation binding the contract event 0x5a51f96eda2fa129d02ccea2614367ece90f06ee3ced4c58a06a931a2b619954.
+//
+// Solidity: event ValidatorStopped(uint256 stoppedCount, uint256 stoppedBalance)
+func (_StakingContract *StakingContractFilterer) WatchValidatorStopped(opts *bind.WatchOpts, sink chan<- *StakingContractValidatorStopped) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "ValidatorStopped")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractValidatorStopped)
+				if err := _StakingContract.contract.UnpackLog(event, "ValidatorStopped", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseValidatorStopped is a log parse operation binding the contract event 0x5a51f96eda2fa129d02ccea2614367ece90f06ee3ced4c58a06a931a2b619954.
+//
+// Solidity: event ValidatorStopped(uint256 stoppedCount, uint256 stoppedBalance)
+func (_StakingContract *StakingContractFilterer) ParseValidatorStopped(log types.Log) (*StakingContractValidatorStopped, error) {
+	event := new(StakingContractValidatorStopped)
+	if err := _StakingContract.contract.UnpackLog(event, "ValidatorStopped", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractWithdrawCredentialSetIterator is returned from FilterWithdrawCredentialSet and is used to iterate over the raw logs and unpacked data for WithdrawCredentialSet events raised by the StakingContract contract.
+type StakingContractWithdrawCredentialSetIterator struct {
+	Event *StakingContractWithdrawCredentialSet // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractWithdrawCredentialSetIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractWithdrawCredentialSet)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractWithdrawCredentialSet)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractWithdrawCredentialSetIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractWithdrawCredentialSetIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractWithdrawCredentialSet represents a WithdrawCredentialSet event raised by the StakingContract contract.
+type StakingContractWithdrawCredentialSet struct {
+	WithdrawCredential [32]byte
+	Raw                types.Log // Blockchain specific contextual infos
+}
+
+// FilterWithdrawCredentialSet is a free log retrieval operation binding the contract event 0x690facbfacb53c9319489117a6ac422718b5cb059a6ffade4871ff10f6f9aee9.
+//
+// Solidity: event WithdrawCredentialSet(bytes32 withdrawCredential)
+func (_StakingContract *StakingContractFilterer) FilterWithdrawCredentialSet(opts *bind.FilterOpts) (*StakingContractWithdrawCredentialSetIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "WithdrawCredentialSet")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractWithdrawCredentialSetIterator{contract: _StakingContract.contract, event: "WithdrawCredentialSet", logs: logs, sub: sub}, nil
+}
+
+// WatchWithdrawCredentialSet is a free log subscription operation binding the contract event 0x690facbfacb53c9319489117a6ac422718b5cb059a6ffade4871ff10f6f9aee9.
+//
+// Solidity: event WithdrawCredentialSet(bytes32 withdrawCredential)
+func (_StakingContract *StakingContractFilterer) WatchWithdrawCredentialSet(opts *bind.WatchOpts, sink chan<- *StakingContractWithdrawCredentialSet) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "WithdrawCredentialSet")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractWithdrawCredentialSet)
+				if err := _StakingContract.contract.UnpackLog(event, "WithdrawCredentialSet", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseWithdrawCredentialSet is a log parse operation binding the contract event 0x690facbfacb53c9319489117a6ac422718b5cb059a6ffade4871ff10f6f9aee9.
+//
+// Solidity: event WithdrawCredentialSet(bytes32 withdrawCredential)
+func (_StakingContract *StakingContractFilterer) ParseWithdrawCredentialSet(log types.Log) (*StakingContractWithdrawCredentialSet, error) {
+	event := new(StakingContractWithdrawCredentialSet)
+	if err := _StakingContract.contract.UnpackLog(event, "WithdrawCredentialSet", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// StakingContractXETHContractSetIterator is returned from FilterXETHContractSet and is used to iterate over the raw logs and unpacked data for XETHContractSet events raised by the StakingContract contract.
+type StakingContractXETHContractSetIterator struct {
+	Event *StakingContractXETHContractSet // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractXETHContractSetIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractXETHContractSet)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractXETHContractSet)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractXETHContractSetIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractXETHContractSetIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractXETHContractSet represents a XETHContractSet event raised by the StakingContract contract.
+type StakingContractXETHContractSet struct {
+	Addr common.Address
+	Raw  types.Log // Blockchain specific contextual infos
+}
+
+// FilterXETHContractSet is a free log retrieval operation binding the contract event 0x65f24f264bd70348b9888b2fbf27cd04f9e2fb0fcc50dde8fb36483576ef32a3.
+//
+// Solidity: event XETHContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) FilterXETHContractSet(opts *bind.FilterOpts) (*StakingContractXETHContractSetIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "XETHContractSet")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractXETHContractSetIterator{contract: _StakingContract.contract, event: "XETHContractSet", logs: logs, sub: sub}, nil
+}
+
+// WatchXETHContractSet is a free log subscription operation binding the contract event 0x65f24f264bd70348b9888b2fbf27cd04f9e2fb0fcc50dde8fb36483576ef32a3.
+//
+// Solidity: event XETHContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) WatchXETHContractSet(opts *bind.WatchOpts, sink chan<- *StakingContractXETHContractSet) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "XETHContractSet")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractXETHContractSet)
+				if err := _StakingContract.contract.UnpackLog(event, "XETHContractSet", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseXETHContractSet is a log parse operation binding the contract event 0x65f24f264bd70348b9888b2fbf27cd04f9e2fb0fcc50dde8fb36483576ef32a3.
+//
+// Solidity: event XETHContractSet(address addr)
+func (_StakingContract *StakingContractFilterer) ParseXETHContractSet(log types.Log) (*StakingContractXETHContractSet, error) {
+	event := new(StakingContractXETHContractSet)
+	if err := _StakingContract.contract.UnpackLog(event, "XETHContractSet", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
