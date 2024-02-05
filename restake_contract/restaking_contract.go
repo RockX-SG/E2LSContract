@@ -28,16 +28,9 @@ var (
 	_ = event.NewSubscription
 )
 
-// BeaconChainProofsValidatorFieldsAndBalanceProofs is an auto generated low-level Go binding around an user-defined struct.
-type BeaconChainProofsValidatorFieldsAndBalanceProofs struct {
-	ValidatorFieldsProof  []byte
-	ValidatorBalanceProof []byte
-	BalanceRoot           [32]byte
-}
-
 // RestakingContractMetaData contains all meta data concerning the RestakingContract contract.
 var RestakingContractMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Claimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Pending\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"OPERATOR_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxNumberOfWithdrawalsToClaim\",\"type\":\"uint256\"}],\"name\":\"claimDelayedWithdrawals\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"podOwner\",\"type\":\"address\"}],\"name\":\"createDelayedWithdrawal\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delayedWithdrawalRouter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delegationManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPod\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPodManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingWithdrawalAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_eigenPodManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_strategyManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delayedWithdrawalRouter\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stakingAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"strategyManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"oracleBlockNumber\",\"type\":\"uint64\"},{\"internalType\":\"uint40\",\"name\":\"validatorIndex\",\"type\":\"uint40\"},{\"components\":[{\"internalType\":\"bytes\",\"name\":\"validatorFieldsProof\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"validatorBalanceProof\",\"type\":\"bytes\"},{\"internalType\":\"bytes32\",\"name\":\"balanceRoot\",\"type\":\"bytes32\"}],\"internalType\":\"structBeaconChainProofs.ValidatorFieldsAndBalanceProofs\",\"name\":\"proofs\",\"type\":\"tuple\"},{\"internalType\":\"bytes32[]\",\"name\":\"validatorFields\",\"type\":\"bytes32[]\"}],\"name\":\"verifyWithdrawalCredentialsAndBalance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawBeforeRestaking\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Claimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Pending\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"OPERATOR_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WITHDRAW_MIN\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxNumberOfWithdrawalsToClaim\",\"type\":\"uint256\"}],\"name\":\"claimDelayedWithdrawals\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delayedWithdrawalRouter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delegationManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPod\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPodManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingWithdrawalAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_eigenPodManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_strategyManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delayedWithdrawalRouter\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"stakingAddress_\",\"type\":\"address\"}],\"name\":\"initializeV2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stakingAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"strategyManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawBeforeRestaking\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
 }
 
 // RestakingContractABI is the input ABI used to generate the binding from.
@@ -246,6 +239,37 @@ func (_RestakingContract *RestakingContractSession) OPERATORROLE() ([32]byte, er
 // Solidity: function OPERATOR_ROLE() view returns(bytes32)
 func (_RestakingContract *RestakingContractCallerSession) OPERATORROLE() ([32]byte, error) {
 	return _RestakingContract.Contract.OPERATORROLE(&_RestakingContract.CallOpts)
+}
+
+// WITHDRAWMIN is a free data retrieval call binding the contract method 0x6094accc.
+//
+// Solidity: function WITHDRAW_MIN() view returns(uint256)
+func (_RestakingContract *RestakingContractCaller) WITHDRAWMIN(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _RestakingContract.contract.Call(opts, &out, "WITHDRAW_MIN")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// WITHDRAWMIN is a free data retrieval call binding the contract method 0x6094accc.
+//
+// Solidity: function WITHDRAW_MIN() view returns(uint256)
+func (_RestakingContract *RestakingContractSession) WITHDRAWMIN() (*big.Int, error) {
+	return _RestakingContract.Contract.WITHDRAWMIN(&_RestakingContract.CallOpts)
+}
+
+// WITHDRAWMIN is a free data retrieval call binding the contract method 0x6094accc.
+//
+// Solidity: function WITHDRAW_MIN() view returns(uint256)
+func (_RestakingContract *RestakingContractCallerSession) WITHDRAWMIN() (*big.Int, error) {
+	return _RestakingContract.Contract.WITHDRAWMIN(&_RestakingContract.CallOpts)
 }
 
 // DelayedWithdrawalRouter is a free data retrieval call binding the contract method 0x1a5057be.
@@ -579,27 +603,6 @@ func (_RestakingContract *RestakingContractTransactorSession) ClaimDelayedWithdr
 	return _RestakingContract.Contract.ClaimDelayedWithdrawals(&_RestakingContract.TransactOpts, maxNumberOfWithdrawalsToClaim)
 }
 
-// CreateDelayedWithdrawal is a paid mutator transaction binding the contract method 0x3c7e8855.
-//
-// Solidity: function createDelayedWithdrawal(address podOwner) payable returns()
-func (_RestakingContract *RestakingContractTransactor) CreateDelayedWithdrawal(opts *bind.TransactOpts, podOwner common.Address) (*types.Transaction, error) {
-	return _RestakingContract.contract.Transact(opts, "createDelayedWithdrawal", podOwner)
-}
-
-// CreateDelayedWithdrawal is a paid mutator transaction binding the contract method 0x3c7e8855.
-//
-// Solidity: function createDelayedWithdrawal(address podOwner) payable returns()
-func (_RestakingContract *RestakingContractSession) CreateDelayedWithdrawal(podOwner common.Address) (*types.Transaction, error) {
-	return _RestakingContract.Contract.CreateDelayedWithdrawal(&_RestakingContract.TransactOpts, podOwner)
-}
-
-// CreateDelayedWithdrawal is a paid mutator transaction binding the contract method 0x3c7e8855.
-//
-// Solidity: function createDelayedWithdrawal(address podOwner) payable returns()
-func (_RestakingContract *RestakingContractTransactorSession) CreateDelayedWithdrawal(podOwner common.Address) (*types.Transaction, error) {
-	return _RestakingContract.Contract.CreateDelayedWithdrawal(&_RestakingContract.TransactOpts, podOwner)
-}
-
 // GrantRole is a paid mutator transaction binding the contract method 0x2f2ff15d.
 //
 // Solidity: function grantRole(bytes32 role, address account) returns()
@@ -642,6 +645,27 @@ func (_RestakingContract *RestakingContractTransactorSession) Initialize(_eigenP
 	return _RestakingContract.Contract.Initialize(&_RestakingContract.TransactOpts, _eigenPodManager, _delegationManager, _strategyManager, _delayedWithdrawalRouter)
 }
 
+// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
+//
+// Solidity: function initializeV2(address stakingAddress_) returns()
+func (_RestakingContract *RestakingContractTransactor) InitializeV2(opts *bind.TransactOpts, stakingAddress_ common.Address) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "initializeV2", stakingAddress_)
+}
+
+// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
+//
+// Solidity: function initializeV2(address stakingAddress_) returns()
+func (_RestakingContract *RestakingContractSession) InitializeV2(stakingAddress_ common.Address) (*types.Transaction, error) {
+	return _RestakingContract.Contract.InitializeV2(&_RestakingContract.TransactOpts, stakingAddress_)
+}
+
+// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
+//
+// Solidity: function initializeV2(address stakingAddress_) returns()
+func (_RestakingContract *RestakingContractTransactorSession) InitializeV2(stakingAddress_ common.Address) (*types.Transaction, error) {
+	return _RestakingContract.Contract.InitializeV2(&_RestakingContract.TransactOpts, stakingAddress_)
+}
+
 // RenounceRole is a paid mutator transaction binding the contract method 0x36568abe.
 //
 // Solidity: function renounceRole(bytes32 role, address account) returns()
@@ -682,27 +706,6 @@ func (_RestakingContract *RestakingContractSession) RevokeRole(role [32]byte, ac
 // Solidity: function revokeRole(bytes32 role, address account) returns()
 func (_RestakingContract *RestakingContractTransactorSession) RevokeRole(role [32]byte, account common.Address) (*types.Transaction, error) {
 	return _RestakingContract.Contract.RevokeRole(&_RestakingContract.TransactOpts, role, account)
-}
-
-// VerifyWithdrawalCredentialsAndBalance is a paid mutator transaction binding the contract method 0x51f07208.
-//
-// Solidity: function verifyWithdrawalCredentialsAndBalance(uint64 oracleBlockNumber, uint40 validatorIndex, (bytes,bytes,bytes32) proofs, bytes32[] validatorFields) returns()
-func (_RestakingContract *RestakingContractTransactor) VerifyWithdrawalCredentialsAndBalance(opts *bind.TransactOpts, oracleBlockNumber uint64, validatorIndex *big.Int, proofs BeaconChainProofsValidatorFieldsAndBalanceProofs, validatorFields [][32]byte) (*types.Transaction, error) {
-	return _RestakingContract.contract.Transact(opts, "verifyWithdrawalCredentialsAndBalance", oracleBlockNumber, validatorIndex, proofs, validatorFields)
-}
-
-// VerifyWithdrawalCredentialsAndBalance is a paid mutator transaction binding the contract method 0x51f07208.
-//
-// Solidity: function verifyWithdrawalCredentialsAndBalance(uint64 oracleBlockNumber, uint40 validatorIndex, (bytes,bytes,bytes32) proofs, bytes32[] validatorFields) returns()
-func (_RestakingContract *RestakingContractSession) VerifyWithdrawalCredentialsAndBalance(oracleBlockNumber uint64, validatorIndex *big.Int, proofs BeaconChainProofsValidatorFieldsAndBalanceProofs, validatorFields [][32]byte) (*types.Transaction, error) {
-	return _RestakingContract.Contract.VerifyWithdrawalCredentialsAndBalance(&_RestakingContract.TransactOpts, oracleBlockNumber, validatorIndex, proofs, validatorFields)
-}
-
-// VerifyWithdrawalCredentialsAndBalance is a paid mutator transaction binding the contract method 0x51f07208.
-//
-// Solidity: function verifyWithdrawalCredentialsAndBalance(uint64 oracleBlockNumber, uint40 validatorIndex, (bytes,bytes,bytes32) proofs, bytes32[] validatorFields) returns()
-func (_RestakingContract *RestakingContractTransactorSession) VerifyWithdrawalCredentialsAndBalance(oracleBlockNumber uint64, validatorIndex *big.Int, proofs BeaconChainProofsValidatorFieldsAndBalanceProofs, validatorFields [][32]byte) (*types.Transaction, error) {
-	return _RestakingContract.Contract.VerifyWithdrawalCredentialsAndBalance(&_RestakingContract.TransactOpts, oracleBlockNumber, validatorIndex, proofs, validatorFields)
 }
 
 // WithdrawBeforeRestaking is a paid mutator transaction binding the contract method 0xbaa7145a.
@@ -875,6 +878,140 @@ func (_RestakingContract *RestakingContractFilterer) WatchClaimed(opts *bind.Wat
 func (_RestakingContract *RestakingContractFilterer) ParseClaimed(log types.Log) (*RestakingContractClaimed, error) {
 	event := new(RestakingContractClaimed)
 	if err := _RestakingContract.contract.UnpackLog(event, "Claimed", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// RestakingContractInitializedIterator is returned from FilterInitialized and is used to iterate over the raw logs and unpacked data for Initialized events raised by the RestakingContract contract.
+type RestakingContractInitializedIterator struct {
+	Event *RestakingContractInitialized // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *RestakingContractInitializedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(RestakingContractInitialized)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(RestakingContractInitialized)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *RestakingContractInitializedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *RestakingContractInitializedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// RestakingContractInitialized represents a Initialized event raised by the RestakingContract contract.
+type RestakingContractInitialized struct {
+	Version uint8
+	Raw     types.Log // Blockchain specific contextual infos
+}
+
+// FilterInitialized is a free log retrieval operation binding the contract event 0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498.
+//
+// Solidity: event Initialized(uint8 version)
+func (_RestakingContract *RestakingContractFilterer) FilterInitialized(opts *bind.FilterOpts) (*RestakingContractInitializedIterator, error) {
+
+	logs, sub, err := _RestakingContract.contract.FilterLogs(opts, "Initialized")
+	if err != nil {
+		return nil, err
+	}
+	return &RestakingContractInitializedIterator{contract: _RestakingContract.contract, event: "Initialized", logs: logs, sub: sub}, nil
+}
+
+// WatchInitialized is a free log subscription operation binding the contract event 0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498.
+//
+// Solidity: event Initialized(uint8 version)
+func (_RestakingContract *RestakingContractFilterer) WatchInitialized(opts *bind.WatchOpts, sink chan<- *RestakingContractInitialized) (event.Subscription, error) {
+
+	logs, sub, err := _RestakingContract.contract.WatchLogs(opts, "Initialized")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(RestakingContractInitialized)
+				if err := _RestakingContract.contract.UnpackLog(event, "Initialized", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseInitialized is a log parse operation binding the contract event 0x7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb3847402498.
+//
+// Solidity: event Initialized(uint8 version)
+func (_RestakingContract *RestakingContractFilterer) ParseInitialized(log types.Log) (*RestakingContractInitialized, error) {
+	event := new(RestakingContractInitialized)
+	if err := _RestakingContract.contract.UnpackLog(event, "Initialized", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
