@@ -1,7 +1,7 @@
 // Code generated - DO NOT EDIT.
 // This file is a generated binding and any manual changes will be lost.
 
-package uniEth_contract
+package unistaking_contract
 
 import (
 	"errors"
@@ -28,113 +28,113 @@ var (
 	_ = event.NewSubscription
 )
 
-// UniEthContractMetaData contains all meta data concerning the UniEthContract contract.
-var UniEthContractMetaData = &bind.MetaData{
+// UnistakingContractMetaData contains all meta data concerning the UnistakingContract contract.
+var UnistakingContractMetaData = &bind.MetaData{
 	ABI: "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_logic\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"admin_\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"stateMutability\":\"payable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"previousAdmin\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"AdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beacon\",\"type\":\"address\"}],\"name\":\"BeaconUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"admin_\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAdmin\",\"type\":\"address\"}],\"name\":\"changeAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"implementation_\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
 }
 
-// UniEthContractABI is the input ABI used to generate the binding from.
-// Deprecated: Use UniEthContractMetaData.ABI instead.
-var UniEthContractABI = UniEthContractMetaData.ABI
+// UnistakingContractABI is the input ABI used to generate the binding from.
+// Deprecated: Use UnistakingContractMetaData.ABI instead.
+var UnistakingContractABI = UnistakingContractMetaData.ABI
 
-// UniEthContract is an auto generated Go binding around an Ethereum contract.
-type UniEthContract struct {
-	UniEthContractCaller     // Read-only binding to the contract
-	UniEthContractTransactor // Write-only binding to the contract
-	UniEthContractFilterer   // Log filterer for contract events
+// UnistakingContract is an auto generated Go binding around an Ethereum contract.
+type UnistakingContract struct {
+	UnistakingContractCaller     // Read-only binding to the contract
+	UnistakingContractTransactor // Write-only binding to the contract
+	UnistakingContractFilterer   // Log filterer for contract events
 }
 
-// UniEthContractCaller is an auto generated read-only Go binding around an Ethereum contract.
-type UniEthContractCaller struct {
+// UnistakingContractCaller is an auto generated read-only Go binding around an Ethereum contract.
+type UnistakingContractCaller struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// UniEthContractTransactor is an auto generated write-only Go binding around an Ethereum contract.
-type UniEthContractTransactor struct {
+// UnistakingContractTransactor is an auto generated write-only Go binding around an Ethereum contract.
+type UnistakingContractTransactor struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// UniEthContractFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
-type UniEthContractFilterer struct {
+// UnistakingContractFilterer is an auto generated log filtering Go binding around an Ethereum contract events.
+type UnistakingContractFilterer struct {
 	contract *bind.BoundContract // Generic contract wrapper for the low level calls
 }
 
-// UniEthContractSession is an auto generated Go binding around an Ethereum contract,
+// UnistakingContractSession is an auto generated Go binding around an Ethereum contract,
 // with pre-set call and transact options.
-type UniEthContractSession struct {
-	Contract     *UniEthContract   // Generic contract binding to set the session for
-	CallOpts     bind.CallOpts     // Call options to use throughout this session
-	TransactOpts bind.TransactOpts // Transaction auth options to use throughout this session
+type UnistakingContractSession struct {
+	Contract     *UnistakingContract // Generic contract binding to set the session for
+	CallOpts     bind.CallOpts       // Call options to use throughout this session
+	TransactOpts bind.TransactOpts   // Transaction auth options to use throughout this session
 }
 
-// UniEthContractCallerSession is an auto generated read-only Go binding around an Ethereum contract,
+// UnistakingContractCallerSession is an auto generated read-only Go binding around an Ethereum contract,
 // with pre-set call options.
-type UniEthContractCallerSession struct {
-	Contract *UniEthContractCaller // Generic contract caller binding to set the session for
-	CallOpts bind.CallOpts         // Call options to use throughout this session
+type UnistakingContractCallerSession struct {
+	Contract *UnistakingContractCaller // Generic contract caller binding to set the session for
+	CallOpts bind.CallOpts             // Call options to use throughout this session
 }
 
-// UniEthContractTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
+// UnistakingContractTransactorSession is an auto generated write-only Go binding around an Ethereum contract,
 // with pre-set transact options.
-type UniEthContractTransactorSession struct {
-	Contract     *UniEthContractTransactor // Generic contract transactor binding to set the session for
-	TransactOpts bind.TransactOpts         // Transaction auth options to use throughout this session
+type UnistakingContractTransactorSession struct {
+	Contract     *UnistakingContractTransactor // Generic contract transactor binding to set the session for
+	TransactOpts bind.TransactOpts             // Transaction auth options to use throughout this session
 }
 
-// UniEthContractRaw is an auto generated low-level Go binding around an Ethereum contract.
-type UniEthContractRaw struct {
-	Contract *UniEthContract // Generic contract binding to access the raw methods on
+// UnistakingContractRaw is an auto generated low-level Go binding around an Ethereum contract.
+type UnistakingContractRaw struct {
+	Contract *UnistakingContract // Generic contract binding to access the raw methods on
 }
 
-// UniEthContractCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
-type UniEthContractCallerRaw struct {
-	Contract *UniEthContractCaller // Generic read-only contract binding to access the raw methods on
+// UnistakingContractCallerRaw is an auto generated low-level read-only Go binding around an Ethereum contract.
+type UnistakingContractCallerRaw struct {
+	Contract *UnistakingContractCaller // Generic read-only contract binding to access the raw methods on
 }
 
-// UniEthContractTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
-type UniEthContractTransactorRaw struct {
-	Contract *UniEthContractTransactor // Generic write-only contract binding to access the raw methods on
+// UnistakingContractTransactorRaw is an auto generated low-level write-only Go binding around an Ethereum contract.
+type UnistakingContractTransactorRaw struct {
+	Contract *UnistakingContractTransactor // Generic write-only contract binding to access the raw methods on
 }
 
-// NewUniEthContract creates a new instance of UniEthContract, bound to a specific deployed contract.
-func NewUniEthContract(address common.Address, backend bind.ContractBackend) (*UniEthContract, error) {
-	contract, err := bindUniEthContract(address, backend, backend, backend)
+// NewUnistakingContract creates a new instance of UnistakingContract, bound to a specific deployed contract.
+func NewUnistakingContract(address common.Address, backend bind.ContractBackend) (*UnistakingContract, error) {
+	contract, err := bindUnistakingContract(address, backend, backend, backend)
 	if err != nil {
 		return nil, err
 	}
-	return &UniEthContract{UniEthContractCaller: UniEthContractCaller{contract: contract}, UniEthContractTransactor: UniEthContractTransactor{contract: contract}, UniEthContractFilterer: UniEthContractFilterer{contract: contract}}, nil
+	return &UnistakingContract{UnistakingContractCaller: UnistakingContractCaller{contract: contract}, UnistakingContractTransactor: UnistakingContractTransactor{contract: contract}, UnistakingContractFilterer: UnistakingContractFilterer{contract: contract}}, nil
 }
 
-// NewUniEthContractCaller creates a new read-only instance of UniEthContract, bound to a specific deployed contract.
-func NewUniEthContractCaller(address common.Address, caller bind.ContractCaller) (*UniEthContractCaller, error) {
-	contract, err := bindUniEthContract(address, caller, nil, nil)
+// NewUnistakingContractCaller creates a new read-only instance of UnistakingContract, bound to a specific deployed contract.
+func NewUnistakingContractCaller(address common.Address, caller bind.ContractCaller) (*UnistakingContractCaller, error) {
+	contract, err := bindUnistakingContract(address, caller, nil, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &UniEthContractCaller{contract: contract}, nil
+	return &UnistakingContractCaller{contract: contract}, nil
 }
 
-// NewUniEthContractTransactor creates a new write-only instance of UniEthContract, bound to a specific deployed contract.
-func NewUniEthContractTransactor(address common.Address, transactor bind.ContractTransactor) (*UniEthContractTransactor, error) {
-	contract, err := bindUniEthContract(address, nil, transactor, nil)
+// NewUnistakingContractTransactor creates a new write-only instance of UnistakingContract, bound to a specific deployed contract.
+func NewUnistakingContractTransactor(address common.Address, transactor bind.ContractTransactor) (*UnistakingContractTransactor, error) {
+	contract, err := bindUnistakingContract(address, nil, transactor, nil)
 	if err != nil {
 		return nil, err
 	}
-	return &UniEthContractTransactor{contract: contract}, nil
+	return &UnistakingContractTransactor{contract: contract}, nil
 }
 
-// NewUniEthContractFilterer creates a new log filterer instance of UniEthContract, bound to a specific deployed contract.
-func NewUniEthContractFilterer(address common.Address, filterer bind.ContractFilterer) (*UniEthContractFilterer, error) {
-	contract, err := bindUniEthContract(address, nil, nil, filterer)
+// NewUnistakingContractFilterer creates a new log filterer instance of UnistakingContract, bound to a specific deployed contract.
+func NewUnistakingContractFilterer(address common.Address, filterer bind.ContractFilterer) (*UnistakingContractFilterer, error) {
+	contract, err := bindUnistakingContract(address, nil, nil, filterer)
 	if err != nil {
 		return nil, err
 	}
-	return &UniEthContractFilterer{contract: contract}, nil
+	return &UnistakingContractFilterer{contract: contract}, nil
 }
 
-// bindUniEthContract binds a generic wrapper to an already deployed contract.
-func bindUniEthContract(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
-	parsed, err := abi.JSON(strings.NewReader(UniEthContractABI))
+// bindUnistakingContract binds a generic wrapper to an already deployed contract.
+func bindUnistakingContract(address common.Address, caller bind.ContractCaller, transactor bind.ContractTransactor, filterer bind.ContractFilterer) (*bind.BoundContract, error) {
+	parsed, err := abi.JSON(strings.NewReader(UnistakingContractABI))
 	if err != nil {
 		return nil, err
 	}
@@ -145,190 +145,190 @@ func bindUniEthContract(address common.Address, caller bind.ContractCaller, tran
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_UniEthContract *UniEthContractRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _UniEthContract.Contract.UniEthContractCaller.contract.Call(opts, result, method, params...)
+func (_UnistakingContract *UnistakingContractRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _UnistakingContract.Contract.UnistakingContractCaller.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_UniEthContract *UniEthContractRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _UniEthContract.Contract.UniEthContractTransactor.contract.Transfer(opts)
+func (_UnistakingContract *UnistakingContractRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.UnistakingContractTransactor.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_UniEthContract *UniEthContractRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _UniEthContract.Contract.UniEthContractTransactor.contract.Transact(opts, method, params...)
+func (_UnistakingContract *UnistakingContractRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.UnistakingContractTransactor.contract.Transact(opts, method, params...)
 }
 
 // Call invokes the (constant) contract method with params as input values and
 // sets the output to result. The result type might be a single field for simple
 // returns, a slice of interfaces for anonymous returns and a struct for named
 // returns.
-func (_UniEthContract *UniEthContractCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
-	return _UniEthContract.Contract.contract.Call(opts, result, method, params...)
+func (_UnistakingContract *UnistakingContractCallerRaw) Call(opts *bind.CallOpts, result *[]interface{}, method string, params ...interface{}) error {
+	return _UnistakingContract.Contract.contract.Call(opts, result, method, params...)
 }
 
 // Transfer initiates a plain transaction to move funds to the contract, calling
 // its default method if one is available.
-func (_UniEthContract *UniEthContractTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _UniEthContract.Contract.contract.Transfer(opts)
+func (_UnistakingContract *UnistakingContractTransactorRaw) Transfer(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.contract.Transfer(opts)
 }
 
 // Transact invokes the (paid) contract method with params as input values.
-func (_UniEthContract *UniEthContractTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
-	return _UniEthContract.Contract.contract.Transact(opts, method, params...)
+func (_UnistakingContract *UnistakingContractTransactorRaw) Transact(opts *bind.TransactOpts, method string, params ...interface{}) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.contract.Transact(opts, method, params...)
 }
 
 // Admin is a paid mutator transaction binding the contract method 0xf851a440.
 //
 // Solidity: function admin() returns(address admin_)
-func (_UniEthContract *UniEthContractTransactor) Admin(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _UniEthContract.contract.Transact(opts, "admin")
+func (_UnistakingContract *UnistakingContractTransactor) Admin(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _UnistakingContract.contract.Transact(opts, "admin")
 }
 
 // Admin is a paid mutator transaction binding the contract method 0xf851a440.
 //
 // Solidity: function admin() returns(address admin_)
-func (_UniEthContract *UniEthContractSession) Admin() (*types.Transaction, error) {
-	return _UniEthContract.Contract.Admin(&_UniEthContract.TransactOpts)
+func (_UnistakingContract *UnistakingContractSession) Admin() (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Admin(&_UnistakingContract.TransactOpts)
 }
 
 // Admin is a paid mutator transaction binding the contract method 0xf851a440.
 //
 // Solidity: function admin() returns(address admin_)
-func (_UniEthContract *UniEthContractTransactorSession) Admin() (*types.Transaction, error) {
-	return _UniEthContract.Contract.Admin(&_UniEthContract.TransactOpts)
+func (_UnistakingContract *UnistakingContractTransactorSession) Admin() (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Admin(&_UnistakingContract.TransactOpts)
 }
 
 // ChangeAdmin is a paid mutator transaction binding the contract method 0x8f283970.
 //
 // Solidity: function changeAdmin(address newAdmin) returns()
-func (_UniEthContract *UniEthContractTransactor) ChangeAdmin(opts *bind.TransactOpts, newAdmin common.Address) (*types.Transaction, error) {
-	return _UniEthContract.contract.Transact(opts, "changeAdmin", newAdmin)
+func (_UnistakingContract *UnistakingContractTransactor) ChangeAdmin(opts *bind.TransactOpts, newAdmin common.Address) (*types.Transaction, error) {
+	return _UnistakingContract.contract.Transact(opts, "changeAdmin", newAdmin)
 }
 
 // ChangeAdmin is a paid mutator transaction binding the contract method 0x8f283970.
 //
 // Solidity: function changeAdmin(address newAdmin) returns()
-func (_UniEthContract *UniEthContractSession) ChangeAdmin(newAdmin common.Address) (*types.Transaction, error) {
-	return _UniEthContract.Contract.ChangeAdmin(&_UniEthContract.TransactOpts, newAdmin)
+func (_UnistakingContract *UnistakingContractSession) ChangeAdmin(newAdmin common.Address) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.ChangeAdmin(&_UnistakingContract.TransactOpts, newAdmin)
 }
 
 // ChangeAdmin is a paid mutator transaction binding the contract method 0x8f283970.
 //
 // Solidity: function changeAdmin(address newAdmin) returns()
-func (_UniEthContract *UniEthContractTransactorSession) ChangeAdmin(newAdmin common.Address) (*types.Transaction, error) {
-	return _UniEthContract.Contract.ChangeAdmin(&_UniEthContract.TransactOpts, newAdmin)
+func (_UnistakingContract *UnistakingContractTransactorSession) ChangeAdmin(newAdmin common.Address) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.ChangeAdmin(&_UnistakingContract.TransactOpts, newAdmin)
 }
 
 // Implementation is a paid mutator transaction binding the contract method 0x5c60da1b.
 //
 // Solidity: function implementation() returns(address implementation_)
-func (_UniEthContract *UniEthContractTransactor) Implementation(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _UniEthContract.contract.Transact(opts, "implementation")
+func (_UnistakingContract *UnistakingContractTransactor) Implementation(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _UnistakingContract.contract.Transact(opts, "implementation")
 }
 
 // Implementation is a paid mutator transaction binding the contract method 0x5c60da1b.
 //
 // Solidity: function implementation() returns(address implementation_)
-func (_UniEthContract *UniEthContractSession) Implementation() (*types.Transaction, error) {
-	return _UniEthContract.Contract.Implementation(&_UniEthContract.TransactOpts)
+func (_UnistakingContract *UnistakingContractSession) Implementation() (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Implementation(&_UnistakingContract.TransactOpts)
 }
 
 // Implementation is a paid mutator transaction binding the contract method 0x5c60da1b.
 //
 // Solidity: function implementation() returns(address implementation_)
-func (_UniEthContract *UniEthContractTransactorSession) Implementation() (*types.Transaction, error) {
-	return _UniEthContract.Contract.Implementation(&_UniEthContract.TransactOpts)
+func (_UnistakingContract *UnistakingContractTransactorSession) Implementation() (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Implementation(&_UnistakingContract.TransactOpts)
 }
 
 // UpgradeTo is a paid mutator transaction binding the contract method 0x3659cfe6.
 //
 // Solidity: function upgradeTo(address newImplementation) returns()
-func (_UniEthContract *UniEthContractTransactor) UpgradeTo(opts *bind.TransactOpts, newImplementation common.Address) (*types.Transaction, error) {
-	return _UniEthContract.contract.Transact(opts, "upgradeTo", newImplementation)
+func (_UnistakingContract *UnistakingContractTransactor) UpgradeTo(opts *bind.TransactOpts, newImplementation common.Address) (*types.Transaction, error) {
+	return _UnistakingContract.contract.Transact(opts, "upgradeTo", newImplementation)
 }
 
 // UpgradeTo is a paid mutator transaction binding the contract method 0x3659cfe6.
 //
 // Solidity: function upgradeTo(address newImplementation) returns()
-func (_UniEthContract *UniEthContractSession) UpgradeTo(newImplementation common.Address) (*types.Transaction, error) {
-	return _UniEthContract.Contract.UpgradeTo(&_UniEthContract.TransactOpts, newImplementation)
+func (_UnistakingContract *UnistakingContractSession) UpgradeTo(newImplementation common.Address) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.UpgradeTo(&_UnistakingContract.TransactOpts, newImplementation)
 }
 
 // UpgradeTo is a paid mutator transaction binding the contract method 0x3659cfe6.
 //
 // Solidity: function upgradeTo(address newImplementation) returns()
-func (_UniEthContract *UniEthContractTransactorSession) UpgradeTo(newImplementation common.Address) (*types.Transaction, error) {
-	return _UniEthContract.Contract.UpgradeTo(&_UniEthContract.TransactOpts, newImplementation)
+func (_UnistakingContract *UnistakingContractTransactorSession) UpgradeTo(newImplementation common.Address) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.UpgradeTo(&_UnistakingContract.TransactOpts, newImplementation)
 }
 
 // UpgradeToAndCall is a paid mutator transaction binding the contract method 0x4f1ef286.
 //
 // Solidity: function upgradeToAndCall(address newImplementation, bytes data) payable returns()
-func (_UniEthContract *UniEthContractTransactor) UpgradeToAndCall(opts *bind.TransactOpts, newImplementation common.Address, data []byte) (*types.Transaction, error) {
-	return _UniEthContract.contract.Transact(opts, "upgradeToAndCall", newImplementation, data)
+func (_UnistakingContract *UnistakingContractTransactor) UpgradeToAndCall(opts *bind.TransactOpts, newImplementation common.Address, data []byte) (*types.Transaction, error) {
+	return _UnistakingContract.contract.Transact(opts, "upgradeToAndCall", newImplementation, data)
 }
 
 // UpgradeToAndCall is a paid mutator transaction binding the contract method 0x4f1ef286.
 //
 // Solidity: function upgradeToAndCall(address newImplementation, bytes data) payable returns()
-func (_UniEthContract *UniEthContractSession) UpgradeToAndCall(newImplementation common.Address, data []byte) (*types.Transaction, error) {
-	return _UniEthContract.Contract.UpgradeToAndCall(&_UniEthContract.TransactOpts, newImplementation, data)
+func (_UnistakingContract *UnistakingContractSession) UpgradeToAndCall(newImplementation common.Address, data []byte) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.UpgradeToAndCall(&_UnistakingContract.TransactOpts, newImplementation, data)
 }
 
 // UpgradeToAndCall is a paid mutator transaction binding the contract method 0x4f1ef286.
 //
 // Solidity: function upgradeToAndCall(address newImplementation, bytes data) payable returns()
-func (_UniEthContract *UniEthContractTransactorSession) UpgradeToAndCall(newImplementation common.Address, data []byte) (*types.Transaction, error) {
-	return _UniEthContract.Contract.UpgradeToAndCall(&_UniEthContract.TransactOpts, newImplementation, data)
+func (_UnistakingContract *UnistakingContractTransactorSession) UpgradeToAndCall(newImplementation common.Address, data []byte) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.UpgradeToAndCall(&_UnistakingContract.TransactOpts, newImplementation, data)
 }
 
 // Fallback is a paid mutator transaction binding the contract fallback function.
 //
 // Solidity: fallback() payable returns()
-func (_UniEthContract *UniEthContractTransactor) Fallback(opts *bind.TransactOpts, calldata []byte) (*types.Transaction, error) {
-	return _UniEthContract.contract.RawTransact(opts, calldata)
+func (_UnistakingContract *UnistakingContractTransactor) Fallback(opts *bind.TransactOpts, calldata []byte) (*types.Transaction, error) {
+	return _UnistakingContract.contract.RawTransact(opts, calldata)
 }
 
 // Fallback is a paid mutator transaction binding the contract fallback function.
 //
 // Solidity: fallback() payable returns()
-func (_UniEthContract *UniEthContractSession) Fallback(calldata []byte) (*types.Transaction, error) {
-	return _UniEthContract.Contract.Fallback(&_UniEthContract.TransactOpts, calldata)
+func (_UnistakingContract *UnistakingContractSession) Fallback(calldata []byte) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Fallback(&_UnistakingContract.TransactOpts, calldata)
 }
 
 // Fallback is a paid mutator transaction binding the contract fallback function.
 //
 // Solidity: fallback() payable returns()
-func (_UniEthContract *UniEthContractTransactorSession) Fallback(calldata []byte) (*types.Transaction, error) {
-	return _UniEthContract.Contract.Fallback(&_UniEthContract.TransactOpts, calldata)
+func (_UnistakingContract *UnistakingContractTransactorSession) Fallback(calldata []byte) (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Fallback(&_UnistakingContract.TransactOpts, calldata)
 }
 
 // Receive is a paid mutator transaction binding the contract receive function.
 //
 // Solidity: receive() payable returns()
-func (_UniEthContract *UniEthContractTransactor) Receive(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _UniEthContract.contract.RawTransact(opts, nil) // calldata is disallowed for receive function
+func (_UnistakingContract *UnistakingContractTransactor) Receive(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _UnistakingContract.contract.RawTransact(opts, nil) // calldata is disallowed for receive function
 }
 
 // Receive is a paid mutator transaction binding the contract receive function.
 //
 // Solidity: receive() payable returns()
-func (_UniEthContract *UniEthContractSession) Receive() (*types.Transaction, error) {
-	return _UniEthContract.Contract.Receive(&_UniEthContract.TransactOpts)
+func (_UnistakingContract *UnistakingContractSession) Receive() (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Receive(&_UnistakingContract.TransactOpts)
 }
 
 // Receive is a paid mutator transaction binding the contract receive function.
 //
 // Solidity: receive() payable returns()
-func (_UniEthContract *UniEthContractTransactorSession) Receive() (*types.Transaction, error) {
-	return _UniEthContract.Contract.Receive(&_UniEthContract.TransactOpts)
+func (_UnistakingContract *UnistakingContractTransactorSession) Receive() (*types.Transaction, error) {
+	return _UnistakingContract.Contract.Receive(&_UnistakingContract.TransactOpts)
 }
 
-// UniEthContractAdminChangedIterator is returned from FilterAdminChanged and is used to iterate over the raw logs and unpacked data for AdminChanged events raised by the UniEthContract contract.
-type UniEthContractAdminChangedIterator struct {
-	Event *UniEthContractAdminChanged // Event containing the contract specifics and raw log
+// UnistakingContractAdminChangedIterator is returned from FilterAdminChanged and is used to iterate over the raw logs and unpacked data for AdminChanged events raised by the UnistakingContract contract.
+type UnistakingContractAdminChangedIterator struct {
+	Event *UnistakingContractAdminChanged // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -342,7 +342,7 @@ type UniEthContractAdminChangedIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *UniEthContractAdminChangedIterator) Next() bool {
+func (it *UnistakingContractAdminChangedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -351,7 +351,7 @@ func (it *UniEthContractAdminChangedIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(UniEthContractAdminChanged)
+			it.Event = new(UnistakingContractAdminChanged)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -366,7 +366,7 @@ func (it *UniEthContractAdminChangedIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(UniEthContractAdminChanged)
+		it.Event = new(UnistakingContractAdminChanged)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -382,19 +382,19 @@ func (it *UniEthContractAdminChangedIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *UniEthContractAdminChangedIterator) Error() error {
+func (it *UnistakingContractAdminChangedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *UniEthContractAdminChangedIterator) Close() error {
+func (it *UnistakingContractAdminChangedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// UniEthContractAdminChanged represents a AdminChanged event raised by the UniEthContract contract.
-type UniEthContractAdminChanged struct {
+// UnistakingContractAdminChanged represents a AdminChanged event raised by the UnistakingContract contract.
+type UnistakingContractAdminChanged struct {
 	PreviousAdmin common.Address
 	NewAdmin      common.Address
 	Raw           types.Log // Blockchain specific contextual infos
@@ -403,21 +403,21 @@ type UniEthContractAdminChanged struct {
 // FilterAdminChanged is a free log retrieval operation binding the contract event 0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f.
 //
 // Solidity: event AdminChanged(address previousAdmin, address newAdmin)
-func (_UniEthContract *UniEthContractFilterer) FilterAdminChanged(opts *bind.FilterOpts) (*UniEthContractAdminChangedIterator, error) {
+func (_UnistakingContract *UnistakingContractFilterer) FilterAdminChanged(opts *bind.FilterOpts) (*UnistakingContractAdminChangedIterator, error) {
 
-	logs, sub, err := _UniEthContract.contract.FilterLogs(opts, "AdminChanged")
+	logs, sub, err := _UnistakingContract.contract.FilterLogs(opts, "AdminChanged")
 	if err != nil {
 		return nil, err
 	}
-	return &UniEthContractAdminChangedIterator{contract: _UniEthContract.contract, event: "AdminChanged", logs: logs, sub: sub}, nil
+	return &UnistakingContractAdminChangedIterator{contract: _UnistakingContract.contract, event: "AdminChanged", logs: logs, sub: sub}, nil
 }
 
 // WatchAdminChanged is a free log subscription operation binding the contract event 0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f.
 //
 // Solidity: event AdminChanged(address previousAdmin, address newAdmin)
-func (_UniEthContract *UniEthContractFilterer) WatchAdminChanged(opts *bind.WatchOpts, sink chan<- *UniEthContractAdminChanged) (event.Subscription, error) {
+func (_UnistakingContract *UnistakingContractFilterer) WatchAdminChanged(opts *bind.WatchOpts, sink chan<- *UnistakingContractAdminChanged) (event.Subscription, error) {
 
-	logs, sub, err := _UniEthContract.contract.WatchLogs(opts, "AdminChanged")
+	logs, sub, err := _UnistakingContract.contract.WatchLogs(opts, "AdminChanged")
 	if err != nil {
 		return nil, err
 	}
@@ -427,8 +427,8 @@ func (_UniEthContract *UniEthContractFilterer) WatchAdminChanged(opts *bind.Watc
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(UniEthContractAdminChanged)
-				if err := _UniEthContract.contract.UnpackLog(event, "AdminChanged", log); err != nil {
+				event := new(UnistakingContractAdminChanged)
+				if err := _UnistakingContract.contract.UnpackLog(event, "AdminChanged", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -452,18 +452,18 @@ func (_UniEthContract *UniEthContractFilterer) WatchAdminChanged(opts *bind.Watc
 // ParseAdminChanged is a log parse operation binding the contract event 0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f.
 //
 // Solidity: event AdminChanged(address previousAdmin, address newAdmin)
-func (_UniEthContract *UniEthContractFilterer) ParseAdminChanged(log types.Log) (*UniEthContractAdminChanged, error) {
-	event := new(UniEthContractAdminChanged)
-	if err := _UniEthContract.contract.UnpackLog(event, "AdminChanged", log); err != nil {
+func (_UnistakingContract *UnistakingContractFilterer) ParseAdminChanged(log types.Log) (*UnistakingContractAdminChanged, error) {
+	event := new(UnistakingContractAdminChanged)
+	if err := _UnistakingContract.contract.UnpackLog(event, "AdminChanged", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// UniEthContractBeaconUpgradedIterator is returned from FilterBeaconUpgraded and is used to iterate over the raw logs and unpacked data for BeaconUpgraded events raised by the UniEthContract contract.
-type UniEthContractBeaconUpgradedIterator struct {
-	Event *UniEthContractBeaconUpgraded // Event containing the contract specifics and raw log
+// UnistakingContractBeaconUpgradedIterator is returned from FilterBeaconUpgraded and is used to iterate over the raw logs and unpacked data for BeaconUpgraded events raised by the UnistakingContract contract.
+type UnistakingContractBeaconUpgradedIterator struct {
+	Event *UnistakingContractBeaconUpgraded // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -477,7 +477,7 @@ type UniEthContractBeaconUpgradedIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *UniEthContractBeaconUpgradedIterator) Next() bool {
+func (it *UnistakingContractBeaconUpgradedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -486,7 +486,7 @@ func (it *UniEthContractBeaconUpgradedIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(UniEthContractBeaconUpgraded)
+			it.Event = new(UnistakingContractBeaconUpgraded)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -501,7 +501,7 @@ func (it *UniEthContractBeaconUpgradedIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(UniEthContractBeaconUpgraded)
+		it.Event = new(UnistakingContractBeaconUpgraded)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -517,19 +517,19 @@ func (it *UniEthContractBeaconUpgradedIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *UniEthContractBeaconUpgradedIterator) Error() error {
+func (it *UnistakingContractBeaconUpgradedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *UniEthContractBeaconUpgradedIterator) Close() error {
+func (it *UnistakingContractBeaconUpgradedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// UniEthContractBeaconUpgraded represents a BeaconUpgraded event raised by the UniEthContract contract.
-type UniEthContractBeaconUpgraded struct {
+// UnistakingContractBeaconUpgraded represents a BeaconUpgraded event raised by the UnistakingContract contract.
+type UnistakingContractBeaconUpgraded struct {
 	Beacon common.Address
 	Raw    types.Log // Blockchain specific contextual infos
 }
@@ -537,31 +537,31 @@ type UniEthContractBeaconUpgraded struct {
 // FilterBeaconUpgraded is a free log retrieval operation binding the contract event 0x1cf3b03a6cf19fa2baba4df148e9dcabedea7f8a5c07840e207e5c089be95d3e.
 //
 // Solidity: event BeaconUpgraded(address indexed beacon)
-func (_UniEthContract *UniEthContractFilterer) FilterBeaconUpgraded(opts *bind.FilterOpts, beacon []common.Address) (*UniEthContractBeaconUpgradedIterator, error) {
+func (_UnistakingContract *UnistakingContractFilterer) FilterBeaconUpgraded(opts *bind.FilterOpts, beacon []common.Address) (*UnistakingContractBeaconUpgradedIterator, error) {
 
 	var beaconRule []interface{}
 	for _, beaconItem := range beacon {
 		beaconRule = append(beaconRule, beaconItem)
 	}
 
-	logs, sub, err := _UniEthContract.contract.FilterLogs(opts, "BeaconUpgraded", beaconRule)
+	logs, sub, err := _UnistakingContract.contract.FilterLogs(opts, "BeaconUpgraded", beaconRule)
 	if err != nil {
 		return nil, err
 	}
-	return &UniEthContractBeaconUpgradedIterator{contract: _UniEthContract.contract, event: "BeaconUpgraded", logs: logs, sub: sub}, nil
+	return &UnistakingContractBeaconUpgradedIterator{contract: _UnistakingContract.contract, event: "BeaconUpgraded", logs: logs, sub: sub}, nil
 }
 
 // WatchBeaconUpgraded is a free log subscription operation binding the contract event 0x1cf3b03a6cf19fa2baba4df148e9dcabedea7f8a5c07840e207e5c089be95d3e.
 //
 // Solidity: event BeaconUpgraded(address indexed beacon)
-func (_UniEthContract *UniEthContractFilterer) WatchBeaconUpgraded(opts *bind.WatchOpts, sink chan<- *UniEthContractBeaconUpgraded, beacon []common.Address) (event.Subscription, error) {
+func (_UnistakingContract *UnistakingContractFilterer) WatchBeaconUpgraded(opts *bind.WatchOpts, sink chan<- *UnistakingContractBeaconUpgraded, beacon []common.Address) (event.Subscription, error) {
 
 	var beaconRule []interface{}
 	for _, beaconItem := range beacon {
 		beaconRule = append(beaconRule, beaconItem)
 	}
 
-	logs, sub, err := _UniEthContract.contract.WatchLogs(opts, "BeaconUpgraded", beaconRule)
+	logs, sub, err := _UnistakingContract.contract.WatchLogs(opts, "BeaconUpgraded", beaconRule)
 	if err != nil {
 		return nil, err
 	}
@@ -571,8 +571,8 @@ func (_UniEthContract *UniEthContractFilterer) WatchBeaconUpgraded(opts *bind.Wa
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(UniEthContractBeaconUpgraded)
-				if err := _UniEthContract.contract.UnpackLog(event, "BeaconUpgraded", log); err != nil {
+				event := new(UnistakingContractBeaconUpgraded)
+				if err := _UnistakingContract.contract.UnpackLog(event, "BeaconUpgraded", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -596,18 +596,18 @@ func (_UniEthContract *UniEthContractFilterer) WatchBeaconUpgraded(opts *bind.Wa
 // ParseBeaconUpgraded is a log parse operation binding the contract event 0x1cf3b03a6cf19fa2baba4df148e9dcabedea7f8a5c07840e207e5c089be95d3e.
 //
 // Solidity: event BeaconUpgraded(address indexed beacon)
-func (_UniEthContract *UniEthContractFilterer) ParseBeaconUpgraded(log types.Log) (*UniEthContractBeaconUpgraded, error) {
-	event := new(UniEthContractBeaconUpgraded)
-	if err := _UniEthContract.contract.UnpackLog(event, "BeaconUpgraded", log); err != nil {
+func (_UnistakingContract *UnistakingContractFilterer) ParseBeaconUpgraded(log types.Log) (*UnistakingContractBeaconUpgraded, error) {
+	event := new(UnistakingContractBeaconUpgraded)
+	if err := _UnistakingContract.contract.UnpackLog(event, "BeaconUpgraded", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
 	return event, nil
 }
 
-// UniEthContractUpgradedIterator is returned from FilterUpgraded and is used to iterate over the raw logs and unpacked data for Upgraded events raised by the UniEthContract contract.
-type UniEthContractUpgradedIterator struct {
-	Event *UniEthContractUpgraded // Event containing the contract specifics and raw log
+// UnistakingContractUpgradedIterator is returned from FilterUpgraded and is used to iterate over the raw logs and unpacked data for Upgraded events raised by the UnistakingContract contract.
+type UnistakingContractUpgradedIterator struct {
+	Event *UnistakingContractUpgraded // Event containing the contract specifics and raw log
 
 	contract *bind.BoundContract // Generic contract to use for unpacking event data
 	event    string              // Event name to use for unpacking event data
@@ -621,7 +621,7 @@ type UniEthContractUpgradedIterator struct {
 // Next advances the iterator to the subsequent event, returning whether there
 // are any more events found. In case of a retrieval or parsing error, false is
 // returned and Error() can be queried for the exact failure.
-func (it *UniEthContractUpgradedIterator) Next() bool {
+func (it *UnistakingContractUpgradedIterator) Next() bool {
 	// If the iterator failed, stop iterating
 	if it.fail != nil {
 		return false
@@ -630,7 +630,7 @@ func (it *UniEthContractUpgradedIterator) Next() bool {
 	if it.done {
 		select {
 		case log := <-it.logs:
-			it.Event = new(UniEthContractUpgraded)
+			it.Event = new(UnistakingContractUpgraded)
 			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 				it.fail = err
 				return false
@@ -645,7 +645,7 @@ func (it *UniEthContractUpgradedIterator) Next() bool {
 	// Iterator still in progress, wait for either a data or an error event
 	select {
 	case log := <-it.logs:
-		it.Event = new(UniEthContractUpgraded)
+		it.Event = new(UnistakingContractUpgraded)
 		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
 			it.fail = err
 			return false
@@ -661,19 +661,19 @@ func (it *UniEthContractUpgradedIterator) Next() bool {
 }
 
 // Error returns any retrieval or parsing error occurred during filtering.
-func (it *UniEthContractUpgradedIterator) Error() error {
+func (it *UnistakingContractUpgradedIterator) Error() error {
 	return it.fail
 }
 
 // Close terminates the iteration process, releasing any pending underlying
 // resources.
-func (it *UniEthContractUpgradedIterator) Close() error {
+func (it *UnistakingContractUpgradedIterator) Close() error {
 	it.sub.Unsubscribe()
 	return nil
 }
 
-// UniEthContractUpgraded represents a Upgraded event raised by the UniEthContract contract.
-type UniEthContractUpgraded struct {
+// UnistakingContractUpgraded represents a Upgraded event raised by the UnistakingContract contract.
+type UnistakingContractUpgraded struct {
 	Implementation common.Address
 	Raw            types.Log // Blockchain specific contextual infos
 }
@@ -681,31 +681,31 @@ type UniEthContractUpgraded struct {
 // FilterUpgraded is a free log retrieval operation binding the contract event 0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b.
 //
 // Solidity: event Upgraded(address indexed implementation)
-func (_UniEthContract *UniEthContractFilterer) FilterUpgraded(opts *bind.FilterOpts, implementation []common.Address) (*UniEthContractUpgradedIterator, error) {
+func (_UnistakingContract *UnistakingContractFilterer) FilterUpgraded(opts *bind.FilterOpts, implementation []common.Address) (*UnistakingContractUpgradedIterator, error) {
 
 	var implementationRule []interface{}
 	for _, implementationItem := range implementation {
 		implementationRule = append(implementationRule, implementationItem)
 	}
 
-	logs, sub, err := _UniEthContract.contract.FilterLogs(opts, "Upgraded", implementationRule)
+	logs, sub, err := _UnistakingContract.contract.FilterLogs(opts, "Upgraded", implementationRule)
 	if err != nil {
 		return nil, err
 	}
-	return &UniEthContractUpgradedIterator{contract: _UniEthContract.contract, event: "Upgraded", logs: logs, sub: sub}, nil
+	return &UnistakingContractUpgradedIterator{contract: _UnistakingContract.contract, event: "Upgraded", logs: logs, sub: sub}, nil
 }
 
 // WatchUpgraded is a free log subscription operation binding the contract event 0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b.
 //
 // Solidity: event Upgraded(address indexed implementation)
-func (_UniEthContract *UniEthContractFilterer) WatchUpgraded(opts *bind.WatchOpts, sink chan<- *UniEthContractUpgraded, implementation []common.Address) (event.Subscription, error) {
+func (_UnistakingContract *UnistakingContractFilterer) WatchUpgraded(opts *bind.WatchOpts, sink chan<- *UnistakingContractUpgraded, implementation []common.Address) (event.Subscription, error) {
 
 	var implementationRule []interface{}
 	for _, implementationItem := range implementation {
 		implementationRule = append(implementationRule, implementationItem)
 	}
 
-	logs, sub, err := _UniEthContract.contract.WatchLogs(opts, "Upgraded", implementationRule)
+	logs, sub, err := _UnistakingContract.contract.WatchLogs(opts, "Upgraded", implementationRule)
 	if err != nil {
 		return nil, err
 	}
@@ -715,8 +715,8 @@ func (_UniEthContract *UniEthContractFilterer) WatchUpgraded(opts *bind.WatchOpt
 			select {
 			case log := <-logs:
 				// New log arrived, parse the event and forward to the user
-				event := new(UniEthContractUpgraded)
-				if err := _UniEthContract.contract.UnpackLog(event, "Upgraded", log); err != nil {
+				event := new(UnistakingContractUpgraded)
+				if err := _UnistakingContract.contract.UnpackLog(event, "Upgraded", log); err != nil {
 					return err
 				}
 				event.Raw = log
@@ -740,9 +740,9 @@ func (_UniEthContract *UniEthContractFilterer) WatchUpgraded(opts *bind.WatchOpt
 // ParseUpgraded is a log parse operation binding the contract event 0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b.
 //
 // Solidity: event Upgraded(address indexed implementation)
-func (_UniEthContract *UniEthContractFilterer) ParseUpgraded(log types.Log) (*UniEthContractUpgraded, error) {
-	event := new(UniEthContractUpgraded)
-	if err := _UniEthContract.contract.UnpackLog(event, "Upgraded", log); err != nil {
+func (_UnistakingContract *UnistakingContractFilterer) ParseUpgraded(log types.Log) (*UnistakingContractUpgraded, error) {
+	event := new(UnistakingContractUpgraded)
+	if err := _UnistakingContract.contract.UnpackLog(event, "Upgraded", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
