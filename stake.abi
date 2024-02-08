@@ -1,5 +1,23 @@
 [
   {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "enabled",
+        "type": "bool"
+      }
+    ],
+    "name": "AutoCompoundToggle",
+    "type": "event"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -42,6 +60,19 @@
       }
     ],
     "name": "DepositContractSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint8",
+        "name": "version",
+        "type": "uint8"
+      }
+    ],
+    "name": "Initialized",
     "type": "event"
   },
   {
@@ -113,6 +144,19 @@
       }
     ],
     "name": "RedeemContractSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "addr",
+        "type": "address"
+      }
+    ],
+    "name": "RestakingAddressSet",
     "type": "event"
   },
   {
@@ -237,12 +281,6 @@
         "internalType": "uint256",
         "name": "stoppedCount",
         "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "slashed",
-        "type": "uint256"
       }
     ],
     "name": "ValidatorSlashedStopped",
@@ -256,15 +294,28 @@
         "internalType": "uint256",
         "name": "stoppedCount",
         "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "stoppedBalance",
-        "type": "uint256"
       }
     ],
     "name": "ValidatorStopped",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "enabled",
+        "type": "bool"
+      }
+    ],
+    "name": "WhiteListToggle",
     "type": "event"
   },
   {
@@ -550,6 +601,25 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "getQuota",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "getRecentReceived",
     "outputs": [
@@ -623,6 +693,45 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "idx_from",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "idx_to",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRegisteredValidatorsV2",
+    "outputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "pubkeys",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bytes[]",
+        "name": "signatures",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bool[]",
+        "name": "stopped",
+        "type": "bool[]"
+      },
+      {
+        "internalType": "bool[]",
+        "name": "restaking",
+        "type": "bool[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "getReportedValidatorBalance",
     "outputs": [
@@ -638,6 +747,19 @@
   {
     "inputs": [],
     "name": "getReportedValidators",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRewardDebts",
     "outputs": [
       {
         "internalType": "uint256",
@@ -756,6 +878,38 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "restakingContract_",
+        "type": "address"
+      }
+    ],
+    "name": "initializeV2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "isWhiteListed",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "managerFeeShare",
     "outputs": [
@@ -821,13 +975,41 @@
       },
       {
         "internalType": "uint256",
-        "name": "_aliveBalance",
+        "name": "",
         "type": "uint256"
       },
       {
         "internalType": "bytes32",
         "name": "clock",
         "type": "bytes32"
+      }
+    ],
+    "name": "pushBeacon",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_aliveValidators",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "clock",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "limit",
+        "type": "uint256"
       }
     ],
     "name": "pushBeacon",
@@ -874,6 +1056,24 @@
         "type": "uint256"
       }
     ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "pubkeys",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bytes[]",
+        "name": "signatures",
+        "type": "bytes[]"
+      }
+    ],
+    "name": "registerRestakingValidators",
+    "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
@@ -952,6 +1152,47 @@
     "name": "replaceValidator",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "oldpubkeys",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bytes[]",
+        "name": "pubkeys",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bytes[]",
+        "name": "signatures",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bool",
+        "name": "restaking",
+        "type": "bool"
+      }
+    ],
+    "name": "replaceValidators",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "restakingContract",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1047,19 +1288,6 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "sumbitRewardWithdrawal",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "bytes4",
         "name": "interfaceId",
         "type": "bytes4"
@@ -1090,14 +1318,28 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "syncBalance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "toggleAutoCompound",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
-        "internalType": "bytes32",
-        "name": "clock",
-        "type": "bytes32"
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
       }
     ],
-    "name": "syncBalance",
+    "name": "toggleWhiteList",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1117,16 +1359,6 @@
         "type": "bytes[]"
       },
       {
-        "internalType": "uint256",
-        "name": "_remainingAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_slashedAmount",
-        "type": "uint256"
-      },
-      {
         "internalType": "bytes32",
         "name": "clock",
         "type": "bytes32"
@@ -1143,11 +1375,6 @@
         "internalType": "bytes[]",
         "name": "_stoppedPubKeys",
         "type": "bytes[]"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_stoppedBalance",
-        "type": "uint256"
       },
       {
         "internalType": "bytes32",
@@ -1171,11 +1398,6 @@
         "internalType": "address",
         "name": "to",
         "type": "address"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "clock",
-        "type": "bytes32"
       }
     ],
     "name": "withdrawManagerFee",
