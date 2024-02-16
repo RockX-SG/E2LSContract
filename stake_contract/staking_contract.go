@@ -30,7 +30,7 @@ var (
 
 // StakingContractMetaData contains all meta data concerning the StakingContract contract.
 var StakingContractMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"enabled\",\"type\":\"bool\"}],\"name\":\"AutoCompoundToggle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"diff\",\"type\":\"uint256\"}],\"name\":\"BalanceSynced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"creditor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountEther\",\"type\":\"uint256\"}],\"name\":\"DebtQueued\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"DepositContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"ManagerAccountSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"ManagerFeeSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"ManagerFeeWithdrawed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"RedeemContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"RestakingAddressSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RevenueAccounted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nextValidatorId\",\"type\":\"uint256\"}],\"name\":\"ValidatorActivated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stoppedCount\",\"type\":\"uint256\"}],\"name\":\"ValidatorSlashedStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stoppedCount\",\"type\":\"uint256\"}],\"name\":\"ValidatorStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"enabled\",\"type\":\"bool\"}],\"name\":\"WhiteListToggle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"withdrawCredential\",\"type\":\"bytes32\"}],\"name\":\"WithdrawCredentialSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"XETHContractSet\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEPOSIT_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ORACLE_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REGISTRY_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"checkDebt\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentReserve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"debtOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ethDepositContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"exchangeRatio\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedBalance\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedManagerRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedUserRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCurrentDebts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDebtQueue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"first\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"last\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingEthers\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"getQuota\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecentReceived\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecentSlashed\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx_from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"idx_to\",\"type\":\"uint256\"}],\"name\":\"getRegisteredValidators\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bool[]\",\"name\":\"stopped\",\"type\":\"bool[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRegisteredValidatorsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx_from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"idx_to\",\"type\":\"uint256\"}],\"name\":\"getRegisteredValidatorsV2\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bool[]\",\"name\":\"stopped\",\"type\":\"bool[]\"},{\"internalType\":\"bool[]\",\"name\":\"restaking\",\"type\":\"bool[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReportedValidatorBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReportedValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRewardDebts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getStoppedValidatorsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalStaked\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getVectorClock\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"restakingContract_\",\"type\":\"address\"}],\"name\":\"initializeV2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isWhiteListed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"managerFeeShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"minToMint\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"minted\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_aliveValidators\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"pushBeacon\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_aliveValidators\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"limit\",\"type\":\"uint256\"}],\"name\":\"pushBeacon\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"redeemContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ethersToRedeem\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxToBurn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"redeemFromValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"burned\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"name\":\"registerRestakingValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"registerValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"name\":\"registerValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"oldpubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"replaceValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"oldpubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bool\",\"name\":\"restaking\",\"type\":\"bool\"}],\"name\":\"replaceValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"restakingContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ethDepositContract\",\"type\":\"address\"}],\"name\":\"setETHDepositContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"setManagerFeeShare\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_redeemContract\",\"type\":\"address\"}],\"name\":\"setRedeemContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"withdrawalCredentials_\",\"type\":\"bytes32\"}],\"name\":\"setWithdrawCredential\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_xETHContract\",\"type\":\"address\"}],\"name\":\"setXETHContractAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newPhase\",\"type\":\"uint256\"}],\"name\":\"switchPhase\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"syncBalance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"toggleAutoCompound\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"toggleWhiteList\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"_stoppedPubKeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"validatorSlashedStop\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"_stoppedPubKeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"validatorStopped\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"withdrawManagerFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawalCredentials\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"xETHAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"enabled\",\"type\":\"bool\"}],\"name\":\"AutoCompoundToggle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"diff\",\"type\":\"uint256\"}],\"name\":\"BalanceSynced\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"creditor\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amountEther\",\"type\":\"uint256\"}],\"name\":\"DebtQueued\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"DepositContractSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"ManagerAccountSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"ManagerFeeSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"ManagerFeeWithdrawed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"ManagerRevenueCompounded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"addr\",\"type\":\"address\"}],\"name\":\"RestakingAddressSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"RevenueAccounted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nextValidatorId\",\"type\":\"uint256\"}],\"name\":\"ValidatorActivated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stoppedCount\",\"type\":\"uint256\"}],\"name\":\"ValidatorSlashedStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"stoppedCount\",\"type\":\"uint256\"}],\"name\":\"ValidatorStopped\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"enabled\",\"type\":\"bool\"}],\"name\":\"WhiteListToggle\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"withdrawCredential\",\"type\":\"bytes32\"}],\"name\":\"WithdrawCredentialSet\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DEPOSIT_SIZE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MANAGER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MIN_MANAGER_COMPOUND\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ORACLE_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"PAUSER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"REGISTRY_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SAFE_PUSH_REWARDS\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"checkDebt\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentReserve\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"debtOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ethDepositContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"exchangeRatio\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedBalance\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedManagerRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAccountedUserRevenue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCurrentDebts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDebtQueue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"first\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"last\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNextValidatorId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingEthers\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"getQuota\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecentReceived\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRecentStopped\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx_from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"idx_to\",\"type\":\"uint256\"}],\"name\":\"getRegisteredValidators\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bool[]\",\"name\":\"stopped\",\"type\":\"bool[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRegisteredValidatorsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"idx_from\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"idx_to\",\"type\":\"uint256\"}],\"name\":\"getRegisteredValidatorsV2\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bool[]\",\"name\":\"stopped\",\"type\":\"bool[]\"},{\"internalType\":\"bool[]\",\"name\":\"restaking\",\"type\":\"bool[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReportedValidatorBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getReportedValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRewardDebts\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getStoppedValidatorsCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalStaked\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getVectorClock\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenAmount\",\"type\":\"uint256\"}],\"name\":\"instantSwap\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isWhiteListed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"managerFeeShare\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"minToMint\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"minted\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenAmount\",\"type\":\"uint256\"}],\"name\":\"previewInstantSwap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"maxEthersToSwap\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxTokensToBurn\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pushBeacon\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"maxRewards\",\"type\":\"uint256\"}],\"name\":\"pushBeacon\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"redeemContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"ethersToRedeem\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maxToBurn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"redeemFromValidators\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"burned\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"name\":\"registerRestakingValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"registerValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"}],\"name\":\"registerValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"oldpubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"pubkey\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"replaceValidator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"oldpubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"pubkeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes[]\",\"name\":\"signatures\",\"type\":\"bytes[]\"},{\"internalType\":\"bool\",\"name\":\"restaking\",\"type\":\"bool\"}],\"name\":\"replaceValidators\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"restakingContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_ethDepositContract\",\"type\":\"address\"}],\"name\":\"setETHDepositContract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"milli\",\"type\":\"uint256\"}],\"name\":\"setManagerFeeShare\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"withdrawalCredentials_\",\"type\":\"bytes32\"}],\"name\":\"setWithdrawCredential\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newPhase\",\"type\":\"uint256\"}],\"name\":\"switchPhase\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"syncBalance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"toggleAutoCompound\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"toggleWhiteList\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"_stoppedPubKeys\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes32\",\"name\":\"clock\",\"type\":\"bytes32\"}],\"name\":\"validatorStopped\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"withdrawManagerFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawalCredentials\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"xETHAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
 }
 
 // StakingContractABI is the input ABI used to generate the binding from.
@@ -272,6 +272,37 @@ func (_StakingContract *StakingContractCallerSession) MANAGERROLE() ([32]byte, e
 	return _StakingContract.Contract.MANAGERROLE(&_StakingContract.CallOpts)
 }
 
+// MINMANAGERCOMPOUND is a free data retrieval call binding the contract method 0x91fbc28e.
+//
+// Solidity: function MIN_MANAGER_COMPOUND() view returns(uint256)
+func (_StakingContract *StakingContractCaller) MINMANAGERCOMPOUND(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "MIN_MANAGER_COMPOUND")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// MINMANAGERCOMPOUND is a free data retrieval call binding the contract method 0x91fbc28e.
+//
+// Solidity: function MIN_MANAGER_COMPOUND() view returns(uint256)
+func (_StakingContract *StakingContractSession) MINMANAGERCOMPOUND() (*big.Int, error) {
+	return _StakingContract.Contract.MINMANAGERCOMPOUND(&_StakingContract.CallOpts)
+}
+
+// MINMANAGERCOMPOUND is a free data retrieval call binding the contract method 0x91fbc28e.
+//
+// Solidity: function MIN_MANAGER_COMPOUND() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) MINMANAGERCOMPOUND() (*big.Int, error) {
+	return _StakingContract.Contract.MINMANAGERCOMPOUND(&_StakingContract.CallOpts)
+}
+
 // ORACLEROLE is a free data retrieval call binding the contract method 0x07e2cea5.
 //
 // Solidity: function ORACLE_ROLE() view returns(bytes32)
@@ -363,6 +394,37 @@ func (_StakingContract *StakingContractSession) REGISTRYROLE() ([32]byte, error)
 // Solidity: function REGISTRY_ROLE() view returns(bytes32)
 func (_StakingContract *StakingContractCallerSession) REGISTRYROLE() ([32]byte, error) {
 	return _StakingContract.Contract.REGISTRYROLE(&_StakingContract.CallOpts)
+}
+
+// SAFEPUSHREWARDS is a free data retrieval call binding the contract method 0x506a7bec.
+//
+// Solidity: function SAFE_PUSH_REWARDS() view returns(uint256)
+func (_StakingContract *StakingContractCaller) SAFEPUSHREWARDS(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "SAFE_PUSH_REWARDS")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// SAFEPUSHREWARDS is a free data retrieval call binding the contract method 0x506a7bec.
+//
+// Solidity: function SAFE_PUSH_REWARDS() view returns(uint256)
+func (_StakingContract *StakingContractSession) SAFEPUSHREWARDS() (*big.Int, error) {
+	return _StakingContract.Contract.SAFEPUSHREWARDS(&_StakingContract.CallOpts)
+}
+
+// SAFEPUSHREWARDS is a free data retrieval call binding the contract method 0x506a7bec.
+//
+// Solidity: function SAFE_PUSH_REWARDS() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) SAFEPUSHREWARDS() (*big.Int, error) {
+	return _StakingContract.Contract.SAFEPUSHREWARDS(&_StakingContract.CallOpts)
 }
 
 // CheckDebt is a free data retrieval call binding the contract method 0xc8c3df4a.
@@ -827,12 +889,12 @@ func (_StakingContract *StakingContractCallerSession) GetRecentReceived() (*big.
 	return _StakingContract.Contract.GetRecentReceived(&_StakingContract.CallOpts)
 }
 
-// GetRecentSlashed is a free data retrieval call binding the contract method 0xaba52536.
+// GetRecentStopped is a free data retrieval call binding the contract method 0x2ae45fa1.
 //
-// Solidity: function getRecentSlashed() view returns(uint256)
-func (_StakingContract *StakingContractCaller) GetRecentSlashed(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function getRecentStopped() view returns(uint256)
+func (_StakingContract *StakingContractCaller) GetRecentStopped(opts *bind.CallOpts) (*big.Int, error) {
 	var out []interface{}
-	err := _StakingContract.contract.Call(opts, &out, "getRecentSlashed")
+	err := _StakingContract.contract.Call(opts, &out, "getRecentStopped")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -844,18 +906,18 @@ func (_StakingContract *StakingContractCaller) GetRecentSlashed(opts *bind.CallO
 
 }
 
-// GetRecentSlashed is a free data retrieval call binding the contract method 0xaba52536.
+// GetRecentStopped is a free data retrieval call binding the contract method 0x2ae45fa1.
 //
-// Solidity: function getRecentSlashed() view returns(uint256)
-func (_StakingContract *StakingContractSession) GetRecentSlashed() (*big.Int, error) {
-	return _StakingContract.Contract.GetRecentSlashed(&_StakingContract.CallOpts)
+// Solidity: function getRecentStopped() view returns(uint256)
+func (_StakingContract *StakingContractSession) GetRecentStopped() (*big.Int, error) {
+	return _StakingContract.Contract.GetRecentStopped(&_StakingContract.CallOpts)
 }
 
-// GetRecentSlashed is a free data retrieval call binding the contract method 0xaba52536.
+// GetRecentStopped is a free data retrieval call binding the contract method 0x2ae45fa1.
 //
-// Solidity: function getRecentSlashed() view returns(uint256)
-func (_StakingContract *StakingContractCallerSession) GetRecentSlashed() (*big.Int, error) {
-	return _StakingContract.Contract.GetRecentSlashed(&_StakingContract.CallOpts)
+// Solidity: function getRecentStopped() view returns(uint256)
+func (_StakingContract *StakingContractCallerSession) GetRecentStopped() (*big.Int, error) {
+	return _StakingContract.Contract.GetRecentStopped(&_StakingContract.CallOpts)
 }
 
 // GetRegisteredValidators is a free data retrieval call binding the contract method 0xf22abf37.
@@ -1335,6 +1397,51 @@ func (_StakingContract *StakingContractCallerSession) Paused() (bool, error) {
 	return _StakingContract.Contract.Paused(&_StakingContract.CallOpts)
 }
 
+// PreviewInstantSwap is a free data retrieval call binding the contract method 0xfa695018.
+//
+// Solidity: function previewInstantSwap(uint256 tokenAmount) view returns(uint256 maxEthersToSwap, uint256 maxTokensToBurn)
+func (_StakingContract *StakingContractCaller) PreviewInstantSwap(opts *bind.CallOpts, tokenAmount *big.Int) (struct {
+	MaxEthersToSwap *big.Int
+	MaxTokensToBurn *big.Int
+}, error) {
+	var out []interface{}
+	err := _StakingContract.contract.Call(opts, &out, "previewInstantSwap", tokenAmount)
+
+	outstruct := new(struct {
+		MaxEthersToSwap *big.Int
+		MaxTokensToBurn *big.Int
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.MaxEthersToSwap = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	outstruct.MaxTokensToBurn = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
+
+	return *outstruct, err
+
+}
+
+// PreviewInstantSwap is a free data retrieval call binding the contract method 0xfa695018.
+//
+// Solidity: function previewInstantSwap(uint256 tokenAmount) view returns(uint256 maxEthersToSwap, uint256 maxTokensToBurn)
+func (_StakingContract *StakingContractSession) PreviewInstantSwap(tokenAmount *big.Int) (struct {
+	MaxEthersToSwap *big.Int
+	MaxTokensToBurn *big.Int
+}, error) {
+	return _StakingContract.Contract.PreviewInstantSwap(&_StakingContract.CallOpts, tokenAmount)
+}
+
+// PreviewInstantSwap is a free data retrieval call binding the contract method 0xfa695018.
+//
+// Solidity: function previewInstantSwap(uint256 tokenAmount) view returns(uint256 maxEthersToSwap, uint256 maxTokensToBurn)
+func (_StakingContract *StakingContractCallerSession) PreviewInstantSwap(tokenAmount *big.Int) (struct {
+	MaxEthersToSwap *big.Int
+	MaxTokensToBurn *big.Int
+}, error) {
+	return _StakingContract.Contract.PreviewInstantSwap(&_StakingContract.CallOpts, tokenAmount)
+}
+
 // RedeemContract is a free data retrieval call binding the contract method 0x7a4473e1.
 //
 // Solidity: function redeemContract() view returns(address)
@@ -1511,46 +1618,25 @@ func (_StakingContract *StakingContractTransactorSession) GrantRole(role [32]byt
 	return _StakingContract.Contract.GrantRole(&_StakingContract.TransactOpts, role, account)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0x8129fc1c.
+// InstantSwap is a paid mutator transaction binding the contract method 0xfadb574d.
 //
-// Solidity: function initialize() returns()
-func (_StakingContract *StakingContractTransactor) Initialize(opts *bind.TransactOpts) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "initialize")
+// Solidity: function instantSwap(uint256 tokenAmount) returns()
+func (_StakingContract *StakingContractTransactor) InstantSwap(opts *bind.TransactOpts, tokenAmount *big.Int) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "instantSwap", tokenAmount)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0x8129fc1c.
+// InstantSwap is a paid mutator transaction binding the contract method 0xfadb574d.
 //
-// Solidity: function initialize() returns()
-func (_StakingContract *StakingContractSession) Initialize() (*types.Transaction, error) {
-	return _StakingContract.Contract.Initialize(&_StakingContract.TransactOpts)
+// Solidity: function instantSwap(uint256 tokenAmount) returns()
+func (_StakingContract *StakingContractSession) InstantSwap(tokenAmount *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.InstantSwap(&_StakingContract.TransactOpts, tokenAmount)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0x8129fc1c.
+// InstantSwap is a paid mutator transaction binding the contract method 0xfadb574d.
 //
-// Solidity: function initialize() returns()
-func (_StakingContract *StakingContractTransactorSession) Initialize() (*types.Transaction, error) {
-	return _StakingContract.Contract.Initialize(&_StakingContract.TransactOpts)
-}
-
-// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
-//
-// Solidity: function initializeV2(address restakingContract_) returns()
-func (_StakingContract *StakingContractTransactor) InitializeV2(opts *bind.TransactOpts, restakingContract_ common.Address) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "initializeV2", restakingContract_)
-}
-
-// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
-//
-// Solidity: function initializeV2(address restakingContract_) returns()
-func (_StakingContract *StakingContractSession) InitializeV2(restakingContract_ common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.InitializeV2(&_StakingContract.TransactOpts, restakingContract_)
-}
-
-// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
-//
-// Solidity: function initializeV2(address restakingContract_) returns()
-func (_StakingContract *StakingContractTransactorSession) InitializeV2(restakingContract_ common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.InitializeV2(&_StakingContract.TransactOpts, restakingContract_)
+// Solidity: function instantSwap(uint256 tokenAmount) returns()
+func (_StakingContract *StakingContractTransactorSession) InstantSwap(tokenAmount *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.InstantSwap(&_StakingContract.TransactOpts, tokenAmount)
 }
 
 // Mint is a paid mutator transaction binding the contract method 0x1b2ef1ca.
@@ -1595,46 +1681,46 @@ func (_StakingContract *StakingContractTransactorSession) Pause() (*types.Transa
 	return _StakingContract.Contract.Pause(&_StakingContract.TransactOpts)
 }
 
-// PushBeacon is a paid mutator transaction binding the contract method 0x496bf5bb.
+// PushBeacon is a paid mutator transaction binding the contract method 0x849138af.
 //
-// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 , bytes32 clock) returns()
-func (_StakingContract *StakingContractTransactor) PushBeacon(opts *bind.TransactOpts, _aliveValidators *big.Int, arg1 *big.Int, clock [32]byte) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "pushBeacon", _aliveValidators, arg1, clock)
+// Solidity: function pushBeacon() returns()
+func (_StakingContract *StakingContractTransactor) PushBeacon(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "pushBeacon")
 }
 
-// PushBeacon is a paid mutator transaction binding the contract method 0x496bf5bb.
+// PushBeacon is a paid mutator transaction binding the contract method 0x849138af.
 //
-// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 , bytes32 clock) returns()
-func (_StakingContract *StakingContractSession) PushBeacon(_aliveValidators *big.Int, arg1 *big.Int, clock [32]byte) (*types.Transaction, error) {
-	return _StakingContract.Contract.PushBeacon(&_StakingContract.TransactOpts, _aliveValidators, arg1, clock)
+// Solidity: function pushBeacon() returns()
+func (_StakingContract *StakingContractSession) PushBeacon() (*types.Transaction, error) {
+	return _StakingContract.Contract.PushBeacon(&_StakingContract.TransactOpts)
 }
 
-// PushBeacon is a paid mutator transaction binding the contract method 0x496bf5bb.
+// PushBeacon is a paid mutator transaction binding the contract method 0x849138af.
 //
-// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 , bytes32 clock) returns()
-func (_StakingContract *StakingContractTransactorSession) PushBeacon(_aliveValidators *big.Int, arg1 *big.Int, clock [32]byte) (*types.Transaction, error) {
-	return _StakingContract.Contract.PushBeacon(&_StakingContract.TransactOpts, _aliveValidators, arg1, clock)
+// Solidity: function pushBeacon() returns()
+func (_StakingContract *StakingContractTransactorSession) PushBeacon() (*types.Transaction, error) {
+	return _StakingContract.Contract.PushBeacon(&_StakingContract.TransactOpts)
 }
 
-// PushBeacon0 is a paid mutator transaction binding the contract method 0x93454817.
+// PushBeacon0 is a paid mutator transaction binding the contract method 0xa13cb538.
 //
-// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 , bytes32 clock, uint256 limit) returns()
-func (_StakingContract *StakingContractTransactor) PushBeacon0(opts *bind.TransactOpts, _aliveValidators *big.Int, arg1 *big.Int, clock [32]byte, limit *big.Int) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "pushBeacon0", _aliveValidators, arg1, clock, limit)
+// Solidity: function pushBeacon(bytes32 clock, uint256 maxRewards) returns()
+func (_StakingContract *StakingContractTransactor) PushBeacon0(opts *bind.TransactOpts, clock [32]byte, maxRewards *big.Int) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "pushBeacon0", clock, maxRewards)
 }
 
-// PushBeacon0 is a paid mutator transaction binding the contract method 0x93454817.
+// PushBeacon0 is a paid mutator transaction binding the contract method 0xa13cb538.
 //
-// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 , bytes32 clock, uint256 limit) returns()
-func (_StakingContract *StakingContractSession) PushBeacon0(_aliveValidators *big.Int, arg1 *big.Int, clock [32]byte, limit *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.PushBeacon0(&_StakingContract.TransactOpts, _aliveValidators, arg1, clock, limit)
+// Solidity: function pushBeacon(bytes32 clock, uint256 maxRewards) returns()
+func (_StakingContract *StakingContractSession) PushBeacon0(clock [32]byte, maxRewards *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.PushBeacon0(&_StakingContract.TransactOpts, clock, maxRewards)
 }
 
-// PushBeacon0 is a paid mutator transaction binding the contract method 0x93454817.
+// PushBeacon0 is a paid mutator transaction binding the contract method 0xa13cb538.
 //
-// Solidity: function pushBeacon(uint256 _aliveValidators, uint256 , bytes32 clock, uint256 limit) returns()
-func (_StakingContract *StakingContractTransactorSession) PushBeacon0(_aliveValidators *big.Int, arg1 *big.Int, clock [32]byte, limit *big.Int) (*types.Transaction, error) {
-	return _StakingContract.Contract.PushBeacon0(&_StakingContract.TransactOpts, _aliveValidators, arg1, clock, limit)
+// Solidity: function pushBeacon(bytes32 clock, uint256 maxRewards) returns()
+func (_StakingContract *StakingContractTransactorSession) PushBeacon0(clock [32]byte, maxRewards *big.Int) (*types.Transaction, error) {
+	return _StakingContract.Contract.PushBeacon0(&_StakingContract.TransactOpts, clock, maxRewards)
 }
 
 // RedeemFromValidators is a paid mutator transaction binding the contract method 0xf5404d60.
@@ -1847,27 +1933,6 @@ func (_StakingContract *StakingContractTransactorSession) SetManagerFeeShare(mil
 	return _StakingContract.Contract.SetManagerFeeShare(&_StakingContract.TransactOpts, milli)
 }
 
-// SetRedeemContract is a paid mutator transaction binding the contract method 0x6bb022c8.
-//
-// Solidity: function setRedeemContract(address _redeemContract) returns()
-func (_StakingContract *StakingContractTransactor) SetRedeemContract(opts *bind.TransactOpts, _redeemContract common.Address) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "setRedeemContract", _redeemContract)
-}
-
-// SetRedeemContract is a paid mutator transaction binding the contract method 0x6bb022c8.
-//
-// Solidity: function setRedeemContract(address _redeemContract) returns()
-func (_StakingContract *StakingContractSession) SetRedeemContract(_redeemContract common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.SetRedeemContract(&_StakingContract.TransactOpts, _redeemContract)
-}
-
-// SetRedeemContract is a paid mutator transaction binding the contract method 0x6bb022c8.
-//
-// Solidity: function setRedeemContract(address _redeemContract) returns()
-func (_StakingContract *StakingContractTransactorSession) SetRedeemContract(_redeemContract common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.SetRedeemContract(&_StakingContract.TransactOpts, _redeemContract)
-}
-
 // SetWithdrawCredential is a paid mutator transaction binding the contract method 0xd7d25461.
 //
 // Solidity: function setWithdrawCredential(bytes32 withdrawalCredentials_) returns()
@@ -1887,27 +1952,6 @@ func (_StakingContract *StakingContractSession) SetWithdrawCredential(withdrawal
 // Solidity: function setWithdrawCredential(bytes32 withdrawalCredentials_) returns()
 func (_StakingContract *StakingContractTransactorSession) SetWithdrawCredential(withdrawalCredentials_ [32]byte) (*types.Transaction, error) {
 	return _StakingContract.Contract.SetWithdrawCredential(&_StakingContract.TransactOpts, withdrawalCredentials_)
-}
-
-// SetXETHContractAddress is a paid mutator transaction binding the contract method 0x72cda182.
-//
-// Solidity: function setXETHContractAddress(address _xETHContract) returns()
-func (_StakingContract *StakingContractTransactor) SetXETHContractAddress(opts *bind.TransactOpts, _xETHContract common.Address) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "setXETHContractAddress", _xETHContract)
-}
-
-// SetXETHContractAddress is a paid mutator transaction binding the contract method 0x72cda182.
-//
-// Solidity: function setXETHContractAddress(address _xETHContract) returns()
-func (_StakingContract *StakingContractSession) SetXETHContractAddress(_xETHContract common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.SetXETHContractAddress(&_StakingContract.TransactOpts, _xETHContract)
-}
-
-// SetXETHContractAddress is a paid mutator transaction binding the contract method 0x72cda182.
-//
-// Solidity: function setXETHContractAddress(address _xETHContract) returns()
-func (_StakingContract *StakingContractTransactorSession) SetXETHContractAddress(_xETHContract common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.SetXETHContractAddress(&_StakingContract.TransactOpts, _xETHContract)
 }
 
 // Stake is a paid mutator transaction binding the contract method 0x3a4b66f1.
@@ -2036,27 +2080,6 @@ func (_StakingContract *StakingContractTransactorSession) Unpause() (*types.Tran
 	return _StakingContract.Contract.Unpause(&_StakingContract.TransactOpts)
 }
 
-// ValidatorSlashedStop is a paid mutator transaction binding the contract method 0x5662f706.
-//
-// Solidity: function validatorSlashedStop(bytes[] _stoppedPubKeys, bytes32 clock) returns()
-func (_StakingContract *StakingContractTransactor) ValidatorSlashedStop(opts *bind.TransactOpts, _stoppedPubKeys [][]byte, clock [32]byte) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "validatorSlashedStop", _stoppedPubKeys, clock)
-}
-
-// ValidatorSlashedStop is a paid mutator transaction binding the contract method 0x5662f706.
-//
-// Solidity: function validatorSlashedStop(bytes[] _stoppedPubKeys, bytes32 clock) returns()
-func (_StakingContract *StakingContractSession) ValidatorSlashedStop(_stoppedPubKeys [][]byte, clock [32]byte) (*types.Transaction, error) {
-	return _StakingContract.Contract.ValidatorSlashedStop(&_StakingContract.TransactOpts, _stoppedPubKeys, clock)
-}
-
-// ValidatorSlashedStop is a paid mutator transaction binding the contract method 0x5662f706.
-//
-// Solidity: function validatorSlashedStop(bytes[] _stoppedPubKeys, bytes32 clock) returns()
-func (_StakingContract *StakingContractTransactorSession) ValidatorSlashedStop(_stoppedPubKeys [][]byte, clock [32]byte) (*types.Transaction, error) {
-	return _StakingContract.Contract.ValidatorSlashedStop(&_StakingContract.TransactOpts, _stoppedPubKeys, clock)
-}
-
 // ValidatorStopped is a paid mutator transaction binding the contract method 0x99629f58.
 //
 // Solidity: function validatorStopped(bytes[] _stoppedPubKeys, bytes32 clock) returns()
@@ -2078,25 +2101,25 @@ func (_StakingContract *StakingContractTransactorSession) ValidatorStopped(_stop
 	return _StakingContract.Contract.ValidatorStopped(&_StakingContract.TransactOpts, _stoppedPubKeys, clock)
 }
 
-// WithdrawManagerFee is a paid mutator transaction binding the contract method 0xfa0ec2ce.
+// WithdrawManagerFee is a paid mutator transaction binding the contract method 0x8d40152c.
 //
-// Solidity: function withdrawManagerFee(uint256 amount, address to) returns()
-func (_StakingContract *StakingContractTransactor) WithdrawManagerFee(opts *bind.TransactOpts, amount *big.Int, to common.Address) (*types.Transaction, error) {
-	return _StakingContract.contract.Transact(opts, "withdrawManagerFee", amount, to)
+// Solidity: function withdrawManagerFee(address to) returns()
+func (_StakingContract *StakingContractTransactor) WithdrawManagerFee(opts *bind.TransactOpts, to common.Address) (*types.Transaction, error) {
+	return _StakingContract.contract.Transact(opts, "withdrawManagerFee", to)
 }
 
-// WithdrawManagerFee is a paid mutator transaction binding the contract method 0xfa0ec2ce.
+// WithdrawManagerFee is a paid mutator transaction binding the contract method 0x8d40152c.
 //
-// Solidity: function withdrawManagerFee(uint256 amount, address to) returns()
-func (_StakingContract *StakingContractSession) WithdrawManagerFee(amount *big.Int, to common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.WithdrawManagerFee(&_StakingContract.TransactOpts, amount, to)
+// Solidity: function withdrawManagerFee(address to) returns()
+func (_StakingContract *StakingContractSession) WithdrawManagerFee(to common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.WithdrawManagerFee(&_StakingContract.TransactOpts, to)
 }
 
-// WithdrawManagerFee is a paid mutator transaction binding the contract method 0xfa0ec2ce.
+// WithdrawManagerFee is a paid mutator transaction binding the contract method 0x8d40152c.
 //
-// Solidity: function withdrawManagerFee(uint256 amount, address to) returns()
-func (_StakingContract *StakingContractTransactorSession) WithdrawManagerFee(amount *big.Int, to common.Address) (*types.Transaction, error) {
-	return _StakingContract.Contract.WithdrawManagerFee(&_StakingContract.TransactOpts, amount, to)
+// Solidity: function withdrawManagerFee(address to) returns()
+func (_StakingContract *StakingContractTransactorSession) WithdrawManagerFee(to common.Address) (*types.Transaction, error) {
+	return _StakingContract.Contract.WithdrawManagerFee(&_StakingContract.TransactOpts, to)
 }
 
 // Receive is a paid mutator transaction binding the contract receive function.
@@ -3194,6 +3217,140 @@ func (_StakingContract *StakingContractFilterer) ParseManagerFeeWithdrawed(log t
 	return event, nil
 }
 
+// StakingContractManagerRevenueCompoundedIterator is returned from FilterManagerRevenueCompounded and is used to iterate over the raw logs and unpacked data for ManagerRevenueCompounded events raised by the StakingContract contract.
+type StakingContractManagerRevenueCompoundedIterator struct {
+	Event *StakingContractManagerRevenueCompounded // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *StakingContractManagerRevenueCompoundedIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(StakingContractManagerRevenueCompounded)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(StakingContractManagerRevenueCompounded)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *StakingContractManagerRevenueCompoundedIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *StakingContractManagerRevenueCompoundedIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// StakingContractManagerRevenueCompounded represents a ManagerRevenueCompounded event raised by the StakingContract contract.
+type StakingContractManagerRevenueCompounded struct {
+	Amount *big.Int
+	Raw    types.Log // Blockchain specific contextual infos
+}
+
+// FilterManagerRevenueCompounded is a free log retrieval operation binding the contract event 0x20af1949d4837141c257165539bba8e24981f6d6c45872735b01fbf85848e5db.
+//
+// Solidity: event ManagerRevenueCompounded(uint256 amount)
+func (_StakingContract *StakingContractFilterer) FilterManagerRevenueCompounded(opts *bind.FilterOpts) (*StakingContractManagerRevenueCompoundedIterator, error) {
+
+	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "ManagerRevenueCompounded")
+	if err != nil {
+		return nil, err
+	}
+	return &StakingContractManagerRevenueCompoundedIterator{contract: _StakingContract.contract, event: "ManagerRevenueCompounded", logs: logs, sub: sub}, nil
+}
+
+// WatchManagerRevenueCompounded is a free log subscription operation binding the contract event 0x20af1949d4837141c257165539bba8e24981f6d6c45872735b01fbf85848e5db.
+//
+// Solidity: event ManagerRevenueCompounded(uint256 amount)
+func (_StakingContract *StakingContractFilterer) WatchManagerRevenueCompounded(opts *bind.WatchOpts, sink chan<- *StakingContractManagerRevenueCompounded) (event.Subscription, error) {
+
+	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "ManagerRevenueCompounded")
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(StakingContractManagerRevenueCompounded)
+				if err := _StakingContract.contract.UnpackLog(event, "ManagerRevenueCompounded", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseManagerRevenueCompounded is a log parse operation binding the contract event 0x20af1949d4837141c257165539bba8e24981f6d6c45872735b01fbf85848e5db.
+//
+// Solidity: event ManagerRevenueCompounded(uint256 amount)
+func (_StakingContract *StakingContractFilterer) ParseManagerRevenueCompounded(log types.Log) (*StakingContractManagerRevenueCompounded, error) {
+	event := new(StakingContractManagerRevenueCompounded)
+	if err := _StakingContract.contract.UnpackLog(event, "ManagerRevenueCompounded", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
 // StakingContractPausedIterator is returned from FilterPaused and is used to iterate over the raw logs and unpacked data for Paused events raised by the StakingContract contract.
 type StakingContractPausedIterator struct {
 	Event *StakingContractPaused // Event containing the contract specifics and raw log
@@ -3322,140 +3479,6 @@ func (_StakingContract *StakingContractFilterer) WatchPaused(opts *bind.WatchOpt
 func (_StakingContract *StakingContractFilterer) ParsePaused(log types.Log) (*StakingContractPaused, error) {
 	event := new(StakingContractPaused)
 	if err := _StakingContract.contract.UnpackLog(event, "Paused", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// StakingContractRedeemContractSetIterator is returned from FilterRedeemContractSet and is used to iterate over the raw logs and unpacked data for RedeemContractSet events raised by the StakingContract contract.
-type StakingContractRedeemContractSetIterator struct {
-	Event *StakingContractRedeemContractSet // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *StakingContractRedeemContractSetIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(StakingContractRedeemContractSet)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(StakingContractRedeemContractSet)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractRedeemContractSetIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *StakingContractRedeemContractSetIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// StakingContractRedeemContractSet represents a RedeemContractSet event raised by the StakingContract contract.
-type StakingContractRedeemContractSet struct {
-	Addr common.Address
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterRedeemContractSet is a free log retrieval operation binding the contract event 0x4d3d3f5d1d8423a4e40b3fcfccaf0c1b18ca550a8592d5e38a61765931a9cf78.
-//
-// Solidity: event RedeemContractSet(address addr)
-func (_StakingContract *StakingContractFilterer) FilterRedeemContractSet(opts *bind.FilterOpts) (*StakingContractRedeemContractSetIterator, error) {
-
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "RedeemContractSet")
-	if err != nil {
-		return nil, err
-	}
-	return &StakingContractRedeemContractSetIterator{contract: _StakingContract.contract, event: "RedeemContractSet", logs: logs, sub: sub}, nil
-}
-
-// WatchRedeemContractSet is a free log subscription operation binding the contract event 0x4d3d3f5d1d8423a4e40b3fcfccaf0c1b18ca550a8592d5e38a61765931a9cf78.
-//
-// Solidity: event RedeemContractSet(address addr)
-func (_StakingContract *StakingContractFilterer) WatchRedeemContractSet(opts *bind.WatchOpts, sink chan<- *StakingContractRedeemContractSet) (event.Subscription, error) {
-
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "RedeemContractSet")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractRedeemContractSet)
-				if err := _StakingContract.contract.UnpackLog(event, "RedeemContractSet", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseRedeemContractSet is a log parse operation binding the contract event 0x4d3d3f5d1d8423a4e40b3fcfccaf0c1b18ca550a8592d5e38a61765931a9cf78.
-//
-// Solidity: event RedeemContractSet(address addr)
-func (_StakingContract *StakingContractFilterer) ParseRedeemContractSet(log types.Log) (*StakingContractRedeemContractSet, error) {
-	event := new(StakingContractRedeemContractSet)
-	if err := _StakingContract.contract.UnpackLog(event, "RedeemContractSet", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
@@ -5015,140 +5038,6 @@ func (_StakingContract *StakingContractFilterer) WatchWithdrawCredentialSet(opts
 func (_StakingContract *StakingContractFilterer) ParseWithdrawCredentialSet(log types.Log) (*StakingContractWithdrawCredentialSet, error) {
 	event := new(StakingContractWithdrawCredentialSet)
 	if err := _StakingContract.contract.UnpackLog(event, "WithdrawCredentialSet", log); err != nil {
-		return nil, err
-	}
-	event.Raw = log
-	return event, nil
-}
-
-// StakingContractXETHContractSetIterator is returned from FilterXETHContractSet and is used to iterate over the raw logs and unpacked data for XETHContractSet events raised by the StakingContract contract.
-type StakingContractXETHContractSetIterator struct {
-	Event *StakingContractXETHContractSet // Event containing the contract specifics and raw log
-
-	contract *bind.BoundContract // Generic contract to use for unpacking event data
-	event    string              // Event name to use for unpacking event data
-
-	logs chan types.Log        // Log channel receiving the found contract events
-	sub  ethereum.Subscription // Subscription for errors, completion and termination
-	done bool                  // Whether the subscription completed delivering logs
-	fail error                 // Occurred error to stop iteration
-}
-
-// Next advances the iterator to the subsequent event, returning whether there
-// are any more events found. In case of a retrieval or parsing error, false is
-// returned and Error() can be queried for the exact failure.
-func (it *StakingContractXETHContractSetIterator) Next() bool {
-	// If the iterator failed, stop iterating
-	if it.fail != nil {
-		return false
-	}
-	// If the iterator completed, deliver directly whatever's available
-	if it.done {
-		select {
-		case log := <-it.logs:
-			it.Event = new(StakingContractXETHContractSet)
-			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-				it.fail = err
-				return false
-			}
-			it.Event.Raw = log
-			return true
-
-		default:
-			return false
-		}
-	}
-	// Iterator still in progress, wait for either a data or an error event
-	select {
-	case log := <-it.logs:
-		it.Event = new(StakingContractXETHContractSet)
-		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
-			it.fail = err
-			return false
-		}
-		it.Event.Raw = log
-		return true
-
-	case err := <-it.sub.Err():
-		it.done = true
-		it.fail = err
-		return it.Next()
-	}
-}
-
-// Error returns any retrieval or parsing error occurred during filtering.
-func (it *StakingContractXETHContractSetIterator) Error() error {
-	return it.fail
-}
-
-// Close terminates the iteration process, releasing any pending underlying
-// resources.
-func (it *StakingContractXETHContractSetIterator) Close() error {
-	it.sub.Unsubscribe()
-	return nil
-}
-
-// StakingContractXETHContractSet represents a XETHContractSet event raised by the StakingContract contract.
-type StakingContractXETHContractSet struct {
-	Addr common.Address
-	Raw  types.Log // Blockchain specific contextual infos
-}
-
-// FilterXETHContractSet is a free log retrieval operation binding the contract event 0x65f24f264bd70348b9888b2fbf27cd04f9e2fb0fcc50dde8fb36483576ef32a3.
-//
-// Solidity: event XETHContractSet(address addr)
-func (_StakingContract *StakingContractFilterer) FilterXETHContractSet(opts *bind.FilterOpts) (*StakingContractXETHContractSetIterator, error) {
-
-	logs, sub, err := _StakingContract.contract.FilterLogs(opts, "XETHContractSet")
-	if err != nil {
-		return nil, err
-	}
-	return &StakingContractXETHContractSetIterator{contract: _StakingContract.contract, event: "XETHContractSet", logs: logs, sub: sub}, nil
-}
-
-// WatchXETHContractSet is a free log subscription operation binding the contract event 0x65f24f264bd70348b9888b2fbf27cd04f9e2fb0fcc50dde8fb36483576ef32a3.
-//
-// Solidity: event XETHContractSet(address addr)
-func (_StakingContract *StakingContractFilterer) WatchXETHContractSet(opts *bind.WatchOpts, sink chan<- *StakingContractXETHContractSet) (event.Subscription, error) {
-
-	logs, sub, err := _StakingContract.contract.WatchLogs(opts, "XETHContractSet")
-	if err != nil {
-		return nil, err
-	}
-	return event.NewSubscription(func(quit <-chan struct{}) error {
-		defer sub.Unsubscribe()
-		for {
-			select {
-			case log := <-logs:
-				// New log arrived, parse the event and forward to the user
-				event := new(StakingContractXETHContractSet)
-				if err := _StakingContract.contract.UnpackLog(event, "XETHContractSet", log); err != nil {
-					return err
-				}
-				event.Raw = log
-
-				select {
-				case sink <- event:
-				case err := <-sub.Err():
-					return err
-				case <-quit:
-					return nil
-				}
-			case err := <-sub.Err():
-				return err
-			case <-quit:
-				return nil
-			}
-		}
-	}), nil
-}
-
-// ParseXETHContractSet is a log parse operation binding the contract event 0x65f24f264bd70348b9888b2fbf27cd04f9e2fb0fcc50dde8fb36483576ef32a3.
-//
-// Solidity: event XETHContractSet(address addr)
-func (_StakingContract *StakingContractFilterer) ParseXETHContractSet(log types.Log) (*StakingContractXETHContractSet, error) {
-	event := new(StakingContractXETHContractSet)
-	if err := _StakingContract.contract.UnpackLog(event, "XETHContractSet", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log

@@ -125,12 +125,12 @@
     "inputs": [
       {
         "indexed": false,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
       }
     ],
-    "name": "Paused",
+    "name": "ManagerRevenueCompounded",
     "type": "event"
   },
   {
@@ -139,11 +139,11 @@
       {
         "indexed": false,
         "internalType": "address",
-        "name": "addr",
+        "name": "account",
         "type": "address"
       }
     ],
-    "name": "RedeemContractSet",
+    "name": "Paused",
     "type": "event"
   },
   {
@@ -332,19 +332,6 @@
     "type": "event"
   },
   {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "addr",
-        "type": "address"
-      }
-    ],
-    "name": "XETHContractSet",
-    "type": "event"
-  },
-  {
     "inputs": [],
     "name": "DEFAULT_ADMIN_ROLE",
     "outputs": [
@@ -385,6 +372,19 @@
   },
   {
     "inputs": [],
+    "name": "MIN_MANAGER_COMPOUND",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "ORACLE_ROLE",
     "outputs": [
       {
@@ -417,6 +417,19 @@
         "internalType": "bytes32",
         "name": "",
         "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "SAFE_PUSH_REWARDS",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -634,7 +647,7 @@
   },
   {
     "inputs": [],
-    "name": "getRecentSlashed",
+    "name": "getRecentStopped",
     "outputs": [
       {
         "internalType": "uint256",
@@ -871,21 +884,14 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "initialize",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "restakingContract_",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "tokenAmount",
+        "type": "uint256"
       }
     ],
-    "name": "initializeV2",
+    "name": "instantSwap",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -970,20 +976,28 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_aliveValidators",
+        "name": "tokenAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "previewInstantSwap",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxEthersToSwap",
         "type": "uint256"
       },
       {
         "internalType": "uint256",
-        "name": "",
+        "name": "maxTokensToBurn",
         "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "clock",
-        "type": "bytes32"
       }
     ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "pushBeacon",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -992,23 +1006,13 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "_aliveValidators",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
         "internalType": "bytes32",
         "name": "clock",
         "type": "bytes32"
       },
       {
         "internalType": "uint256",
-        "name": "limit",
+        "name": "maxRewards",
         "type": "uint256"
       }
     ],
@@ -1242,38 +1246,12 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_redeemContract",
-        "type": "address"
-      }
-    ],
-    "name": "setRedeemContract",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "bytes32",
         "name": "withdrawalCredentials_",
         "type": "bytes32"
       }
     ],
     "name": "setWithdrawCredential",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_xETHContract",
-        "type": "address"
-      }
-    ],
-    "name": "setXETHContractAddress",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1364,24 +1342,6 @@
         "type": "bytes32"
       }
     ],
-    "name": "validatorSlashedStop",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes[]",
-        "name": "_stoppedPubKeys",
-        "type": "bytes[]"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "clock",
-        "type": "bytes32"
-      }
-    ],
     "name": "validatorStopped",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -1389,11 +1349,6 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      },
       {
         "internalType": "address",
         "name": "to",
