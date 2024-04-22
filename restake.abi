@@ -146,15 +146,39 @@
   },
   {
     "inputs": [],
-    "name": "WITHDRAW_MIN",
+    "name": "beacon",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "contract UpgradeableBeacon",
         "name": "",
-        "type": "uint256"
+        "type": "address"
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "podId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "callDelegationManager",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -166,6 +190,13 @@
       }
     ],
     "name": "claimDelayedWithdrawals",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "createPod",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -223,6 +254,30 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "target",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "execute",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "getPendingWithdrawalAmount",
     "outputs": [
@@ -230,6 +285,25 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPod",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -249,6 +323,19 @@
         "internalType": "bytes32",
         "name": "",
         "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTotalPods",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -300,26 +387,11 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_eigenPodManager",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_delegationManager",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_strategyManager",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_delayedWithdrawalRouter",
+        "name": "impl",
         "type": "address"
       }
     ],
-    "name": "initialize",
+    "name": "initializeV3",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -327,14 +399,20 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "stakingAddress_",
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "podOwners",
+    "outputs": [
+      {
+        "internalType": "contract IPodOwner",
+        "name": "",
         "type": "address"
       }
     ],
-    "name": "initializeV2",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -416,6 +494,94 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "target",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "transfer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "update",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "impl",
+        "type": "address"
+      }
+    ],
+    "name": "upgradeBeacon",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "podId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint64",
+        "name": "oracleTimestamp",
+        "type": "uint64"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "beaconStateRoot",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes",
+            "name": "proof",
+            "type": "bytes"
+          }
+        ],
+        "internalType": "struct BeaconChainProofs.StateRootProof",
+        "name": "stateRootProof",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint40[]",
+        "name": "validatorIndices",
+        "type": "uint40[]"
+      },
+      {
+        "internalType": "bytes[]",
+        "name": "validatorFieldsProofs",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "bytes32[][]",
+        "name": "validatorFields",
+        "type": "bytes32[][]"
+      }
+    ],
+    "name": "verifyWithdrawalCredentials",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {

@@ -28,9 +28,15 @@ var (
 	_ = event.NewSubscription
 )
 
+// BeaconChainProofsStateRootProof is an auto generated low-level Go binding around an user-defined struct.
+type BeaconChainProofsStateRootProof struct {
+	BeaconStateRoot [32]byte
+	Proof           []byte
+}
+
 // RestakingContractMetaData contains all meta data concerning the RestakingContract contract.
 var RestakingContractMetaData = &bind.MetaData{
-	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Claimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Pending\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"OPERATOR_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WITHDRAW_MIN\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxNumberOfWithdrawalsToClaim\",\"type\":\"uint256\"}],\"name\":\"claimDelayedWithdrawals\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delayedWithdrawalRouter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delegationManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPod\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPodManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingWithdrawalAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_eigenPodManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delegationManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_strategyManager\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_delayedWithdrawalRouter\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"stakingAddress_\",\"type\":\"address\"}],\"name\":\"initializeV2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stakingAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"strategyManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawBeforeRestaking\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
+	ABI: "[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Claimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Pending\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"OPERATOR_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"beacon\",\"outputs\":[{\"internalType\":\"contractUpgradeableBeacon\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"podId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"callDelegationManager\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maxNumberOfWithdrawalsToClaim\",\"type\":\"uint256\"}],\"name\":\"claimDelayedWithdrawals\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"createPod\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delayedWithdrawalRouter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"delegationManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPod\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eigenPodManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"execute\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingWithdrawalAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"i\",\"type\":\"uint256\"}],\"name\":\"getPod\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTotalPods\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"impl\",\"type\":\"address\"}],\"name\":\"initializeV3\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"podOwners\",\"outputs\":[{\"internalType\":\"contractIPodOwner\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stakingAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"strategyManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"update\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"impl\",\"type\":\"address\"}],\"name\":\"upgradeBeacon\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"podId\",\"type\":\"uint256\"},{\"internalType\":\"uint64\",\"name\":\"oracleTimestamp\",\"type\":\"uint64\"},{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"beaconStateRoot\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"proof\",\"type\":\"bytes\"}],\"internalType\":\"structBeaconChainProofs.StateRootProof\",\"name\":\"stateRootProof\",\"type\":\"tuple\"},{\"internalType\":\"uint40[]\",\"name\":\"validatorIndices\",\"type\":\"uint40[]\"},{\"internalType\":\"bytes[]\",\"name\":\"validatorFieldsProofs\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes32[][]\",\"name\":\"validatorFields\",\"type\":\"bytes32[][]\"}],\"name\":\"verifyWithdrawalCredentials\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawBeforeRestaking\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}]",
 }
 
 // RestakingContractABI is the input ABI used to generate the binding from.
@@ -241,35 +247,35 @@ func (_RestakingContract *RestakingContractCallerSession) OPERATORROLE() ([32]by
 	return _RestakingContract.Contract.OPERATORROLE(&_RestakingContract.CallOpts)
 }
 
-// WITHDRAWMIN is a free data retrieval call binding the contract method 0x6094accc.
+// Beacon is a free data retrieval call binding the contract method 0x59659e90.
 //
-// Solidity: function WITHDRAW_MIN() view returns(uint256)
-func (_RestakingContract *RestakingContractCaller) WITHDRAWMIN(opts *bind.CallOpts) (*big.Int, error) {
+// Solidity: function beacon() view returns(address)
+func (_RestakingContract *RestakingContractCaller) Beacon(opts *bind.CallOpts) (common.Address, error) {
 	var out []interface{}
-	err := _RestakingContract.contract.Call(opts, &out, "WITHDRAW_MIN")
+	err := _RestakingContract.contract.Call(opts, &out, "beacon")
 
 	if err != nil {
-		return *new(*big.Int), err
+		return *new(common.Address), err
 	}
 
-	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
 
 	return out0, err
 
 }
 
-// WITHDRAWMIN is a free data retrieval call binding the contract method 0x6094accc.
+// Beacon is a free data retrieval call binding the contract method 0x59659e90.
 //
-// Solidity: function WITHDRAW_MIN() view returns(uint256)
-func (_RestakingContract *RestakingContractSession) WITHDRAWMIN() (*big.Int, error) {
-	return _RestakingContract.Contract.WITHDRAWMIN(&_RestakingContract.CallOpts)
+// Solidity: function beacon() view returns(address)
+func (_RestakingContract *RestakingContractSession) Beacon() (common.Address, error) {
+	return _RestakingContract.Contract.Beacon(&_RestakingContract.CallOpts)
 }
 
-// WITHDRAWMIN is a free data retrieval call binding the contract method 0x6094accc.
+// Beacon is a free data retrieval call binding the contract method 0x59659e90.
 //
-// Solidity: function WITHDRAW_MIN() view returns(uint256)
-func (_RestakingContract *RestakingContractCallerSession) WITHDRAWMIN() (*big.Int, error) {
-	return _RestakingContract.Contract.WITHDRAWMIN(&_RestakingContract.CallOpts)
+// Solidity: function beacon() view returns(address)
+func (_RestakingContract *RestakingContractCallerSession) Beacon() (common.Address, error) {
+	return _RestakingContract.Contract.Beacon(&_RestakingContract.CallOpts)
 }
 
 // DelayedWithdrawalRouter is a free data retrieval call binding the contract method 0x1a5057be.
@@ -427,6 +433,37 @@ func (_RestakingContract *RestakingContractCallerSession) GetPendingWithdrawalAm
 	return _RestakingContract.Contract.GetPendingWithdrawalAmount(&_RestakingContract.CallOpts)
 }
 
+// GetPod is a free data retrieval call binding the contract method 0x6a93ee0f.
+//
+// Solidity: function getPod(uint256 i) view returns(address)
+func (_RestakingContract *RestakingContractCaller) GetPod(opts *bind.CallOpts, i *big.Int) (common.Address, error) {
+	var out []interface{}
+	err := _RestakingContract.contract.Call(opts, &out, "getPod", i)
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// GetPod is a free data retrieval call binding the contract method 0x6a93ee0f.
+//
+// Solidity: function getPod(uint256 i) view returns(address)
+func (_RestakingContract *RestakingContractSession) GetPod(i *big.Int) (common.Address, error) {
+	return _RestakingContract.Contract.GetPod(&_RestakingContract.CallOpts, i)
+}
+
+// GetPod is a free data retrieval call binding the contract method 0x6a93ee0f.
+//
+// Solidity: function getPod(uint256 i) view returns(address)
+func (_RestakingContract *RestakingContractCallerSession) GetPod(i *big.Int) (common.Address, error) {
+	return _RestakingContract.Contract.GetPod(&_RestakingContract.CallOpts, i)
+}
+
 // GetRoleAdmin is a free data retrieval call binding the contract method 0x248a9ca3.
 //
 // Solidity: function getRoleAdmin(bytes32 role) view returns(bytes32)
@@ -458,6 +495,37 @@ func (_RestakingContract *RestakingContractCallerSession) GetRoleAdmin(role [32]
 	return _RestakingContract.Contract.GetRoleAdmin(&_RestakingContract.CallOpts, role)
 }
 
+// GetTotalPods is a free data retrieval call binding the contract method 0xd2197bd3.
+//
+// Solidity: function getTotalPods() view returns(uint256)
+func (_RestakingContract *RestakingContractCaller) GetTotalPods(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _RestakingContract.contract.Call(opts, &out, "getTotalPods")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// GetTotalPods is a free data retrieval call binding the contract method 0xd2197bd3.
+//
+// Solidity: function getTotalPods() view returns(uint256)
+func (_RestakingContract *RestakingContractSession) GetTotalPods() (*big.Int, error) {
+	return _RestakingContract.Contract.GetTotalPods(&_RestakingContract.CallOpts)
+}
+
+// GetTotalPods is a free data retrieval call binding the contract method 0xd2197bd3.
+//
+// Solidity: function getTotalPods() view returns(uint256)
+func (_RestakingContract *RestakingContractCallerSession) GetTotalPods() (*big.Int, error) {
+	return _RestakingContract.Contract.GetTotalPods(&_RestakingContract.CallOpts)
+}
+
 // HasRole is a free data retrieval call binding the contract method 0x91d14854.
 //
 // Solidity: function hasRole(bytes32 role, address account) view returns(bool)
@@ -487,6 +555,37 @@ func (_RestakingContract *RestakingContractSession) HasRole(role [32]byte, accou
 // Solidity: function hasRole(bytes32 role, address account) view returns(bool)
 func (_RestakingContract *RestakingContractCallerSession) HasRole(role [32]byte, account common.Address) (bool, error) {
 	return _RestakingContract.Contract.HasRole(&_RestakingContract.CallOpts, role, account)
+}
+
+// PodOwners is a free data retrieval call binding the contract method 0xa1dccd11.
+//
+// Solidity: function podOwners(uint256 ) view returns(address)
+func (_RestakingContract *RestakingContractCaller) PodOwners(opts *bind.CallOpts, arg0 *big.Int) (common.Address, error) {
+	var out []interface{}
+	err := _RestakingContract.contract.Call(opts, &out, "podOwners", arg0)
+
+	if err != nil {
+		return *new(common.Address), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(common.Address)).(*common.Address)
+
+	return out0, err
+
+}
+
+// PodOwners is a free data retrieval call binding the contract method 0xa1dccd11.
+//
+// Solidity: function podOwners(uint256 ) view returns(address)
+func (_RestakingContract *RestakingContractSession) PodOwners(arg0 *big.Int) (common.Address, error) {
+	return _RestakingContract.Contract.PodOwners(&_RestakingContract.CallOpts, arg0)
+}
+
+// PodOwners is a free data retrieval call binding the contract method 0xa1dccd11.
+//
+// Solidity: function podOwners(uint256 ) view returns(address)
+func (_RestakingContract *RestakingContractCallerSession) PodOwners(arg0 *big.Int) (common.Address, error) {
+	return _RestakingContract.Contract.PodOwners(&_RestakingContract.CallOpts, arg0)
 }
 
 // StakingAddress is a free data retrieval call binding the contract method 0xd7b4be24.
@@ -582,6 +681,27 @@ func (_RestakingContract *RestakingContractCallerSession) SupportsInterface(inte
 	return _RestakingContract.Contract.SupportsInterface(&_RestakingContract.CallOpts, interfaceId)
 }
 
+// CallDelegationManager is a paid mutator transaction binding the contract method 0x37a26eef.
+//
+// Solidity: function callDelegationManager(uint256 podId, bytes data) returns(bytes)
+func (_RestakingContract *RestakingContractTransactor) CallDelegationManager(opts *bind.TransactOpts, podId *big.Int, data []byte) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "callDelegationManager", podId, data)
+}
+
+// CallDelegationManager is a paid mutator transaction binding the contract method 0x37a26eef.
+//
+// Solidity: function callDelegationManager(uint256 podId, bytes data) returns(bytes)
+func (_RestakingContract *RestakingContractSession) CallDelegationManager(podId *big.Int, data []byte) (*types.Transaction, error) {
+	return _RestakingContract.Contract.CallDelegationManager(&_RestakingContract.TransactOpts, podId, data)
+}
+
+// CallDelegationManager is a paid mutator transaction binding the contract method 0x37a26eef.
+//
+// Solidity: function callDelegationManager(uint256 podId, bytes data) returns(bytes)
+func (_RestakingContract *RestakingContractTransactorSession) CallDelegationManager(podId *big.Int, data []byte) (*types.Transaction, error) {
+	return _RestakingContract.Contract.CallDelegationManager(&_RestakingContract.TransactOpts, podId, data)
+}
+
 // ClaimDelayedWithdrawals is a paid mutator transaction binding the contract method 0xd44e1b76.
 //
 // Solidity: function claimDelayedWithdrawals(uint256 maxNumberOfWithdrawalsToClaim) returns()
@@ -601,6 +721,48 @@ func (_RestakingContract *RestakingContractSession) ClaimDelayedWithdrawals(maxN
 // Solidity: function claimDelayedWithdrawals(uint256 maxNumberOfWithdrawalsToClaim) returns()
 func (_RestakingContract *RestakingContractTransactorSession) ClaimDelayedWithdrawals(maxNumberOfWithdrawalsToClaim *big.Int) (*types.Transaction, error) {
 	return _RestakingContract.Contract.ClaimDelayedWithdrawals(&_RestakingContract.TransactOpts, maxNumberOfWithdrawalsToClaim)
+}
+
+// CreatePod is a paid mutator transaction binding the contract method 0x84d81062.
+//
+// Solidity: function createPod() returns()
+func (_RestakingContract *RestakingContractTransactor) CreatePod(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "createPod")
+}
+
+// CreatePod is a paid mutator transaction binding the contract method 0x84d81062.
+//
+// Solidity: function createPod() returns()
+func (_RestakingContract *RestakingContractSession) CreatePod() (*types.Transaction, error) {
+	return _RestakingContract.Contract.CreatePod(&_RestakingContract.TransactOpts)
+}
+
+// CreatePod is a paid mutator transaction binding the contract method 0x84d81062.
+//
+// Solidity: function createPod() returns()
+func (_RestakingContract *RestakingContractTransactorSession) CreatePod() (*types.Transaction, error) {
+	return _RestakingContract.Contract.CreatePod(&_RestakingContract.TransactOpts)
+}
+
+// Execute is a paid mutator transaction binding the contract method 0x1cff79cd.
+//
+// Solidity: function execute(address target, bytes data) returns(bytes)
+func (_RestakingContract *RestakingContractTransactor) Execute(opts *bind.TransactOpts, target common.Address, data []byte) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "execute", target, data)
+}
+
+// Execute is a paid mutator transaction binding the contract method 0x1cff79cd.
+//
+// Solidity: function execute(address target, bytes data) returns(bytes)
+func (_RestakingContract *RestakingContractSession) Execute(target common.Address, data []byte) (*types.Transaction, error) {
+	return _RestakingContract.Contract.Execute(&_RestakingContract.TransactOpts, target, data)
+}
+
+// Execute is a paid mutator transaction binding the contract method 0x1cff79cd.
+//
+// Solidity: function execute(address target, bytes data) returns(bytes)
+func (_RestakingContract *RestakingContractTransactorSession) Execute(target common.Address, data []byte) (*types.Transaction, error) {
+	return _RestakingContract.Contract.Execute(&_RestakingContract.TransactOpts, target, data)
 }
 
 // GrantRole is a paid mutator transaction binding the contract method 0x2f2ff15d.
@@ -624,46 +786,25 @@ func (_RestakingContract *RestakingContractTransactorSession) GrantRole(role [32
 	return _RestakingContract.Contract.GrantRole(&_RestakingContract.TransactOpts, role, account)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0xf8c8765e.
+// InitializeV3 is a paid mutator transaction binding the contract method 0x3101cfcb.
 //
-// Solidity: function initialize(address _eigenPodManager, address _delegationManager, address _strategyManager, address _delayedWithdrawalRouter) returns()
-func (_RestakingContract *RestakingContractTransactor) Initialize(opts *bind.TransactOpts, _eigenPodManager common.Address, _delegationManager common.Address, _strategyManager common.Address, _delayedWithdrawalRouter common.Address) (*types.Transaction, error) {
-	return _RestakingContract.contract.Transact(opts, "initialize", _eigenPodManager, _delegationManager, _strategyManager, _delayedWithdrawalRouter)
+// Solidity: function initializeV3(address impl) returns()
+func (_RestakingContract *RestakingContractTransactor) InitializeV3(opts *bind.TransactOpts, impl common.Address) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "initializeV3", impl)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0xf8c8765e.
+// InitializeV3 is a paid mutator transaction binding the contract method 0x3101cfcb.
 //
-// Solidity: function initialize(address _eigenPodManager, address _delegationManager, address _strategyManager, address _delayedWithdrawalRouter) returns()
-func (_RestakingContract *RestakingContractSession) Initialize(_eigenPodManager common.Address, _delegationManager common.Address, _strategyManager common.Address, _delayedWithdrawalRouter common.Address) (*types.Transaction, error) {
-	return _RestakingContract.Contract.Initialize(&_RestakingContract.TransactOpts, _eigenPodManager, _delegationManager, _strategyManager, _delayedWithdrawalRouter)
+// Solidity: function initializeV3(address impl) returns()
+func (_RestakingContract *RestakingContractSession) InitializeV3(impl common.Address) (*types.Transaction, error) {
+	return _RestakingContract.Contract.InitializeV3(&_RestakingContract.TransactOpts, impl)
 }
 
-// Initialize is a paid mutator transaction binding the contract method 0xf8c8765e.
+// InitializeV3 is a paid mutator transaction binding the contract method 0x3101cfcb.
 //
-// Solidity: function initialize(address _eigenPodManager, address _delegationManager, address _strategyManager, address _delayedWithdrawalRouter) returns()
-func (_RestakingContract *RestakingContractTransactorSession) Initialize(_eigenPodManager common.Address, _delegationManager common.Address, _strategyManager common.Address, _delayedWithdrawalRouter common.Address) (*types.Transaction, error) {
-	return _RestakingContract.Contract.Initialize(&_RestakingContract.TransactOpts, _eigenPodManager, _delegationManager, _strategyManager, _delayedWithdrawalRouter)
-}
-
-// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
-//
-// Solidity: function initializeV2(address stakingAddress_) returns()
-func (_RestakingContract *RestakingContractTransactor) InitializeV2(opts *bind.TransactOpts, stakingAddress_ common.Address) (*types.Transaction, error) {
-	return _RestakingContract.contract.Transact(opts, "initializeV2", stakingAddress_)
-}
-
-// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
-//
-// Solidity: function initializeV2(address stakingAddress_) returns()
-func (_RestakingContract *RestakingContractSession) InitializeV2(stakingAddress_ common.Address) (*types.Transaction, error) {
-	return _RestakingContract.Contract.InitializeV2(&_RestakingContract.TransactOpts, stakingAddress_)
-}
-
-// InitializeV2 is a paid mutator transaction binding the contract method 0x29b6eca9.
-//
-// Solidity: function initializeV2(address stakingAddress_) returns()
-func (_RestakingContract *RestakingContractTransactorSession) InitializeV2(stakingAddress_ common.Address) (*types.Transaction, error) {
-	return _RestakingContract.Contract.InitializeV2(&_RestakingContract.TransactOpts, stakingAddress_)
+// Solidity: function initializeV3(address impl) returns()
+func (_RestakingContract *RestakingContractTransactorSession) InitializeV3(impl common.Address) (*types.Transaction, error) {
+	return _RestakingContract.Contract.InitializeV3(&_RestakingContract.TransactOpts, impl)
 }
 
 // RenounceRole is a paid mutator transaction binding the contract method 0x36568abe.
@@ -706,6 +847,90 @@ func (_RestakingContract *RestakingContractSession) RevokeRole(role [32]byte, ac
 // Solidity: function revokeRole(bytes32 role, address account) returns()
 func (_RestakingContract *RestakingContractTransactorSession) RevokeRole(role [32]byte, account common.Address) (*types.Transaction, error) {
 	return _RestakingContract.Contract.RevokeRole(&_RestakingContract.TransactOpts, role, account)
+}
+
+// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+//
+// Solidity: function transfer(address target, uint256 amount) returns()
+func (_RestakingContract *RestakingContractTransactor) Transfer(opts *bind.TransactOpts, target common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "transfer", target, amount)
+}
+
+// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+//
+// Solidity: function transfer(address target, uint256 amount) returns()
+func (_RestakingContract *RestakingContractSession) Transfer(target common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RestakingContract.Contract.Transfer(&_RestakingContract.TransactOpts, target, amount)
+}
+
+// Transfer is a paid mutator transaction binding the contract method 0xa9059cbb.
+//
+// Solidity: function transfer(address target, uint256 amount) returns()
+func (_RestakingContract *RestakingContractTransactorSession) Transfer(target common.Address, amount *big.Int) (*types.Transaction, error) {
+	return _RestakingContract.Contract.Transfer(&_RestakingContract.TransactOpts, target, amount)
+}
+
+// Update is a paid mutator transaction binding the contract method 0xa2e62045.
+//
+// Solidity: function update() returns()
+func (_RestakingContract *RestakingContractTransactor) Update(opts *bind.TransactOpts) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "update")
+}
+
+// Update is a paid mutator transaction binding the contract method 0xa2e62045.
+//
+// Solidity: function update() returns()
+func (_RestakingContract *RestakingContractSession) Update() (*types.Transaction, error) {
+	return _RestakingContract.Contract.Update(&_RestakingContract.TransactOpts)
+}
+
+// Update is a paid mutator transaction binding the contract method 0xa2e62045.
+//
+// Solidity: function update() returns()
+func (_RestakingContract *RestakingContractTransactorSession) Update() (*types.Transaction, error) {
+	return _RestakingContract.Contract.Update(&_RestakingContract.TransactOpts)
+}
+
+// UpgradeBeacon is a paid mutator transaction binding the contract method 0x1bce4583.
+//
+// Solidity: function upgradeBeacon(address impl) returns()
+func (_RestakingContract *RestakingContractTransactor) UpgradeBeacon(opts *bind.TransactOpts, impl common.Address) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "upgradeBeacon", impl)
+}
+
+// UpgradeBeacon is a paid mutator transaction binding the contract method 0x1bce4583.
+//
+// Solidity: function upgradeBeacon(address impl) returns()
+func (_RestakingContract *RestakingContractSession) UpgradeBeacon(impl common.Address) (*types.Transaction, error) {
+	return _RestakingContract.Contract.UpgradeBeacon(&_RestakingContract.TransactOpts, impl)
+}
+
+// UpgradeBeacon is a paid mutator transaction binding the contract method 0x1bce4583.
+//
+// Solidity: function upgradeBeacon(address impl) returns()
+func (_RestakingContract *RestakingContractTransactorSession) UpgradeBeacon(impl common.Address) (*types.Transaction, error) {
+	return _RestakingContract.Contract.UpgradeBeacon(&_RestakingContract.TransactOpts, impl)
+}
+
+// VerifyWithdrawalCredentials is a paid mutator transaction binding the contract method 0xc125d9d7.
+//
+// Solidity: function verifyWithdrawalCredentials(uint256 podId, uint64 oracleTimestamp, (bytes32,bytes) stateRootProof, uint40[] validatorIndices, bytes[] validatorFieldsProofs, bytes32[][] validatorFields) returns()
+func (_RestakingContract *RestakingContractTransactor) VerifyWithdrawalCredentials(opts *bind.TransactOpts, podId *big.Int, oracleTimestamp uint64, stateRootProof BeaconChainProofsStateRootProof, validatorIndices []*big.Int, validatorFieldsProofs [][]byte, validatorFields [][][32]byte) (*types.Transaction, error) {
+	return _RestakingContract.contract.Transact(opts, "verifyWithdrawalCredentials", podId, oracleTimestamp, stateRootProof, validatorIndices, validatorFieldsProofs, validatorFields)
+}
+
+// VerifyWithdrawalCredentials is a paid mutator transaction binding the contract method 0xc125d9d7.
+//
+// Solidity: function verifyWithdrawalCredentials(uint256 podId, uint64 oracleTimestamp, (bytes32,bytes) stateRootProof, uint40[] validatorIndices, bytes[] validatorFieldsProofs, bytes32[][] validatorFields) returns()
+func (_RestakingContract *RestakingContractSession) VerifyWithdrawalCredentials(podId *big.Int, oracleTimestamp uint64, stateRootProof BeaconChainProofsStateRootProof, validatorIndices []*big.Int, validatorFieldsProofs [][]byte, validatorFields [][][32]byte) (*types.Transaction, error) {
+	return _RestakingContract.Contract.VerifyWithdrawalCredentials(&_RestakingContract.TransactOpts, podId, oracleTimestamp, stateRootProof, validatorIndices, validatorFieldsProofs, validatorFields)
+}
+
+// VerifyWithdrawalCredentials is a paid mutator transaction binding the contract method 0xc125d9d7.
+//
+// Solidity: function verifyWithdrawalCredentials(uint256 podId, uint64 oracleTimestamp, (bytes32,bytes) stateRootProof, uint40[] validatorIndices, bytes[] validatorFieldsProofs, bytes32[][] validatorFields) returns()
+func (_RestakingContract *RestakingContractTransactorSession) VerifyWithdrawalCredentials(podId *big.Int, oracleTimestamp uint64, stateRootProof BeaconChainProofsStateRootProof, validatorIndices []*big.Int, validatorFieldsProofs [][]byte, validatorFields [][][32]byte) (*types.Transaction, error) {
+	return _RestakingContract.Contract.VerifyWithdrawalCredentials(&_RestakingContract.TransactOpts, podId, oracleTimestamp, stateRootProof, validatorIndices, validatorFieldsProofs, validatorFields)
 }
 
 // WithdrawBeforeRestaking is a paid mutator transaction binding the contract method 0xbaa7145a.
