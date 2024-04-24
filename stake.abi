@@ -372,19 +372,6 @@
   },
   {
     "inputs": [],
-    "name": "MIN_MANAGER_COMPOUND",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "ORACLE_ROLE",
     "outputs": [
       {
@@ -603,25 +590,6 @@
   {
     "inputs": [],
     "name": "getPendingEthers",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
-    ],
-    "name": "getQuota",
     "outputs": [
       {
         "internalType": "uint256",
@@ -897,25 +865,6 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
-    ],
-    "name": "isWhiteListed",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [],
     "name": "managerFeeShare",
     "outputs": [
@@ -1074,6 +1023,11 @@
         "internalType": "bytes[]",
         "name": "signatures",
         "type": "bytes[]"
+      },
+      {
+        "internalType": "uint8[]",
+        "name": "podIds",
+        "type": "uint8[]"
       }
     ],
     "name": "registerRestakingValidators",
@@ -1084,17 +1038,17 @@
   {
     "inputs": [
       {
-        "internalType": "bytes",
-        "name": "pubkey",
-        "type": "bytes"
+        "internalType": "bytes[]",
+        "name": "pubkeys",
+        "type": "bytes[]"
       },
       {
-        "internalType": "bytes",
-        "name": "signature",
-        "type": "bytes"
+        "internalType": "bytes[]",
+        "name": "signatures",
+        "type": "bytes[]"
       }
     ],
-    "name": "registerValidator",
+    "name": "registerRestakingValidators",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1138,29 +1092,6 @@
   {
     "inputs": [
       {
-        "internalType": "bytes",
-        "name": "oldpubkey",
-        "type": "bytes"
-      },
-      {
-        "internalType": "bytes",
-        "name": "pubkey",
-        "type": "bytes"
-      },
-      {
-        "internalType": "bytes",
-        "name": "signature",
-        "type": "bytes"
-      }
-    ],
-    "name": "replaceValidator",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "bytes[]",
         "name": "oldpubkeys",
         "type": "bytes[]"
@@ -1179,6 +1110,11 @@
         "internalType": "bool",
         "name": "restaking",
         "type": "bool"
+      },
+      {
+        "internalType": "uint8[]",
+        "name": "podIds",
+        "type": "uint8[]"
       }
     ],
     "name": "replaceValidators",
@@ -1310,23 +1246,49 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
-    ],
-    "name": "toggleWhiteList",
+    "inputs": [],
+    "name": "unpause",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "unpause",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "validatorRegistry",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "pubkey",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "signature",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bool",
+        "name": "stopped",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "restaking",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint8",
+        "name": "eigenpod",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
